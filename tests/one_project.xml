@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record>
+  <result xmlns:dri="http://www.driver-repository.eu/namespace/dri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <header>
+      <dri:objIdentifier>dedup_wf_001::2c8a49a95bef402a688853c31412a30f</dri:objIdentifier>
+      <dri:dateOfCollection>2019-02-15</dri:dateOfCollection>
+      <dri:dateOfTransformation>2019-09-30T13:57:55.512Z</dri:dateOfTransformation>
+      <counters>
+	  <counter_outcome_inferred value="1"/><counter_outcome value="1"/><counter_dedup value="2"/><counter_doi value="1"/>
+	  </counters>
+    </header>
+    <metadata>
+      <oaf:entity xmlns:oaf="http://namespace.openaire.eu/oaf" xsi:schemaLocation="http://namespace.openaire.eu/oaf https://www.openaire.eu/schema/1.0/oaf-1.0.xsd">
+		<oaf:result>
+			<journal issn="0002-9262" eissn="1476-6256" lissn="" ep="473" iss="3" sp="465" vol="187">Oxford University Press (OUP)</journal><title classid="main title" classname="main title" schemeid="dnet:dataCite_title" schemename="dnet:dataCite_title">The Mental Health Benefits of Acquiring a Home in Older Age: A Fixed-Effects Analysis of Older US Adults</title><language classid="und" classname="Undetermined" schemeid="dnet:languages" schemename="dnet:languages"/><dateofacceptance/><subject classid="keyword" classname="keyword" schemeid="dnet:subject" schemename="dnet:subject">Epidemiology</subject><resulttype classid="publication" classname="publication" schemeid="dnet:result_typologies" schemename="dnet:result_typologies"/><creator rank="1" name="Emilie" surname="Courtin">Courtin, Emilie</creator><creator rank="2" name="Jennifer B." surname="Dowd">Dowd, Jennifer B</creator><creator rank="3" name="Mauricio" surname="Avendano">Avendano, Mauricio</creator><country classid="" classname="" schemeid="" schemename=""/><relevantdate classid="" classname="" schemeid="" schemename=""/><description/><publisher/><embargoenddate/><source/><fulltext/><format/><contributor/><resourcetype classid="" classname="" schemeid="" schemename=""/><coverage/><refereed/><storagedate/><device/><size/><version/><lastmetadataupdate/><metadataversionnumber/><documentationUrl/><codeRepositoryUrl/><programmingLanguage classid="" classname="" schemeid="" schemename=""/><contactperson/><contactgroup/><tool/><collectedfrom name="Sygma" id="openaire____::a8db6f6b2ce4fe72e8b2314a9a93e7d9"/><collectedfrom name="UnpayWall" id="openaire____::8ac8380272269217cb09a928c8caa993"/><collectedfrom name="Crossref" id="openaire____::081b82f96300b6a6e3d282bad31cb6e2"/><collectedfrom name="ORCID" id="openaire____::806360c771262b4d6770e7cdf04b5c5a"/><collectedfrom name="Microsoft Academic Graph" id="openaire____::5f532a3fc4f1ea403f37070f59a7a53a"/><originalId>10.1093/aje/kwx278</originalId><pid classid="doi" classname="doi" schemeid="dnet:pid_types" schemename="dnet:pid_types">10.1093/aje/kwx278</pid><bestaccessright classid="OPEN" classname="Open Access" schemeid="dnet:access_modes" schemename="dnet:access_modes"/><context id="EC" label="European Commission" type="funding"><category id="EC::H2020" label="Horizon 2020 Framework Programme"><concept id="EC::H2020::RIA" label="Research and Innovation action"/></category></context><datainfo><inferred>true</inferred><deletedbyinference>false</deletedbyinference><trust>0.9</trust><inferenceprovenance>dedup-similarity-result-levenstein</inferenceprovenance><provenanceaction classid="sysimport:dedup" classname="sysimport:dedup" schemeid="dnet:provenanceActions" schemename="dnet:provenanceActions"/></datainfo>
+		  <rels>
+		    <rel inferred="true" trust="0.9" inferenceprovenance="" provenanceaction="sysimport:crosswalk:repository">
+		      <to class="isProducedBy" scheme="dnet:result_project_relations" type="project">corda__h2020::4d7a930e02fe477740fd6da9d747d56e</to>
+		      <code>667661</code><funding><funder id="ec__________::EC" shortname="EC" name="European Commission" jurisdiction="EU"/><funding_level_0 name="H2020">ec__________::EC::H2020</funding_level_0><funding_level_1 name="RIA">ec__________::EC::H2020::RIA</funding_level_1></funding><acronym>MINDMAP</acronym><contracttype classid="RIA" classname="Research and Innovation action" schemeid="ec:h2020toas" schemename="Horizon 2020 - Type of Actions"/><title>PROMOTING MENTAL WELLBEING IN THE AGEING URBAN POPULATION: DETERMINANTS, POLICIES AND INTERVENTIONS IN EUROPEAN CITIES</title>
+		    </rel>
+		  </rels>
+		  <children>
+			<result objidentifier="sygma_______::2c8a49a95bef402a688853c31412a30f">
+				<title classid="main title" classname="main title" schemeid="dnet:dataCite_title" schemename="dnet:dataCite_title">The Mental Health Benefits of Acquiring a Home in Older Age: A Fixed-Effects Analysis of Older US Adults</title><resulttype classid="publication" classname="publication" schemeid="dnet:result_typologies" schemename="dnet:result_typologies"/>
+			</result><result objidentifier="doiboost____::2c8a49a95bef402a688853c31412a30f">
+				<title classid="main title" classname="main title" schemeid="dnet:dataCite_title" schemename="dnet:dataCite_title">The Mental Health Benefits of Acquiring a Home in Older Age: A Fixed-Effects Analysis of Older US Adults</title><resulttype classid="publication" classname="publication" schemeid="dnet:result_typologies" schemename="dnet:result_typologies"/>
+			</result><instance id="openaire____::55045bd2a65019fd8e6741a755395c8c">
+			    <accessright classid="UNKNOWN" classname="UNKNOWN" schemeid="dnet:access_modes" schemename="dnet:access_modes"/><collectedfrom name="Sygma" id="openaire____::a8db6f6b2ce4fe72e8b2314a9a93e7d9"/><instancetype classid="0001" classname="Article" schemeid="dnet:publication_resource" schemename="dnet:publication_resource"/><hostedby name="Unknown Repository" id="openaire____::55045bd2a65019fd8e6741a755395c8c"/>
+				<webresource>
+				  <url>http://dx.doi.org/10.1093/aje/kwx278</url>
+				</webresource>
+
+			</instance>
+			<instance id="openaire____::55045bd2a65019fd8e6741a755395c8c">
+			    <accessright classid="OPEN" classname="Open Access" schemeid="dnet:access_modes" schemename="dnet:access_modes"/><collectedfrom name="UnpayWall" id="openaire____::8ac8380272269217cb09a928c8caa993"/><instancetype classid="0001" classname="Article" schemeid="dnet:publication_resource" schemename="dnet:publication_resource"/><hostedby name="Unknown Repository" id="openaire____::55045bd2a65019fd8e6741a755395c8c"/>
+				<webresource>
+				  <url>https://academic.oup.com/aje/article-pdf/187/3/465/24134209/kwx278.pdf</url>
+				</webresource>
+
+			</instance>
+			<instance id="openaire____::55045bd2a65019fd8e6741a755395c8c">
+			    <accessright classid="RESTRICTED" classname="Restricted" schemeid="dnet:access_modes" schemename="dnet:access_modes"/><collectedfrom name="Crossref" id="openaire____::081b82f96300b6a6e3d282bad31cb6e2"/><instancetype classid="0001" classname="Article" schemeid="dnet:publication_resource" schemename="dnet:publication_resource"/><hostedby name="Unknown Repository" id="openaire____::55045bd2a65019fd8e6741a755395c8c"/>
+				<webresource>
+				  <url>http://dx.doi.org/10.1093/aje/kwx278</url>
+				</webresource>
+				<webresource>
+				  <url>http://academic.oup.com/aje/article-pdf/187/3/465/24134209/kwx278.pdf</url>
+				</webresource>
+
+			</instance>
+
+		  </children>
+		</oaf:result>
+
+      </oaf:entity>
+    </metadata>
+  </result>
+</record>

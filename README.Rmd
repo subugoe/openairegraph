@@ -1,0 +1,89 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# openairegraph - Read and manipulate the OpenAIRE Research Graph Dump
+
+<!-- badges: start -->
+[![Travis build status](https://travis-ci.org/njahn82/openairegraph.svg?branch=master)](https://travis-ci.org/njahn82/openairegraph)
+<!-- badges: end -->
+
+The goal of openairegraph is to provide parsing functions to consume metadata from the OpenAIRE Research Graph.
+
+Dump: Manghi, Paolo, Atzori, Claudio, Bardi, Alessia, Shirrwagen, Jochen, Dimitropoulos, Harry, La Bruzzo, Sandro, … Summan, Friedrich. (2019). OpenAIRE Research Graph Dump (Version 1.0.0-beta) [Data set]. Zenodo. <http://doi.org/10.5281/zenodo.3516918>
+
+Documentation: <https://api.openaire.eu/graph-dumps.html>
+
+
+## Installation
+
+You can install the development version of openairegraph from GitHub using the remotes package
+
+``` r
+remotes::install_github("openairegraph")
+```
+
+## Example
+
+OpenAIRE data are provided as XML files.
+
+```{r}
+library(xml2)
+library(openairegraph)
+dump_eg <- system.file("extdata", "multiple_projects.xml", package = "openairegraph")
+my_record <- xml2::read_xml(dump_eg)
+```
+
+### Parse publication metadata
+
+```{r}
+openairegraph::publications_md(my_record)
+```
+
+Author infos
+
+```{r}
+openairegraph::publications_md(my_record)$authors
+```
+
+Linked persistent identifier (PID) to research publication
+
+```{r}
+openairegraph::publications_md(my_record)$pids
+```
+
+### Linked projects
+
+```{r}
+openairegraph::linked_projects(my_record)
+```
+
+### Linked Full-Texts
+
+```{r}
+oarg_linked_ftxt(my_record)
+```
+
+### Affiliation data
+
+```{r}
+oarg_linked_affiliations(my_record)
+```
+
+
+## Meta 
+
+Please note that the 'openairegraph' project is released with a
+[Contributor Code of Conduct](CODE_OF_CONDUCT.md).
+By contributing to this project, you agree to abide by its terms.

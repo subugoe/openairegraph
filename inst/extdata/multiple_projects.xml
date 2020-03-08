@@ -1,0 +1,903 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record>
+  <result xmlns:dri="http://www.driver-repository.eu/namespace/dri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <header>
+      <dri:objIdentifier>dedup_wf_001::702f0aa74d162c0bab892c70a82ba3e1</dri:objIdentifier>
+      <dri:dateOfCollection>2017-09-25T17:36:00.103Z</dri:dateOfCollection>
+      <dri:dateOfTransformation>2019-07-02T16:35:03.26Z</dri:dateOfTransformation>
+      <counters>
+	  <counter_similarity_inferred value="20"/><counter_outcome_inferred value="22"/><counter_affiliation value="52"/><counter_affiliation_inferred value="52"/><counter_similarity value="20"/><counter_outcome value="22"/><counter_dedup value="5"/><counter_doi value="1"/>
+	  </counters>
+    </header>
+    <metadata>
+      <oaf:entity xmlns:oaf="http://namespace.openaire.eu/oaf" xsi:schemaLocation="http://namespace.openaire.eu/oaf https://www.openaire.eu/schema/1.0/oaf-1.0.xsd">
+		<oaf:result>
+			<resulttype classid="publication" classname="publication" schemeid="dnet:result_typologies" schemename="dnet:result_typologies"/><dateofacceptance>2017-06-01</dateofacceptance><publisher>Public Library of Science</publisher><description>Sjogren's syndrome (SS) is a common, autoimmune exocrinopathy distinguished by keratoconjunctivitis sicca and xerostomia. Patients frequently develop serious complications including lymphoma, pulmonary dysfunction, neuropathy, vasculitis, and debilitating fatigue. Dysregulation of type I interferon (IFN) pathway is a prominent feature of SS and is correlated with increased autoantibody titers and disease severity. To identify genetic determinants of IFN pathway dysregulation in SS, we performed cis-expression quantitative trait locus (eQTL) analyses focusing on differentially expressed type I IFN-inducible transcripts identified through a transcriptome profiling study. Multiple cis-eQTLs were associated with transcript levels of 2'-5'-oligoadenylate synthetase 1 (OAS1) peaking at rs10774671 (PeQTL = 6.05 x 10(-14)). Association of rs10774671 with SS susceptibility was identified and confirmed through meta-analysis of two independent cohorts (P-meta = 2.59 x 10(-9); odds ratio = 0.75; 95% confidence interval = 0.66-0.86). The risk allele of rs10774671 shifts splicing of OAS1 from production of the p46 isoform to multiple alternative transcripts, including p42, p48, and p44. We found that the isoforms were differentially expressed within each genotype in controls and patients with and without autoantibodies. Furthermore, our results showed that the three alternatively spliced isoforms lacked translational response to type I IFN stimulation. The p48 and p44 isoforms also had impaired protein expression governed by the 3' end of the transcripts. The SS risk allele of rs10774671 has been shown by others to be associated with reduced OAS1 enzymatic activity and ability to clear viral infections, as well as reduced responsiveness to IFN treatment. Our results establish OAS1 as a risk locus for SS and support a potential role for defective viral clearance due to altered IFN response as a genetic pathophysiological basis of this complex autoimmune disease. </description><subject classid="keyword" classname="keyword" schemeid="dnet:subject_classification_typologies" schemename="dnet:subject_classification_typologies">Molecular Biology</subject><subject classid="keyword" classname="keyword" schemeid="dnet:subject_classification_typologies" schemename="dnet:subject_classification_typologies">Immune System Proteins</subject><subject classid="keyword" classname="keyword" schemeid="dnet:subject_classification_typologies" schemename="dnet:subject_classification_typologies">Research Article</subject><subject classid="keyword" classname="keyword" schemeid="dnet:subject_classification_typologies" schemename="dnet:subject_classification_typologies">Molecular Biology Assays and Analysis Techniques</subject><subject classid="keyword" classname="keyword" schemeid="dnet:subject_classification_typologies" schemename="dnet:subject_classification_typologies">Gene Expression and Vector Techniques</subject><subject classid="keyword" classname="keyword" schemeid="dnet:subject_classification_typologies" schemename="dnet:subject_classification_typologies">Anatomy</subject><subject classid="keyword" classname="keyword" schemeid="dnet:subject_classification_typologies" schemename="dnet:subject_classification_typologies">RNA processing</subject><subject classid="keyword" classname="keyword" schemeid="dnet:subject_classification_typologies" schemename="dnet:subject_classification_typologies">Bioassays and Physiological Analysis</subject><subject classid="keyword" classname="keyword" schemeid="dnet:subject_classification_typologies" schemename="dnet:subject_classification_typologies">QH426-470</subject><subject classid="keyword" classname="keyword" schemeid="dnet:subject_classification_typologies" schemename="dnet:subject_classification_typologies">Genetics</subject><subject classid="keyword" classname="keyword" schemeid="dnet:subject_classification_typologies" schemename="dnet:subject_classification_typologies">Interferons</subject><subject classid="keyword" classname="keyword" schemeid="dnet:result_subject" schemename="dnet:result_subject">Medicin och hälsovetenskap</subject><subject classid="keyword" classname="keyword" schemeid="dnet:subject_classification_typologies" schemename="dnet:subject_classification_typologies">Proteins</subject><subject classid="keyword" classname="keyword" schemeid="dnet:subject_classification_typologies" schemename="dnet:subject_classification_typologies">Molecular Biology Techniques</subject><subject classid="keyword" classname="keyword" schemeid="dnet:subject_classification_typologies" schemename="dnet:subject_classification_typologies">Antibodies</subject><subject classid="keyword" classname="keyword" schemeid="dnet:subject_classification_typologies" schemename="dnet:subject_classification_typologies">Protein Expression</subject><subject classid="keyword" classname="keyword" schemeid="dnet:subject_classification_typologies" schemename="dnet:subject_classification_typologies">Autoantibodies</subject><subject classid="keyword" classname="keyword" schemeid="dnet:subject_classification_typologies" schemename="dnet:subject_classification_typologies">Immunology</subject><subject classid="keyword" classname="keyword" schemeid="dnet:subject_classification_typologies" schemename="dnet:subject_classification_typologies">Biology and Life Sciences</subject><subject classid="keyword" classname="keyword" schemeid="dnet:subject_classification_typologies" schemename="dnet:subject_classification_typologies">Genetics of Disease</subject><subject classid="keyword" classname="keyword" schemeid="dnet:subject_classification_typologies" schemename="dnet:subject_classification_typologies">Alternative Splicing</subject><subject classid="keyword" classname="keyword" schemeid="dnet:subject_classification_typologies" schemename="dnet:subject_classification_typologies">RNA</subject><subject classid="keyword" classname="keyword" schemeid="dnet:subject_classification_typologies" schemename="dnet:subject_classification_typologies">Immune Physiology</subject><subject classid="keyword" classname="keyword" schemeid="dnet:subject_classification_typologies" schemename="dnet:subject_classification_typologies">Research and Analysis Methods</subject><subject classid="keyword" classname="keyword" schemeid="dnet:subject_classification_typologies" schemename="dnet:subject_classification_typologies">Physiology</subject><subject classid="keyword" classname="keyword" schemeid="dnet:subject_classification_typologies" schemename="dnet:subject_classification_typologies">Nucleic acids</subject><subject classid="keyword" classname="keyword" schemeid="dnet:subject_classification_typologies" schemename="dnet:subject_classification_typologies">Body Fluids</subject><subject classid="keyword" classname="keyword" schemeid="dnet:subject_classification_typologies" schemename="dnet:subject_classification_typologies">Blood</subject><subject classid="keyword" classname="keyword" schemeid="dnet:subject_classification_typologies" schemename="dnet:subject_classification_typologies">Microarrays</subject><subject classid="keyword" classname="keyword" schemeid="dnet:result_subject" schemename="dnet:result_subject">Medical and Health Sciences</subject><subject classid="keyword" classname="keyword" schemeid="dnet:subject_classification_typologies" schemename="dnet:subject_classification_typologies">Biochemistry</subject><subject classid="keyword" classname="keyword" schemeid="dnet:subject_classification_typologies" schemename="dnet:subject_classification_typologies">Medicine and Health Sciences</subject><subject classid="keyword" classname="keyword" schemeid="dnet:subject_classification_typologies" schemename="dnet:subject_classification_typologies">Gene expression</subject><creator rank="6" name="Astrid" surname="Rasmussen" ORCID="0000-0001-7744-2948">Rasmussen, Astrid</creator><creator rank="15" name="Maija-Leena" surname="Eloranta" ORCID="0000-0002-8454-1351">Eloranta, Maija-Leena</creator><creator rank="20" name="Kenneth M." surname="Kaufman" ORCID="0000-0001-8195-1876">Kaufman, Kenneth M.</creator><creator rank="21" name="Marika" surname="Kvarnström" ORCID="0000-0002-4948-8380">Kvarnström, Marika</creator><creator rank="22" name="Deborah S." surname="Cunninghame Graham" ORCID="0000-0002-3066-6693">Cunninghame Graham, Deborah S.</creator><creator rank="34" name="Andrew J. W." surname="Huang" ORCID="0000-0003-1939-9149">Huang, Andrew J. W.</creator><creator rank="39" name="Contessa E." surname="Edgar" ORCID="0000-0001-9701-0886">Edgar, Contessa E.</creator><creator rank="44" name="Patrick M." surname="Gaffney" ORCID="0000-0002-1580-869X">Gaffney, Patrick M.</creator><creator rank="55" name="Lars" surname="Rönnblom" ORCID="0000-0001-9403-6503">Rönnblom, Lars</creator><creator rank="58" name="Marie" surname="Wahren-Herlenius" ORCID="0000-0002-0915-7245">Wahren-Herlenius, Marie</creator><creator rank="60" name="Roland" surname="Jonsson" ORCID="0000-0002-9588-0260">Jonsson, Roland</creator><creator rank="61" name="Wan-Fai" surname="Ng" ORCID="0000-0002-5539-388X">Ng, Wan-Fai</creator><creator rank="62" name="Gunnel" surname="Nordmark" ORCID="0000-0002-3829-7431">Nordmark, Gunnel</creator><creator rank="1" name="He" surname="Li">Li, He</creator><creator rank="2" name="Tove Ragna" surname="Reksten">Reksten, Tove Ragna</creator><creator rank="3" name="John A." surname="Ice">Ice, John A.</creator><creator rank="4" name="Jennifer A." surname="Kelly">Kelly, Jennifer A.</creator><creator rank="5" name="Indra" surname="Adrianto">Adrianto, Indra</creator><creator rank="7" name="Shaofeng" surname="Wang">Wang, Shaofeng</creator><creator rank="8" name="Bo" surname="He">He, Bo</creator><creator rank="9" name="Kiely M." surname="Grundahl">Grundahl, Kiely M.</creator><creator rank="10" name="Stuart B." surname="Glenn">Glenn, Stuart B.</creator><creator rank="11" name="Corinne" surname="Miceli-Richard">Miceli-Richard, Corinne</creator><creator rank="12" name="Simon" surname="Bowman">Bowman, Simon</creator><creator rank="13" name="Sue" surname="Lester">Lester, Sue</creator><creator rank="14" name="Per" surname="Eriksson">Eriksson, Per</creator><creator rank="16" name="Johan G." surname="Brun">Brun, Johan G.</creator><creator rank="17" name="Lasse G." surname="Gøransson">Gøransson, Lasse G.</creator><creator rank="18" name="Erna" surname="Harboe">Harboe, Erna</creator><creator rank="19" name="Joel M." surname="Guthridge">Guthridge, Joel M.</creator><creator rank="23" name="Ketan" surname="Patel">Patel, Ketan</creator><creator rank="24" name="Adam J." surname="Adler">Adler, Adam J.</creator><creator rank="25" name="A. Darise" surname="Farris">Farris, A. Darise</creator><creator rank="26" name="Michael T." surname="Brennan">Brennan, Michael T.</creator><creator rank="27" name="James" surname="Chodosh">Chodosh, James</creator><creator rank="28" name="Rajaram" surname="Gopalakrishnan">Gopalakrishnan, Rajaram</creator><creator rank="29" name="Michael H." surname="Weisman">Weisman, Michael H.</creator><creator rank="30" name="Swamy" surname="Venuturupalli">Venuturupalli, Swamy</creator><creator rank="31" name="Daniel J." surname="Wallace">Wallace, Daniel J.</creator><creator rank="32" name="Kimberly S." surname="Hefner">Hefner, Kimberly S.</creator><creator rank="33" name="Glen D." surname="Houston">Houston, Glen D.</creator><creator rank="35" name="Pamela J." surname="Hughes">Hughes, Pamela J.</creator><creator rank="36" name="David M." surname="Lewis">Lewis, David M.</creator><creator rank="37" name="Lida" surname="Radfar">Radfar, Lida</creator><creator rank="38" name="Evan S." surname="Vista">Vista, Evan S.</creator><creator rank="40" name="Michael D." surname="Rohrer">Rohrer, Michael D.</creator><creator rank="41" name="Donald U." surname="Stone">Stone, Donald U.</creator><creator rank="42" name="Timothy J." surname="Vyse">Vyse, Timothy J.</creator><creator rank="43" name="John B." surname="Harley">Harley, John B.</creator><creator rank="45" name="Judith A." surname="James">James, Judith A.</creator><creator rank="46" name="Sean" surname="Turner">Turner, Sean</creator><creator rank="47" name="Ilias" surname="Alevizos">Alevizos, Ilias</creator><creator rank="48" name="Juan-Manuel" surname="Anaya">Anaya, Juan-Manuel</creator><creator rank="49" name="Nelson L." surname="Rhodus">Rhodus, Nelson L.</creator><creator rank="50" name="Barbara M." surname="Segal">Segal, Barbara M.</creator><creator rank="51" name="Courtney G." surname="Montgomery">Montgomery, Courtney G.</creator><creator rank="52" name="R. Hal" surname="Scofield">Scofield, R. Hal</creator><creator rank="53" name="Susan" surname="Kovats">Kovats, Susan</creator><creator rank="54" name="Xavier" surname="Mariette">Mariette, Xavier</creator><creator rank="56" name="Torsten" surname="Witte">Witte, Torsten</creator><creator rank="57" name="Maureen" surname="Rischmueller">Rischmueller, Maureen</creator><creator rank="59" name="Roald" surname="Omdal">Omdal, Roald</creator><creator rank="63" name="Christopher J." surname="Lessard">Lessard, Christopher J.</creator><creator rank="64" name="Kathy L." surname="Sivils">Sivils, Kathy L.</creator><country classid="SE" classname="SE" schemeid="dnet:countries" schemename="dnet:countries" dataInfo="inferred: true    trust: &quot;0.9&quot;    inferenceprovenance: &quot;propagation&quot;    provenanceaction {      classid: &quot;propagation:country:instrepos&quot;      classname: &quot;Propagation of country information from datasources belonging to institutional repositories&quot;      schemeid: &quot;dnet:provenanceActions&quot;      schemename: &quot;dnet:provenanceActions&quot;    }    "/><title classid="main title" classname="main title" schemeid="dnet:dataCite_title" schemename="dnet:dataCite_title">Identification of a Sj?gren's syndrome susceptibility locus at OAS1 that influences isoform switching, protein expression, and responsiveness to type I interferons</title><language classid="eng" classname="English" schemeid="dnet:languages" schemename="dnet:languages"/><journal issn="1553-7390" eissn="1553-7404" lissn="" ep="" iss="6" sp="e1006820" vol="13">PLoS Genetics</journal><format>application/pdf</format><source>PLoS Genetics</source><source>PLoS Genetics, Vol 13, Iss 6, p e1006820 (2017)</source><relevantdate classid="" classname="" schemeid="" schemename=""/><embargoenddate/><fulltext/><contributor/><resourcetype classid="" classname="" schemeid="" schemename=""/><coverage/><refereed/><storagedate/><device/><size/><version/><lastmetadataupdate/><metadataversionnumber/><documentationUrl/><codeRepositoryUrl/><programmingLanguage classid="" classname="" schemeid="" schemename=""/><contactperson/><contactgroup/><tool/><collectedfrom name="Sygma" id="openaire____::a8db6f6b2ce4fe72e8b2314a9a93e7d9"/><collectedfrom name="Publikationer från Uppsala Universitet" id="opendoar____::52720e003547c70561bf5e03b95aa99f"/><collectedfrom name="DOAJ-Articles" id="driver______::bee53aa31dc2cbb538c10c2b65fa5824"/><collectedfrom name="Europe PubMed Central" id="opendoar____::8b6dd7db9af49e67306feb59a8bdc52c"/><collectedfrom name="PubMed Central" id="opendoar____::eda80a3d5b344bc40f3bc04f65b7a357"/><pid classid="pmc" classname="pmc" schemeid="dnet:pid_types" schemename="dnet:pid_types">PMC5501660</pid><pid classid="doi" classname="doi" schemeid="dnet:pid_types" schemename="dnet:pid_types">10.1371/journal.pgen.1006820</pid><pid classid="pmid" classname="pmid" schemeid="dnet:pid_types" schemename="dnet:pid_types">28640813</pid><originalId>oai:DiVA.org:uu-330755</originalId><originalId>oai:doaj.org/article:de75960e36dc428c8be5c64c20d692ba</originalId><originalId>oai:pubmedcentral.nih.gov:5501660</originalId><originalId>10.1371/journal.pgen.1006820</originalId><originalId>oai:europepmc.org:4364922</originalId><bestaccessright classid="OPEN" classname="Open Access" schemeid="dnet:access_modes" schemename="dnet:access_modes"/><context id="RCUK" label="Research Council UK" type="funding"><category id="RCUK::MRC" label="MRC"/></context><context id="DFG" label="Deutsche Forschungsgemeinschaft" type="funding"><category id="DFG::Klinische Forschergruppen" label="Klinische Forschergruppen"/></context><context id="NIH" label="National Institutes of Health" type="funding"><category id="NIH::NATIONAL CENTER FOR RESEARCH RESOURCES" label="NATIONAL CENTER FOR RESEARCH RESOURCES"/><category id="NIH::NATIONAL INSTITUTE OF GENERAL MEDICAL SCIENCES" label="NATIONAL INSTITUTE OF GENERAL MEDICAL SCIENCES"/><category id="NIH::NATIONAL INSTITUTE OF ARTHRITIS AND MUSCULOSKELETAL AND SKIN DISEASES" label="NATIONAL INSTITUTE OF ARTHRITIS AND MUSCULOSKELETAL AND SKIN DISEASES"/><category id="NIH::NATIONAL INSTITUTE OF ALLERGY AND INFECTIOUS DISEASES" label="NATIONAL INSTITUTE OF ALLERGY AND INFECTIOUS DISEASES"/><category id="NIH::NATIONAL INSTITUTE OF DENTAL &amp;CRANIOFACIAL RESEARCH" label="NATIONAL INSTITUTE OF DENTAL &amp;CRANIOFACIAL RESEARCH"/></context><context id="EC" label="European Commission" type="funding"><category id="EC::H2020" label="Horizon 2020 Framework Programme"><concept id="EC::H2020::RIA" label="Research and Innovation action"/></category></context><datainfo><inferred>true</inferred><deletedbyinference>false</deletedbyinference><trust>0.9</trust><inferenceprovenance>dedup-similarity-result-levenstein</inferenceprovenance><provenanceaction classid="sysimport:dedup" classname="sysimport:dedup" schemeid="dnet:provenanceActions" schemename="dnet:provenanceActions"/></datainfo>
+		  <rels>
+		    <rel inferred="true" trust="0.8996" inferenceprovenance="iis::document_affiliations" provenanceaction="iis">
+		      <to class="hasAuthorInstitution" scheme="dnet:result_organization_relations" type="organization">dedup_wf_001::70ca4bc0643a00e54d563615ee7a77d6</to>
+		      <legalshortname>Massachusetts Eye and Ear Infirmary</legalshortname><country classid="US" classname="United States" schemeid="dnet:countries" schemename="dnet:countries"/><websiteurl>http://www.masseyeandear.org/</websiteurl><legalname>Massachusetts Eye and Ear Infirmary</legalname>
+		    </rel><rel inferred="true" trust="0.9" inferenceprovenance="iis::document_affiliations" provenanceaction="iis">
+		      <to class="hasAuthorInstitution" scheme="dnet:result_organization_relations" type="organization">dedup_wf_001::883928f5eb7e725b3092617f91f27176</to>
+		      <legalname>University of Santo Tomas Hospital</legalname><legalshortname>USTH</legalshortname><country classid="PH" classname="Philippines" schemeid="dnet:countries" schemename="dnet:countries"/><websiteurl>http://www.usthospital.com.ph/</websiteurl>
+		    </rel><rel inferred="true" trust="0.8244" inferenceprovenance="iis::document_affiliations" provenanceaction="iis">
+		      <to class="hasAuthorInstitution" scheme="dnet:result_organization_relations" type="organization">dedup_wf_001::2a9c717688ee5b02de322ed596952e27</to>
+		      <country classid="GB" classname="United Kingdom" schemeid="dnet:countries" schemename="dnet:countries"/><legalshortname>University of Birmingham</legalshortname><legalname>University of Birmingham</legalname><websiteurl>http://www.birmingham.ac.uk/index.aspx</websiteurl>
+		    </rel><rel inferred="true" trust="0.9" inferenceprovenance="iis::document_affiliations" provenanceaction="iis">
+		      <to class="hasAuthorInstitution" scheme="dnet:result_organization_relations" type="organization">dedup_wf_001::95174f287b13220c5f398d003dc489f3</to>
+		      <websiteurl>http://cedars-sinai.edu/</websiteurl><legalname>Cedars-Sinai Medical Center</legalname><country classid="US" classname="United States" schemeid="dnet:countries" schemename="dnet:countries"/><legalshortname>Cedars-Sinai Medical Center</legalshortname>
+		    </rel><rel inferred="true" trust="0.8998" inferenceprovenance="iis::document_affiliations" provenanceaction="iis">
+		      <to class="hasAuthorInstitution" scheme="dnet:result_organization_relations" type="organization">dedup_wf_001::b2f44bd54f23cb9748e087c0f28af90e</to>
+		      <legalname>Oklahoma Baptist University</legalname><legalshortname>OBU</legalshortname><country classid="US" classname="United States" schemeid="dnet:countries" schemename="dnet:countries"/><websiteurl>http://www.okbu.edu/</websiteurl>
+		    </rel><rel inferred="true" trust="0.7938" inferenceprovenance="iis::document_affiliations" provenanceaction="iis">
+		      <to class="hasAuthorInstitution" scheme="dnet:result_organization_relations" type="organization">dedup_wf_001::a6fa1da4f93cb149d2821daffaebaed6</to>
+		      <legalname>NATIONAL INSTITUTE OF HEALTH</legalname><country classid="US" classname="United States" schemeid="dnet:countries" schemename="dnet:countries"/><legalshortname>NIH</legalshortname><websiteurl>https://www.nih.gov/</websiteurl>
+		    </rel><rel inferred="true" trust="0.8433" inferenceprovenance="iis::document_affiliations" provenanceaction="iis">
+		      <to class="hasAuthorInstitution" scheme="dnet:result_organization_relations" type="organization">grid________::bb0a3050b59a55c34a36b29edca78e65</to>
+		      <legalname>University of Minnesota - University of Minnesota Medical School</legalname><country classid="US" classname="United States" schemeid="dnet:countries" schemename="dnet:countries"/><websiteurl>http://www.med.umn.edu/</websiteurl><legalshortname>University of Minnesota Medical School</legalshortname>
+		    </rel><rel inferred="true" trust="0.9" inferenceprovenance="iis::document_affiliations" provenanceaction="iis">
+		      <to class="hasAuthorInstitution" scheme="dnet:result_organization_relations" type="organization">dedup_wf_001::e44646976012d1bbdd72f3fc97fdf045</to>
+		      <legalshortname>Haukeland University Hospital</legalshortname><websiteurl>http://www.helse-bergen.no/no/Sider/default.aspx</websiteurl><legalname>Haukeland University Hospital</legalname><country classid="NO" classname="Norway" schemeid="dnet:countries" schemename="dnet:countries"/>
+		    </rel><rel inferred="true" trust="0.9" inferenceprovenance="iis::document_affiliations" provenanceaction="iis">
+		      <to class="hasAuthorInstitution" scheme="dnet:result_organization_relations" type="organization">dedup_wf_001::dd0e81e4c519f4766b5ae9574d672272</to>
+		      <country classid="GB" classname="United Kingdom" schemeid="dnet:countries" schemename="dnet:countries"/><legalshortname>Newcastle University</legalshortname><websiteurl>http://www.ncl.ac.uk/</websiteurl><legalname>Newcastle University</legalname>
+		    </rel><rel inferred="true" trust="0.8998" inferenceprovenance="iis::document_affiliations" provenanceaction="iis">
+		      <to class="hasAuthorInstitution" scheme="dnet:result_organization_relations" type="organization">dedup_wf_001::f475b222932a04cb7aa873ea9c66ae0d</to>
+		      <country classid="US" classname="United States" schemeid="dnet:countries" schemename="dnet:countries"/><legalname>Johns Hopkins University</legalname><websiteurl>http://www.jhu.edu/</websiteurl><legalshortname>JHU</legalshortname>
+		    </rel><rel inferred="true" trust="0.9" inferenceprovenance="iis::document_affiliations" provenanceaction="iis">
+		      <to class="hasAuthorInstitution" scheme="dnet:result_organization_relations" type="organization">dedup_wf_001::f23e962632dcc83e85c1ab6e7fcdd53a</to>
+		      <websiteurl>http://www.mh-hannover.de/index.php?&amp;L=1</websiteurl><legalshortname>MHH</legalshortname><country classid="DE" classname="Germany" schemeid="dnet:countries" schemename="dnet:countries"/><legalname>Hannover Medical School</legalname>
+		    </rel><rel inferred="true" trust="0.8998" inferenceprovenance="iis::document_affiliations" provenanceaction="iis">
+		      <to class="hasAuthorInstitution" scheme="dnet:result_organization_relations" type="organization">wt__________::ad1ae2a199e0b47ca1647a4cc03c54a2</to>
+		      <legalname>King's College London</legalname>
+		    </rel><rel inferred="true" trust="0.8998" inferenceprovenance="iis::document_affiliations" provenanceaction="iis">
+		      <to class="hasAuthorInstitution" scheme="dnet:result_organization_relations" type="organization">wt__________::bfac5cca0edae388ec3b94f11233e814</to>
+		      <legalname>Newcastle University</legalname>
+		    </rel><rel inferred="true" trust="0.7938" inferenceprovenance="iis::document_affiliations" provenanceaction="iis">
+		      <to class="hasAuthorInstitution" scheme="dnet:result_organization_relations" type="organization">re3data_____::aa073d630f1733408545706996d8dca8</to>
+		      <country classid="US" classname="United States" schemeid="dnet:countries" schemename="dnet:countries"/><websiteurl>https://ncats.nih.gov/ctsa</websiteurl><legalshortname>NIH</legalshortname><legalname>National Institutes of Health,  National Center for Advancing Translational Sciences, Clinical and Translational Science Award  program</legalname>
+		    </rel><rel inferred="true" trust="0.7938" inferenceprovenance="iis::document_affiliations" provenanceaction="iis">
+		      <to class="hasAuthorInstitution" scheme="dnet:result_organization_relations" type="organization">re3data_____::b4850c70f1df846bbf4c82b10a9a1f1d</to>
+		      <legalname>National Institutes of Health, National Institute of Allergy and Infectious Diseases</legalname><websiteurl>https://www.niaid.nih.gov/</websiteurl><country classid="US" classname="United States" schemeid="dnet:countries" schemename="dnet:countries"/><legalshortname>NIH</legalshortname>
+		    </rel><rel inferred="true" trust="0.7938" inferenceprovenance="iis::document_affiliations" provenanceaction="iis">
+		      <to class="hasAuthorInstitution" scheme="dnet:result_organization_relations" type="organization">re3data_____::699f59de7d2b102f0edc881b0358c8e5</to>
+		      <legalname>National Institutes of Health, Targeted Software Development</legalname><country classid="US" classname="United States" schemeid="dnet:countries" schemename="dnet:countries"/><legalshortname>NIH</legalshortname><websiteurl>https://datascience.nih.gov/bd2k/funded-programs/software</websiteurl>
+		    </rel><rel inferred="true" trust="0.8998" inferenceprovenance="iis::document_affiliations" provenanceaction="iis">
+		      <to class="hasAuthorInstitution" scheme="dnet:result_organization_relations" type="organization">rcuk________::667e562f1d37430a7a7bcd3e84c8c4f0</to>
+		      <legalname>Cedars-Sinai Medical Center</legalname>
+		    </rel><rel inferred="true" trust="0.8998" inferenceprovenance="iis::document_affiliations" provenanceaction="iis">
+		      <to class="hasAuthorInstitution" scheme="dnet:result_organization_relations" type="organization">rcuk________::9500020a139081f0038cde7969ed953c</to>
+		      <legalname>Linkoping University</legalname>
+		    </rel><rel inferred="true" trust="0.8406" inferenceprovenance="iis::document_affiliations" provenanceaction="iis">
+		      <to class="hasAuthorInstitution" scheme="dnet:result_organization_relations" type="organization">nih_________::e70c5636b93794448250f660156d13e6</to>
+		      <legalname>NATIONAL INSTITUTE OF DENTAL &amp;CRANIOFACIAL RESEARCH</legalname>
+		    </rel><rel inferred="true" trust="0.8998" inferenceprovenance="iis::document_affiliations" provenanceaction="iis">
+		      <to class="hasAuthorInstitution" scheme="dnet:result_organization_relations" type="organization">nih_________::f691c51710828505ad0cdfeb444aa0ca</to>
+		      <legalname>CAROLINAS MEDICAL CENTER</legalname>
+		    </rel><rel inferred="true" trust="0.8998" inferenceprovenance="iis::document_affiliations" provenanceaction="iis">
+		      <to class="hasAuthorInstitution" scheme="dnet:result_organization_relations" type="organization">nsf_________::184f0af18e120fb74a2e35474e61ec68</to>
+		      <legalname>University of Minnesota Medical School</legalname>
+		    </rel><rel inferred="true" trust="0.8406" inferenceprovenance="iis::document_affiliations" provenanceaction="iis">
+		      <to class="hasAuthorInstitution" scheme="dnet:result_organization_relations" type="organization">nih_________::f92e1fdac280a5fa9e0fea30864dad08</to>
+		      <legalname>MASSACHUSETTS EYE and  EAR INFIRM</legalname>
+		    </rel><rel inferred="true" trust="0.8998" inferenceprovenance="iis::document_affiliations" provenanceaction="iis">
+		      <to class="hasAuthorInstitution" scheme="dnet:result_organization_relations" type="organization">nih_________::d82147c325c42030ae1add182e9640e7</to>
+		      <legalname>UPPSALA UNIVERSITY</legalname>
+		    </rel><rel inferred="true" trust="0.9" inferenceprovenance="iis::document_affiliations" provenanceaction="iis">
+		      <to class="hasAuthorInstitution" scheme="dnet:result_organization_relations" type="organization">dedup_wf_001::134338c852cb588939325faacd01bc3e</to>
+		      <websiteurl>https://www.uib.no/</websiteurl><legalname>Universitetet i Bergen</legalname><legalshortname>UiB</legalshortname><country classid="NO" classname="Norway" schemeid="dnet:countries" schemename="dnet:countries"/>
+		    </rel><rel inferred="true" trust="0.8998" inferenceprovenance="iis::document_affiliations" provenanceaction="iis">
+		      <to class="hasAuthorInstitution" scheme="dnet:result_organization_relations" type="organization">dedup_wf_001::12ab63b1fb601378fba70d9b0791b142</to>
+		      <websiteurl>https://hms.harvard.edu/</websiteurl><country classid="US" classname="United States" schemeid="dnet:countries" schemename="dnet:countries"/><legalname>Harvard Medical School</legalname>
+		    </rel><rel inferred="true" trust="0.9" inferenceprovenance="iis::document_affiliations" provenanceaction="iis">
+		      <to class="hasAuthorInstitution" scheme="dnet:result_organization_relations" type="organization">dedup_wf_001::291f63391b53428d4adf71db8efbfca9</to>
+		      <legalshortname>OMRF</legalshortname><legalname>Oklahoma Medical Research Foundation</legalname><websiteurl>https://omrf.org/</websiteurl><country classid="US" classname="United States" schemeid="dnet:countries" schemename="dnet:countries"/>
+		    </rel><rel inferred="true" trust="0.9" inferenceprovenance="iis::document_affiliations" provenanceaction="iis">
+		      <to class="hasAuthorInstitution" scheme="dnet:result_organization_relations" type="organization">dedup_wf_001::2151080f95e80822b2d1983afc672a93</to>
+		      <websiteurl>http://www.aphp.fr/</websiteurl><country classid="FR" classname="France" schemeid="dnet:countries" schemename="dnet:countries"/><legalshortname>AP-HP</legalshortname><legalname>Assistance Publique -Hopitaux De Paris</legalname>
+		    </rel><rel inferred="true" trust="0.9" inferenceprovenance="iis::document_affiliations" provenanceaction="iis">
+		      <to class="hasAuthorInstitution" scheme="dnet:result_organization_relations" type="organization">dedup_wf_001::1bb4e34fbcf3b4c245ae8f3edc8b5afc</to>
+		      <legalname>Stavanger University Hospital</legalname><websiteurl>http://www.helse-stavanger.no/en/Sider/default.aspx</websiteurl><legalshortname>Stavanger University Hospital</legalshortname><country classid="NO" classname="Norway" schemeid="dnet:countries" schemename="dnet:countries"/>
+		    </rel><rel inferred="true" trust="0.9" inferenceprovenance="iis::document_affiliations" provenanceaction="iis">
+		      <to class="hasAuthorInstitution" scheme="dnet:result_organization_relations" type="organization">dedup_wf_001::1b3d769bf88cda7d0a227f4260c3c10a</to>
+		      <legalshortname>KI</legalshortname><websiteurl>http://ki.se/en/startpage</websiteurl><legalname>Karolinska Institute</legalname><country classid="SE" classname="Sweden" schemeid="dnet:countries" schemename="dnet:countries"/>
+		    </rel><rel inferred="true" trust="0.8998" inferenceprovenance="iis::document_affiliations" provenanceaction="iis">
+		      <to class="hasAuthorInstitution" scheme="dnet:result_organization_relations" type="organization">nih_________::bf0fe39fd63592f82cfa9b88e1478d45</to>
+		      <legalname>WASHINGTON UNIVERSITY</legalname>
+		    </rel><rel inferred="true" trust="0.8998" inferenceprovenance="iis::document_affiliations" provenanceaction="iis">
+		      <to class="hasAuthorInstitution" scheme="dnet:result_organization_relations" type="organization">nih_________::99cb754f421c51f9fc1a19cb3fd1da12</to>
+		      <legalname>JOHNS HOPKINS UNIVERSITY</legalname>
+		    </rel><rel inferred="true" trust="0.8998" inferenceprovenance="iis::document_affiliations" provenanceaction="iis">
+		      <to class="hasAuthorInstitution" scheme="dnet:result_organization_relations" type="organization">dedup_wf_001::54e4d7e829a4ca3dfb746525d070070e</to>
+		      <legalname>Linköping University</legalname><legalshortname>LiU</legalshortname><websiteurl>http://www.liu.se/?l=en</websiteurl><country classid="SE" classname="Sweden" schemeid="dnet:countries" schemename="dnet:countries"/>
+		    </rel><rel inferred="true" trust="0.9" inferenceprovenance="iis::document_affiliations" provenanceaction="iis">
+		      <to class="hasAuthorInstitution" scheme="dnet:result_organization_relations" type="organization">dedup_wf_001::6afd4f58165a25979458b82fe57fdd01</to>
+		      <websiteurl>http://www.uib.no/en/node/36362</websiteurl><legalname>University of Bergen</legalname><legalshortname>University of Bergen</legalshortname><country classid="NO" classname="Norway" schemeid="dnet:countries" schemename="dnet:countries"/>
+		    </rel><rel inferred="true" trust="0.9" inferenceprovenance="iis::document_affiliations" provenanceaction="iis">
+		      <to class="hasAuthorInstitution" scheme="dnet:result_organization_relations" type="organization">dedup_wf_001::6b081c30ea9af6a41eccc62c20867ca6</to>
+		      <legalshortname>OUHSC</legalshortname><country classid="US" classname="United States" schemeid="dnet:countries" schemename="dnet:countries"/><legalname>University of Oklahoma Health Sciences Center</legalname><websiteurl>http://www.ouhsc.edu/</websiteurl>
+		    </rel><rel inferred="true" trust="0.72" inferenceprovenance="iis::document_referencedProjects" provenanceaction="iis">
+		      <to class="isProducedBy" scheme="dnet:result_project_relations" type="project">dfgf________::3afb822fce97b350eecc97f478a29686</to>
+		      <funding><funder id="dfgf________::DFGF" shortname="DFG" name="Deutsche Forschungsgemeinschaft" jurisdiction="DE"/><funding_level_0 name="Klinische Forschergruppen">dfgf________::DFGF::562485ab25954e4c6f0f0c28036b48a3</funding_level_0></funding><code>160564869 / KFO 250</code><title>Genetische und zelluläre Mechanismen von Autoimmunerkrankungen</title>
+		    </rel><rel inferred="true" trust="0.897" inferenceprovenance="iis::document_referencedProjects" provenanceaction="iis">
+		      <to class="isProducedBy" scheme="dnet:result_project_relations" type="project">nih_________::02c1506e44c126df80cdb797bad220e4</to>
+		      <funding><funder id="nih_________::NIH" shortname="NIH" name="National Institutes of Health" jurisdiction="US"/><funding_level_0 name="NATIONAL INSTITUTE OF ALLERGY AND INFECTIOUS DISEASES">nih_________::NIH::NATIONAL_INSTITUTE_OF_ALLERGY_AND_INFECTIOUS_DISEASES</funding_level_0></funding><code>5U19AI056363-02</code><title>Modulation of B Cell Responses in Autoimmunity</title>
+		    </rel><rel inferred="true" trust="0.897" inferenceprovenance="iis::document_referencedProjects" provenanceaction="iis">
+		      <to class="isProducedBy" scheme="dnet:result_project_relations" type="project">nih_________::02c83818ccfceb84af6af46fad89ea77</to>
+		      <funding><funder id="nih_________::NIH" shortname="NIH" name="National Institutes of Health" jurisdiction="US"/><funding_level_0 name="NATIONAL INSTITUTE OF ARTHRITIS AND MUSCULOSKELETAL AND SKIN DISEASES">nih_________::NIH::NATIONAL_INSTITUTE_OF_ARTHRITIS_AND_MUSCULOSKELETAL_AND_SKIN_DISEASES</funding_level_0></funding><code>5R01AR065953-03</code><title>Functional Evaluation of Established Sjogren's Syndrome Immune Response Loci</title>
+		    </rel><rel inferred="true" trust="0.9" inferenceprovenance="" provenanceaction="sysimport:crosswalk:repository">
+		      <to class="isProducedBy" scheme="dnet:result_project_relations" type="project">corda__h2020::4c52e818803f4a46e6c015b8fc337d57</to>
+		      <code>731944</code><title>HARMONIzation and integrative analysis of regional, national and international Cohorts on primary Sjögren’s Syndrome (pSS) towards improved stratification, treatment and health policy making</title><funding><funder id="ec__________::EC" shortname="EC" name="European Commission" jurisdiction="EU"/><funding_level_0 name="H2020">ec__________::EC::H2020</funding_level_0><funding_level_1 name="RIA">ec__________::EC::H2020::RIA</funding_level_1></funding><acronym>HarmonicSS</acronym><contracttype classid="RIA" classname="Research and Innovation action" schemeid="ec:h2020toas" schemename="Horizon 2020 - Type of Actions"/>
+		    </rel><rel inferred="true" trust="0.8694" inferenceprovenance="iis::document_affiliations" provenanceaction="iis">
+		      <to class="hasAuthorInstitution" scheme="dnet:result_organization_relations" type="organization">dedup_wf_001::095367cf5cad6d3c00da3d7d6cacfe56</to>
+		      <legalname>UNIVERSITY OF NEWCASTLE UPON TYNE</legalname><country classid="GB" classname="United Kingdom" schemeid="dnet:countries" schemename="dnet:countries"/><websiteurl>http://www.newcastle.ac.uk</websiteurl><legalshortname>UNEW</legalshortname>
+		    </rel><rel inferred="true" trust="0.8433" inferenceprovenance="iis::document_affiliations" provenanceaction="iis">
+		      <to class="hasAuthorInstitution" scheme="dnet:result_organization_relations" type="organization">dedup_wf_001::0d7ba862269ab387c46a8246ee991df3</to>
+		      <legalname>North Memorial Health Care - North Memorial Medical Center</legalname><legalshortname>North Memorial Medical Center</legalshortname><country classid="US" classname="United States" schemeid="dnet:countries" schemename="dnet:countries"/><websiteurl>https://northmemorial.com/location/north-memorial-health-hospital/</websiteurl>
+		    </rel><rel inferred="true" trust="0.8998" inferenceprovenance="iis::document_affiliations" provenanceaction="iis">
+		      <to class="hasAuthorInstitution" scheme="dnet:result_organization_relations" type="organization">dedup_wf_001::0439fc92160aea4a7e10fd6e5b351ec3</to>
+		      <legalname>Cincinnati Children's Hospital Medical Center</legalname><legalshortname>CCHMC</legalshortname><country classid="US" classname="United States" schemeid="dnet:countries" schemename="dnet:countries"/><websiteurl>http://www.cincinnatichildrens.org/default/</websiteurl>
+		    </rel><rel inferred="true" trust="0.9" inferenceprovenance="iis::document_affiliations" provenanceaction="iis">
+		      <to class="hasAuthorInstitution" scheme="dnet:result_organization_relations" type="organization">dedup_wf_001::037f409ee87c2f0ec5f0a7c673fb7512</to>
+		      <websiteurl>https://www.uu.se/en/</websiteurl><legalname>Uppsala University</legalname><legalshortname>Uppsala University</legalshortname><country classid="SE" classname="Sweden" schemeid="dnet:countries" schemename="dnet:countries"/>
+		    </rel><rel inferred="true" trust="0.9" inferenceprovenance="iis::document_affiliations" provenanceaction="iis">
+		      <to class="hasAuthorInstitution" scheme="dnet:result_organization_relations" type="organization">nih_________::7630b913b7f1d9d65476607de9734b27</to>
+		      <legalname>KAROLINSKA INSTITUTE</legalname>
+		    </rel><rel inferred="true" trust="0.8998" inferenceprovenance="iis::document_affiliations" provenanceaction="iis">
+		      <to class="hasAuthorInstitution" scheme="dnet:result_organization_relations" type="organization">nih_________::79a243601cdcdb3db30dbbf73f9fb315</to>
+		      <legalname>HARVARD MEDICAL SCHOOL</legalname>
+		    </rel><rel inferred="true" trust="0.9" inferenceprovenance="iis::document_affiliations" provenanceaction="iis">
+		      <to class="hasAuthorInstitution" scheme="dnet:result_organization_relations" type="organization">nih_________::6d77e190f03e1dcae0266d3762e8b7d1</to>
+		      <legalname>UNIVERSITY OF BERGEN</legalname>
+		    </rel><rel inferred="true" trust="0.8998" inferenceprovenance="iis::document_affiliations" provenanceaction="iis">
+		      <to class="hasAuthorInstitution" scheme="dnet:result_organization_relations" type="organization">nih_________::84ddc4e62becb07171f5a26206c937a1</to>
+		      <legalname>KING'S COLLEGE LONDON</legalname>
+		    </rel><rel inferred="true" trust="0.8998" inferenceprovenance="iis::document_affiliations" provenanceaction="iis">
+		      <to class="hasAuthorInstitution" scheme="dnet:result_organization_relations" type="organization">nih_________::46a7a2fa4fc39f824cf3864010fae94a</to>
+		      <legalname>HANNOVER MEDICAL SCHOOL</legalname>
+		    </rel><rel inferred="true" trust="0.8406" inferenceprovenance="iis::document_affiliations" provenanceaction="iis">
+		      <to class="hasAuthorInstitution" scheme="dnet:result_organization_relations" type="organization">nih_________::4b3bd7b82cbb35bef556d5ad577a2bce</to>
+		      <legalname>NATIONAL INSTITUTE OF DENTAL &amp; CRANIOFACIAL RESEARCH</legalname>
+		    </rel><rel inferred="true" trust="0.8966" inferenceprovenance="iis::document_affiliations" provenanceaction="iis">
+		      <to class="hasAuthorInstitution" scheme="dnet:result_organization_relations" type="organization">nih_________::541b3bb777c6d97b6094a90130567146</to>
+		      <legalname>MASSACHUSETTS EYE AND EAR INFIRMARY</legalname>
+		    </rel><rel inferred="true" trust="0.8998" inferenceprovenance="iis::document_affiliations" provenanceaction="iis">
+		      <to class="hasAuthorInstitution" scheme="dnet:result_organization_relations" type="organization">nih_________::565e97129905324507ca2fdba3c68cd0</to>
+		      <legalname>CEDARS-SINAI MEDICAL CENTER</legalname>
+		    </rel><rel inferred="true" trust="0.8998" inferenceprovenance="iis::document_affiliations" provenanceaction="iis">
+		      <to class="hasAuthorInstitution" scheme="dnet:result_organization_relations" type="organization">nih_________::17dd50e2ee1e8dfedb4635d71f2bb5ad</to>
+		      <legalname>NORTH MEMORIAL MEDICAL CENTER</legalname>
+		    </rel><rel inferred="true" trust="0.9" inferenceprovenance="iis::document_affiliations" provenanceaction="iis">
+		      <to class="hasAuthorInstitution" scheme="dnet:result_organization_relations" type="organization">nih_________::0def58eea4c81f82d6d7b13ba8b6c206</to>
+		      <legalname>OKLAHOMA MEDICAL RESEARCH FOUNDATION</legalname>
+		    </rel><rel inferred="true" trust="0.7938" inferenceprovenance="iis::document_affiliations" provenanceaction="iis">
+		      <to class="hasAuthorInstitution" scheme="dnet:result_organization_relations" type="organization">nih_________::0352fa9dbf5677f98c9a97bb83d9d515</to>
+		      <legalname>National Institutes of Health</legalname><legalshortname>NIH</legalshortname>
+		    </rel><rel inferred="true" trust="0.8998" inferenceprovenance="iis::document_affiliations" provenanceaction="iis">
+		      <to class="hasAuthorInstitution" scheme="dnet:result_organization_relations" type="organization">nsf_________::7b070fa092b1dc6b69b0d67a4fc04142</to>
+		      <legalname>Oklahoma Baptist University</legalname>
+		    </rel><rel inferred="true" trust="0.8998" inferenceprovenance="iis::document_affiliations" provenanceaction="iis">
+		      <to class="hasAuthorInstitution" scheme="dnet:result_organization_relations" type="organization">wt__________::14b68775f02150469c20a2c468c199e4</to>
+		      <legalname>Johns Hopkins University</legalname>
+		    </rel><rel inferred="true" trust="0.8997" inferenceprovenance="iis::document_affiliations" provenanceaction="iis">
+		      <to class="hasAuthorInstitution" scheme="dnet:result_organization_relations" type="organization">snsf________::d1c9c52a17a0ad7f9cb63abf6014b803</to>
+		      <legalname>University of Oklahoma Health Sciences Ctr</legalname><country classid="US" classname="United States" schemeid="dnet:countries" schemename="dnet:countries"/>
+		    </rel><rel inferred="true" trust="0.897" inferenceprovenance="iis::document_referencedProjects" provenanceaction="iis">
+		      <to class="isProducedBy" scheme="dnet:result_project_relations" type="project">nih_________::9ba29e2f5d8c0c5d55dfde6a52afaf57</to>
+		      <code>1P30GM110766-01</code><funding><funder id="nih_________::NIH" shortname="NIH" name="National Institutes of Health" jurisdiction="US"/><funding_level_0 name="NATIONAL INSTITUTE OF GENERAL MEDICAL SCIENCES">nih_________::NIH::NATIONAL_INSTITUTE_OF_GENERAL_MEDICAL_SCIENCES</funding_level_0></funding><title>Genomics Core</title>
+		    </rel><rel inferred="true" trust="0.897" inferenceprovenance="iis::document_referencedProjects" provenanceaction="iis">
+		      <to class="isProducedBy" scheme="dnet:result_project_relations" type="project">nih_________::8ce1ef187c64da48561b3636b5799d1d</to>
+		      <code>5R01DE018209-02</code><title>Susceptibility Genes in Primary Sjogrens Sydrome</title><funding><funder id="nih_________::NIH" shortname="NIH" name="National Institutes of Health" jurisdiction="US"/><funding_level_0 name="NATIONAL INSTITUTE OF DENTAL &amp;CRANIOFACIAL RESEARCH">nih_________::NIH::NATIONAL_INSTITUTE_OF_DENTAL_&amp;CRANIOFACIAL_RESEARCH</funding_level_0></funding>
+		    </rel><rel inferred="true" trust="0.9" inferenceprovenance="iis::document_similarities_standard" provenanceaction="iis">
+		      <to class="hasAmongTopNSimilarDocuments" scheme="dnet:result_result_relations" type="result">doiboost____::741068d9bd8dd78bc370818def2649bb</to>
+		      <title classid="main title" classname="main title" schemeid="dnet:dataCite_title" schemename="dnet:dataCite_title">Type 1 diabetes and the OAS gene cluster: association with splicing polymorphism or haplotype?</title><similarity>0.89977354</similarity><resulttype classid="publication" classname="publication" schemeid="dnet:result_typologies" schemename="dnet:result_typologies"/><pid classid="doi" classname="doi" schemeid="dnet:pid_types" schemename="dnet:pid_types">10.1136/jmg.2005.035212</pid><type>STANDARD</type>
+		    </rel><rel inferred="true" trust="0.9" inferenceprovenance="iis::document_similarities_standard" provenanceaction="iis">
+		      <to class="isAmongTopNSimilarDocuments" scheme="dnet:result_result_relations" type="result">doiboost____::741068d9bd8dd78bc370818def2649bb</to>
+		      <title classid="main title" classname="main title" schemeid="dnet:dataCite_title" schemename="dnet:dataCite_title">Type 1 diabetes and the OAS gene cluster: association with splicing polymorphism or haplotype?</title><similarity>0.89977354</similarity><resulttype classid="publication" classname="publication" schemeid="dnet:result_typologies" schemename="dnet:result_typologies"/><pid classid="doi" classname="doi" schemeid="dnet:pid_types" schemename="dnet:pid_types">10.1136/jmg.2005.035212</pid><type>STANDARD</type>
+		    </rel><rel inferred="true" trust="0.897" inferenceprovenance="iis::document_referencedProjects" provenanceaction="iis">
+		      <to class="isProducedBy" scheme="dnet:result_project_relations" type="project">nih_________::0b843afdc44c65c18a333e7e4b161124</to>
+		      <code>5P20GM103456-10</code><funding><funder id="nih_________::NIH" shortname="NIH" name="National Institutes of Health" jurisdiction="US"/><funding_level_0 name="NATIONAL INSTITUTE OF GENERAL MEDICAL SCIENCES">nih_________::NIH::NATIONAL_INSTITUTE_OF_GENERAL_MEDICAL_SCIENCES</funding_level_0></funding><title>Molecular Mechanisms and Genetics of Autoimmunity</title>
+		    </rel><rel inferred="true" trust="0.897" inferenceprovenance="iis::document_referencedProjects" provenanceaction="iis">
+		      <to class="isProducedBy" scheme="dnet:result_project_relations" type="project">nih_________::382453fa98c5faba088799c6b938fb07</to>
+		      <code>4R37AI024717-22</code><funding><funder id="nih_________::NIH" shortname="NIH" name="National Institutes of Health" jurisdiction="US"/><funding_level_0 name="NATIONAL INSTITUTE OF ALLERGY AND INFECTIOUS DISEASES">nih_________::NIH::NATIONAL_INSTITUTE_OF_ALLERGY_AND_INFECTIOUS_DISEASES</funding_level_0></funding><title>Genetic Linkage in Lupus</title>
+		    </rel><rel inferred="true" trust="0.897" inferenceprovenance="iis::document_referencedProjects" provenanceaction="iis">
+		      <to class="isProducedBy" scheme="dnet:result_project_relations" type="project">nih_________::32c6006cf7c1a080fa8cb2faf589df0f</to>
+		      <code>8P30GM103510-03</code><funding><funder id="nih_________::NIH" shortname="NIH" name="National Institutes of Health" jurisdiction="US"/><funding_level_0 name="NATIONAL INSTITUTE OF GENERAL MEDICAL SCIENCES">nih_________::NIH::NATIONAL_INSTITUTE_OF_GENERAL_MEDICAL_SCIENCES</funding_level_0></funding><title>Science in a Culture of Mentoring</title>
+		    </rel><rel inferred="true" trust="0.897" inferenceprovenance="iis::document_referencedProjects" provenanceaction="iis">
+		      <to class="isProducedBy" scheme="dnet:result_project_relations" type="project">nih_________::1054527997a668f670e08178cc823981</to>
+		      <code>5P01AR049084-09</code><title>A Genetic Risk Profile in Longitudinal Systemic Lupus Erythematosus (SLE) Cohorts</title><funding><funder id="nih_________::NIH" shortname="NIH" name="National Institutes of Health" jurisdiction="US"/><funding_level_0 name="NATIONAL INSTITUTE OF ARTHRITIS AND MUSCULOSKELETAL AND SKIN DISEASES">nih_________::NIH::NATIONAL_INSTITUTE_OF_ARTHRITIS_AND_MUSCULOSKELETAL_AND_SKIN_DISEASES</funding_level_0></funding>
+		    </rel><rel inferred="true" trust="0.897" inferenceprovenance="iis::document_referencedProjects" provenanceaction="iis">
+		      <to class="isProducedBy" scheme="dnet:result_project_relations" type="project">nih_________::1094ade1cea3e7ba77b3acdbbc58e6a3</to>
+		      <code>2P30AR053483-06</code><title>Oklahoma Rheumatic Disease Research Cores Center</title><funding><funder id="nih_________::NIH" shortname="NIH" name="National Institutes of Health" jurisdiction="US"/><funding_level_0 name="NATIONAL INSTITUTE OF ARTHRITIS AND MUSCULOSKELETAL AND SKIN DISEASES">nih_________::NIH::NATIONAL_INSTITUTE_OF_ARTHRITIS_AND_MUSCULOSKELETAL_AND_SKIN_DISEASES</funding_level_0></funding>
+		    </rel><rel inferred="true" trust="0.897" inferenceprovenance="iis::document_referencedProjects" provenanceaction="iis">
+		      <to class="isProducedBy" scheme="dnet:result_project_relations" type="project">nih_________::0e722d0e89edf98d99147b217225a2d8</to>
+		      <funding><funder id="nih_________::NIH" shortname="NIH" name="National Institutes of Health" jurisdiction="US"/><funding_level_0 name="NATIONAL INSTITUTE OF ALLERGY AND INFECTIOUS DISEASES">nih_________::NIH::NATIONAL_INSTITUTE_OF_ALLERGY_AND_INFECTIOUS_DISEASES</funding_level_0></funding><title>Understanding early events in lupus autoimmunity to aid prevention</title><code>5U01AI101934-03</code>
+		    </rel><rel inferred="true" trust="0.897" inferenceprovenance="iis::document_referencedProjects" provenanceaction="iis">
+		      <to class="isProducedBy" scheme="dnet:result_project_relations" type="project">nih_________::288ab6b5bb114dc490b337e5a8afd122</to>
+		      <title>Pre-Clinical Studies to Identify SLE Therapeutic Targets</title><funding><funder id="nih_________::NIH" shortname="NIH" name="National Institutes of Health" jurisdiction="US"/><funding_level_0 name="NATIONAL INSTITUTE OF ALLERGY AND INFECTIOUS DISEASES">nih_________::NIH::NATIONAL_INSTITUTE_OF_ALLERGY_AND_INFECTIOUS_DISEASES</funding_level_0></funding><code>5U19AI082714-04</code>
+		    </rel><rel inferred="true" trust="0.897" inferenceprovenance="iis::document_referencedProjects" provenanceaction="iis">
+		      <to class="isProducedBy" scheme="dnet:result_project_relations" type="project">nih_________::21bb7e87f6e38a488e73100070159b8d</to>
+		      <title>Genetic Association in Sjogrens Syndrome</title><code>5R01DE015223-03</code><funding><funder id="nih_________::NIH" shortname="NIH" name="National Institutes of Health" jurisdiction="US"/><funding_level_0 name="NATIONAL INSTITUTE OF DENTAL &amp;CRANIOFACIAL RESEARCH">nih_________::NIH::NATIONAL_INSTITUTE_OF_DENTAL_&amp;CRANIOFACIAL_RESEARCH</funding_level_0></funding>
+		    </rel><rel inferred="true" trust="0.897" inferenceprovenance="iis::document_referencedProjects" provenanceaction="iis">
+		      <to class="isProducedBy" scheme="dnet:result_project_relations" type="project">nih_________::30d59ef21d7b8d87eceb105074b102f4</to>
+		      <code>1S10RR026735-01</code><funding><funder id="nih_________::NIH" shortname="NIH" name="National Institutes of Health" jurisdiction="US"/><funding_level_0 name="NATIONAL CENTER FOR RESEARCH RESOURCES">nih_________::NIH::NATIONAL_CENTER_FOR_RESEARCH_RESOURCES</funding_level_0></funding><title>Oklahoma High-Throughput Serum Analyte System</title>
+		    </rel><rel inferred="true" trust="0.897" inferenceprovenance="iis::document_referencedProjects" provenanceaction="iis">
+		      <to class="isProducedBy" scheme="dnet:result_project_relations" type="project">nih_________::3079fc8b121298f4db18f759907aa76d</to>
+		      <title>Illumina iScan System for the OMRF Microarray Research Facility</title><funding><funder id="nih_________::NIH" shortname="NIH" name="National Institutes of Health" jurisdiction="US"/><funding_level_0 name="NATIONAL CENTER FOR RESEARCH RESOURCES">nih_________::NIH::NATIONAL_CENTER_FOR_RESEARCH_RESOURCES</funding_level_0></funding><code>7S10RR027190-02</code>
+		    </rel><rel inferred="true" trust="0.897" inferenceprovenance="iis::document_referencedProjects" provenanceaction="iis">
+		      <to class="isProducedBy" scheme="dnet:result_project_relations" type="project">nih_________::2e4948f43c1345fdae6071fbc219cd3b</to>
+		      <title>Antibody Mediated Spontaneous Abortion in Lupus Pregnancies</title><funding><funder id="nih_________::NIH" shortname="NIH" name="National Institutes of Health" jurisdiction="US"/><funding_level_0 name="NATIONAL INSTITUTE OF ARTHRITIS AND MUSCULOSKELETAL AND SKIN DISEASES">nih_________::NIH::NATIONAL_INSTITUTE_OF_ARTHRITIS_AND_MUSCULOSKELETAL_AND_SKIN_DISEASES</funding_level_0></funding><code>1R03AR065786-01</code>
+		    </rel><rel inferred="true" trust="0.897" inferenceprovenance="iis::document_referencedProjects" provenanceaction="iis">
+		      <to class="isProducedBy" scheme="dnet:result_project_relations" type="project">nih_________::2a70e8c3883ae415c9e0fbb549c1232f</to>
+		      <code>5U54GM104938-03</code><title>Clinical Research Education, Mentoring, and Career Development KCA</title><funding><funder id="nih_________::NIH" shortname="NIH" name="National Institutes of Health" jurisdiction="US"/><funding_level_0 name="NATIONAL INSTITUTE OF GENERAL MEDICAL SCIENCES">nih_________::NIH::NATIONAL_INSTITUTE_OF_GENERAL_MEDICAL_SCIENCES</funding_level_0></funding>
+		    </rel><rel inferred="true" trust="0.9" inferenceprovenance="iis::document_similarities_standard" provenanceaction="iis">
+		      <to class="hasAmongTopNSimilarDocuments" scheme="dnet:result_result_relations" type="result">dedup_wf_001::f16b7e798238da437f01f2772eac7836</to>
+		      <resulttype classid="publication" classname="publication" schemeid="dnet:result_typologies" schemename="dnet:result_typologies"/><dateofacceptance>2017-12-01</dateofacceptance><title classid="main title" classname="main title" schemeid="dnet:dataCite_title" schemename="dnet:dataCite_title">A functional variant in the OAS1 gene is associated with Sjögren's syndrome complicated with HBV infection.</title><type>STANDARD</type><similarity>0.8436532</similarity><pid classid="doi" classname="doi" schemeid="dnet:pid_types" schemename="dnet:pid_types">10.1038/s41598-017-17931-9</pid><publisher>Nature Publishing Group UK</publisher><pid classid="pmid" classname="pmid" schemeid="dnet:pid_types" schemename="dnet:pid_types">29242559</pid><pid classid="pmc" classname="pmc" schemeid="dnet:pid_types" schemename="dnet:pid_types">PMC5730593</pid>
+		    </rel><rel inferred="true" trust="0.9" inferenceprovenance="iis::document_similarities_standard" provenanceaction="iis">
+		      <to class="isAmongTopNSimilarDocuments" scheme="dnet:result_result_relations" type="result">dedup_wf_001::f16b7e798238da437f01f2772eac7836</to>
+		      <resulttype classid="publication" classname="publication" schemeid="dnet:result_typologies" schemename="dnet:result_typologies"/><dateofacceptance>2017-12-01</dateofacceptance><title classid="main title" classname="main title" schemeid="dnet:dataCite_title" schemename="dnet:dataCite_title">A functional variant in the OAS1 gene is associated with Sjögren's syndrome complicated with HBV infection.</title><type>STANDARD</type><similarity>0.8436532</similarity><pid classid="doi" classname="doi" schemeid="dnet:pid_types" schemename="dnet:pid_types">10.1038/s41598-017-17931-9</pid><publisher>Nature Publishing Group UK</publisher><pid classid="pmid" classname="pmid" schemeid="dnet:pid_types" schemename="dnet:pid_types">29242559</pid><pid classid="pmc" classname="pmc" schemeid="dnet:pid_types" schemename="dnet:pid_types">PMC5730593</pid>
+		    </rel><rel inferred="true" trust="0.9" inferenceprovenance="iis::document_similarities_standard" provenanceaction="iis">
+		      <to class="hasAmongTopNSimilarDocuments" scheme="dnet:result_result_relations" type="result">doiboost____::ae4e5ebe637bcd37a5d0fee5f502f785</to>
+		      <resulttype classid="publication" classname="publication" schemeid="dnet:result_typologies" schemename="dnet:result_typologies"/><pid classid="doi" classname="doi" schemeid="dnet:pid_types" schemename="dnet:pid_types">10.1136/annrheumdis-2015-eular.5182</pid><title classid="main title" classname="main title" schemeid="dnet:dataCite_title" schemename="dnet:dataCite_title">OP0081 Identification of a Sjögren's Syndrome-Associated Variant that Influences OAS1 Isoform Switching and Protein Expression</title><type>STANDARD</type><similarity>0.79701084</similarity>
+		    </rel><rel inferred="true" trust="0.9" inferenceprovenance="iis::document_similarities_standard" provenanceaction="iis">
+		      <to class="isAmongTopNSimilarDocuments" scheme="dnet:result_result_relations" type="result">doiboost____::ae4e5ebe637bcd37a5d0fee5f502f785</to>
+		      <resulttype classid="publication" classname="publication" schemeid="dnet:result_typologies" schemename="dnet:result_typologies"/><pid classid="doi" classname="doi" schemeid="dnet:pid_types" schemename="dnet:pid_types">10.1136/annrheumdis-2015-eular.5182</pid><title classid="main title" classname="main title" schemeid="dnet:dataCite_title" schemename="dnet:dataCite_title">OP0081 Identification of a Sjögren's Syndrome-Associated Variant that Influences OAS1 Isoform Switching and Protein Expression</title><type>STANDARD</type><similarity>0.79701084</similarity>
+		    </rel><rel inferred="true" trust="0.9" inferenceprovenance="iis::document_similarities_standard" provenanceaction="iis">
+		      <to class="hasAmongTopNSimilarDocuments" scheme="dnet:result_result_relations" type="result">dedup_wf_001::d1e675d8dbdaa448c56f0f6ab9e149f1</to>
+		      <similarity>0.90368664</similarity><pid classid="pmid" classname="pmid" schemeid="dnet:pid_types" schemename="dnet:pid_types">30497421</pid><resulttype classid="publication" classname="publication" schemeid="dnet:result_typologies" schemename="dnet:result_typologies"/><pid classid="doi" classname="doi" schemeid="dnet:pid_types" schemename="dnet:pid_types">10.1186/s12890-018-0746-x</pid><dateofacceptance>2018-11-29</dateofacceptance><type>STANDARD</type><title classid="main title" classname="main title" schemeid="dnet:dataCite_title" schemename="dnet:dataCite_title">2'-5'-Oligoadenylate synthetase 1 polymorphisms are associated with tuberculosis: a case-control study.</title>
+		    </rel><rel inferred="true" trust="0.9" inferenceprovenance="iis::document_similarities_standard" provenanceaction="iis">
+		      <to class="isAmongTopNSimilarDocuments" scheme="dnet:result_result_relations" type="result">dedup_wf_001::d1e675d8dbdaa448c56f0f6ab9e149f1</to>
+		      <similarity>0.90368664</similarity><pid classid="pmid" classname="pmid" schemeid="dnet:pid_types" schemename="dnet:pid_types">30497421</pid><resulttype classid="publication" classname="publication" schemeid="dnet:result_typologies" schemename="dnet:result_typologies"/><pid classid="doi" classname="doi" schemeid="dnet:pid_types" schemename="dnet:pid_types">10.1186/s12890-018-0746-x</pid><dateofacceptance>2018-11-29</dateofacceptance><type>STANDARD</type><title classid="main title" classname="main title" schemeid="dnet:dataCite_title" schemename="dnet:dataCite_title">2'-5'-Oligoadenylate synthetase 1 polymorphisms are associated with tuberculosis: a case-control study.</title>
+		    </rel><rel inferred="true" trust="0.9" inferenceprovenance="iis::document_similarities_standard" provenanceaction="iis">
+		      <to class="hasAmongTopNSimilarDocuments" scheme="dnet:result_result_relations" type="result">r37980778c78::b815dbfbf4d99d2115468c236e8536ad</to>
+		      <similarity>0.8779519</similarity><pid classid="doi" classname="doi" schemeid="dnet:pid_types" schemename="dnet:pid_types">10.1371/journal.pgen.1006820</pid><type>STANDARD</type><dateofacceptance>2017-01-01</dateofacceptance><title classid="main title" classname="main title" schemeid="dnet:dataCite_title" schemename="dnet:dataCite_title">Identification of a Sjögren's syndrome susceptibility locus at &lt;i&gt;OAS1&lt;/i&gt; that influences isoform switching, protein expression, and responsiveness to type I interferons</title><publisher>Figshare</publisher><resulttype classid="other" classname="other" schemeid="dnet:result_typologies" schemename="dnet:result_typologies"/>
+		    </rel><rel inferred="true" trust="0.9" inferenceprovenance="iis::document_similarities_standard" provenanceaction="iis">
+		      <to class="isAmongTopNSimilarDocuments" scheme="dnet:result_result_relations" type="result">r37980778c78::b815dbfbf4d99d2115468c236e8536ad</to>
+		      <similarity>0.8779519</similarity><pid classid="doi" classname="doi" schemeid="dnet:pid_types" schemename="dnet:pid_types">10.1371/journal.pgen.1006820</pid><type>STANDARD</type><dateofacceptance>2017-01-01</dateofacceptance><title classid="main title" classname="main title" schemeid="dnet:dataCite_title" schemename="dnet:dataCite_title">Identification of a Sjögren's syndrome susceptibility locus at &lt;i&gt;OAS1&lt;/i&gt; that influences isoform switching, protein expression, and responsiveness to type I interferons</title><publisher>Figshare</publisher><resulttype classid="other" classname="other" schemeid="dnet:result_typologies" schemename="dnet:result_typologies"/>
+		    </rel><rel inferred="true" trust="0.9" inferenceprovenance="iis::document_similarities_standard" provenanceaction="iis">
+		      <to class="hasAmongTopNSimilarDocuments" scheme="dnet:result_result_relations" type="result">doiboost____::e143e7a0a435918e7485363b518a2bf5</to>
+		      <resulttype classid="publication" classname="publication" schemeid="dnet:result_typologies" schemename="dnet:result_typologies"/><similarity>0.9169652</similarity><pid classid="doi" classname="doi" schemeid="dnet:pid_types" schemename="dnet:pid_types">10.1111/iji.12134</pid><type>STANDARD</type><title classid="main title" classname="main title" schemeid="dnet:dataCite_title" schemename="dnet:dataCite_title">Association analysis of polymorphisms in OAS1 with susceptibility and severity of hand, foot and mouth disease</title>
+		    </rel><rel inferred="true" trust="0.9" inferenceprovenance="iis::document_similarities_standard" provenanceaction="iis">
+		      <to class="isAmongTopNSimilarDocuments" scheme="dnet:result_result_relations" type="result">doiboost____::e143e7a0a435918e7485363b518a2bf5</to>
+		      <resulttype classid="publication" classname="publication" schemeid="dnet:result_typologies" schemename="dnet:result_typologies"/><similarity>0.9169652</similarity><pid classid="doi" classname="doi" schemeid="dnet:pid_types" schemename="dnet:pid_types">10.1111/iji.12134</pid><type>STANDARD</type><title classid="main title" classname="main title" schemeid="dnet:dataCite_title" schemename="dnet:dataCite_title">Association analysis of polymorphisms in OAS1 with susceptibility and severity of hand, foot and mouth disease</title>
+		    </rel><rel inferred="true" trust="0.897" inferenceprovenance="iis::document_referencedProjects" provenanceaction="iis">
+		      <to class="isProducedBy" scheme="dnet:result_project_relations" type="project">nih_________::7611a873d4d066de91f96dc3c8d49704</to>
+		      <funding><funder id="nih_________::NIH" shortname="NIH" name="National Institutes of Health" jurisdiction="US"/><funding_level_0 name="NATIONAL CENTER FOR RESEARCH RESOURCES">nih_________::NIH::NATIONAL_CENTER_FOR_RESEARCH_RESOURCES</funding_level_0></funding><code>1S10RR013039-01</code><title>MICROPLATE SCINTILLATION/LUMINESCENCE/FLOUR COUNTER</title>
+		    </rel><rel inferred="true" trust="0.897" inferenceprovenance="iis::document_referencedProjects" provenanceaction="iis">
+		      <to class="isProducedBy" scheme="dnet:result_project_relations" type="project">nih_________::795ec48499a4fb46af2d1a8f67fb8fd0</to>
+		      <title>Candidate Causal Variants in Systemic Lupus Erythematosus</title><code>5RC2AR058959-02</code><funding><funder id="nih_________::NIH" shortname="NIH" name="National Institutes of Health" jurisdiction="US"/><funding_level_0 name="NATIONAL INSTITUTE OF ARTHRITIS AND MUSCULOSKELETAL AND SKIN DISEASES">nih_________::NIH::NATIONAL_INSTITUTE_OF_ARTHRITIS_AND_MUSCULOSKELETAL_AND_SKIN_DISEASES</funding_level_0></funding>
+		    </rel><rel inferred="true" trust="0.897" inferenceprovenance="iis::document_referencedProjects" provenanceaction="iis">
+		      <to class="isProducedBy" scheme="dnet:result_project_relations" type="project">nih_________::782552295d21ca276e58a2f42b4c6024</to>
+		      <funding><funder id="nih_________::NIH" shortname="NIH" name="National Institutes of Health" jurisdiction="US"/><funding_level_0 name="NATIONAL INSTITUTE OF ALLERGY AND INFECTIOUS DISEASES">nih_________::NIH::NATIONAL_INSTITUTE_OF_ALLERGY_AND_INFECTIOUS_DISEASES</funding_level_0></funding><code>5P01AI083194-02</code><title>Sequencing</title>
+		    </rel><rel inferred="true" trust="0.9" inferenceprovenance="iis::document_similarities_standard" provenanceaction="iis">
+		      <to class="hasAmongTopNSimilarDocuments" scheme="dnet:result_result_relations" type="result">r37980778c78::4cfd2bb7b50dc24f1c2f503c29e5a664</to>
+		      <dateofacceptance>2009-01-01</dateofacceptance><pid classid="doi" classname="doi" schemeid="dnet:pid_types" schemename="dnet:pid_types">10.1371/journal.ppat.1000321</pid><type>STANDARD</type><title classid="main title" classname="main title" schemeid="dnet:dataCite_title" schemename="dnet:dataCite_title">Genetic Variation in &lt;em&gt;OAS1&lt;/em&gt; Is a Risk Factor for Initial Infection with West Nile Virus in Man</title><publisher>Figshare</publisher><similarity>0.7852244</similarity><resulttype classid="other" classname="other" schemeid="dnet:result_typologies" schemename="dnet:result_typologies"/>
+		    </rel><rel inferred="true" trust="0.9" inferenceprovenance="iis::document_similarities_standard" provenanceaction="iis">
+		      <to class="isAmongTopNSimilarDocuments" scheme="dnet:result_result_relations" type="result">r37980778c78::4cfd2bb7b50dc24f1c2f503c29e5a664</to>
+		      <dateofacceptance>2009-01-01</dateofacceptance><pid classid="doi" classname="doi" schemeid="dnet:pid_types" schemename="dnet:pid_types">10.1371/journal.ppat.1000321</pid><type>STANDARD</type><title classid="main title" classname="main title" schemeid="dnet:dataCite_title" schemename="dnet:dataCite_title">Genetic Variation in &lt;em&gt;OAS1&lt;/em&gt; Is a Risk Factor for Initial Infection with West Nile Virus in Man</title><publisher>Figshare</publisher><similarity>0.7852244</similarity><resulttype classid="other" classname="other" schemeid="dnet:result_typologies" schemename="dnet:result_typologies"/>
+		    </rel><rel inferred="true" trust="0.9" inferenceprovenance="iis::document_similarities_standard" provenanceaction="iis">
+		      <to class="isAmongTopNSimilarDocuments" scheme="dnet:result_result_relations" type="result">dedup_wf_001::309f7afc407eb92b0a6aed50288e98b6</to>
+		      <pid classid="doi" classname="doi" schemeid="dnet:pid_types" schemename="dnet:pid_types">https://doi.org/10.6084/m9.figshare.26798.v1</pid><type>STANDARD</type><resulttype classid="dataset" classname="dataset" schemeid="dnet:result_typologies" schemename="dnet:result_typologies"/><similarity>0.8452605</similarity><dateofacceptance>2011-01-01</dateofacceptance><pid classid="doi" classname="doi" schemeid="dnet:pid_types" schemename="dnet:pid_types">10.6084/m9.figshare.26798</pid><pid classid="doi" classname="doi" schemeid="dnet:pid_types" schemename="dnet:pid_types">https://doi.org/10.6084/m9.figshare.26798</pid><publisher>Figshare</publisher><title classid="main title" classname="main title" schemeid="dnet:dataCite_title" schemename="dnet:dataCite_title">Genome-wide survey of allele-specific splicing in humans-2</title><pid classid="doi" classname="doi" schemeid="dnet:pid_types" schemename="dnet:pid_types">10.6084/m9.figshare.26798.v1</pid>
+		    </rel><rel inferred="true" trust="0.9" inferenceprovenance="iis::document_similarities_standard" provenanceaction="iis">
+		      <to class="hasAmongTopNSimilarDocuments" scheme="dnet:result_result_relations" type="result">dedup_wf_001::309f7afc407eb92b0a6aed50288e98b6</to>
+		      <pid classid="doi" classname="doi" schemeid="dnet:pid_types" schemename="dnet:pid_types">https://doi.org/10.6084/m9.figshare.26798.v1</pid><type>STANDARD</type><resulttype classid="dataset" classname="dataset" schemeid="dnet:result_typologies" schemename="dnet:result_typologies"/><similarity>0.8452605</similarity><dateofacceptance>2011-01-01</dateofacceptance><pid classid="doi" classname="doi" schemeid="dnet:pid_types" schemename="dnet:pid_types">10.6084/m9.figshare.26798</pid><pid classid="doi" classname="doi" schemeid="dnet:pid_types" schemename="dnet:pid_types">https://doi.org/10.6084/m9.figshare.26798</pid><publisher>Figshare</publisher><title classid="main title" classname="main title" schemeid="dnet:dataCite_title" schemename="dnet:dataCite_title">Genome-wide survey of allele-specific splicing in humans-2</title><pid classid="doi" classname="doi" schemeid="dnet:pid_types" schemename="dnet:pid_types">10.6084/m9.figshare.26798.v1</pid>
+		    </rel><rel inferred="true" trust="0.9" inferenceprovenance="iis::document_similarities_standard" provenanceaction="iis">
+		      <to class="isAmongTopNSimilarDocuments" scheme="dnet:result_result_relations" type="result">scholexplore::26bb0c61c74b3f0568a331b4b97a3d15</to>
+		      <resulttype classid="publication" classname="publication" schemeid="dnet:result_typologies" schemename="dnet:result_typologies"/><similarity>0.9169652</similarity><pid classid="pmid" classname="pmid" schemeid="dnet:pid_types" schemename="dnet:pid_types">25059424</pid><type>STANDARD</type><title classid="main title" classname="main title" schemeid="dnet:dataCite_title" schemename="dnet:dataCite_title">Association analysis of polymorphisms in OAS1 with susceptibility and severity of hand, foot and mouth disease.</title>
+		    </rel><rel inferred="true" trust="0.9" inferenceprovenance="iis::document_similarities_standard" provenanceaction="iis">
+		      <to class="hasAmongTopNSimilarDocuments" scheme="dnet:result_result_relations" type="result">scholexplore::26bb0c61c74b3f0568a331b4b97a3d15</to>
+		      <resulttype classid="publication" classname="publication" schemeid="dnet:result_typologies" schemename="dnet:result_typologies"/><similarity>0.9169652</similarity><pid classid="pmid" classname="pmid" schemeid="dnet:pid_types" schemename="dnet:pid_types">25059424</pid><type>STANDARD</type><title classid="main title" classname="main title" schemeid="dnet:dataCite_title" schemename="dnet:dataCite_title">Association analysis of polymorphisms in OAS1 with susceptibility and severity of hand, foot and mouth disease.</title>
+		    </rel><rel inferred="true" trust="0.9" inferenceprovenance="iis::document_similarities_standard" provenanceaction="iis">
+		      <to class="hasAmongTopNSimilarDocuments" scheme="dnet:result_result_relations" type="result">dedup_wf_001::b6b09b55859cc2435020772337bf3f34</to>
+		      <dateofacceptance/><pid classid="doi" classname="doi" schemeid="dnet:pid_types" schemename="dnet:pid_types">10.1089/vim.2015.0041</pid><pid classid="pmid" classname="pmid" schemeid="dnet:pid_types" schemename="dnet:pid_types">26505957</pid><similarity>0.8234822</similarity><resulttype classid="publication" classname="publication" schemeid="dnet:result_typologies" schemename="dnet:result_typologies"/><title classid="main title" classname="main title" schemeid="dnet:dataCite_title" schemename="dnet:dataCite_title">Impact of OAS1 Exon 7 rs10774671 Genetic Variation on Liver Fibrosis Progression in Egyptian HCV Genotype 4 Patients.</title><type>STANDARD</type>
+		    </rel><rel inferred="true" trust="0.9" inferenceprovenance="iis::document_similarities_standard" provenanceaction="iis">
+		      <to class="isAmongTopNSimilarDocuments" scheme="dnet:result_result_relations" type="result">dedup_wf_001::b6b09b55859cc2435020772337bf3f34</to>
+		      <dateofacceptance/><pid classid="doi" classname="doi" schemeid="dnet:pid_types" schemename="dnet:pid_types">10.1089/vim.2015.0041</pid><pid classid="pmid" classname="pmid" schemeid="dnet:pid_types" schemename="dnet:pid_types">26505957</pid><similarity>0.8234822</similarity><resulttype classid="publication" classname="publication" schemeid="dnet:result_typologies" schemename="dnet:result_typologies"/><title classid="main title" classname="main title" schemeid="dnet:dataCite_title" schemename="dnet:dataCite_title">Impact of OAS1 Exon 7 rs10774671 Genetic Variation on Liver Fibrosis Progression in Egyptian HCV Genotype 4 Patients.</title><type>STANDARD</type>
+		    </rel><rel inferred="true" trust="0.6971" inferenceprovenance="iis::document_referencedProjects" provenanceaction="iis">
+		      <to class="isProducedBy" scheme="dnet:result_project_relations" type="project">rcuk________::0ce783b3ecd56679ff59711017b4985c</to>
+		      <funding><funder id="rcuk________::RCUK" shortname="RCUK" name="Research Council UK" jurisdiction="GB"/><funding_level_0 name="MRC">rcuk________::RCUK::MRC</funding_level_0></funding><code>G0800629</code><title>United Kingdom Primary Sjogren's Syndrome Registry (UKPSSR)</title>
+		    </rel>
+		  </rels>
+		  <children>
+			<result objidentifier="od_______267::feb39683a596d2ab6fb680de8ead8310">
+				<resulttype classid="publication" classname="publication" schemeid="dnet:result_typologies" schemename="dnet:result_typologies"/><dateofacceptance>2017-06-01</dateofacceptance><publisher>Public Library of Science</publisher><title classid="main title" classname="main title" schemeid="dnet:dataCite_title" schemename="dnet:dataCite_title">Identification of a Sjögren's syndrome susceptibility locus at OAS1 that influences isoform switching, protein expression, and responsiveness to type I interferons</title>
+			</result><result objidentifier="od_______908::6101cf215719547a529e8651f5de5563">
+				<resulttype classid="publication" classname="publication" schemeid="dnet:result_typologies" schemename="dnet:result_typologies"/><dateofacceptance>2017-06-01</dateofacceptance><publisher>Public Library of Science</publisher><title classid="main title" classname="main title" schemeid="dnet:dataCite_title" schemename="dnet:dataCite_title">Identification of a Sj?gren's syndrome susceptibility locus at OAS1 that influences isoform switching, protein expression, and responsiveness to type I interferons</title>
+			</result><result objidentifier="od_______361::e6089aa59c685e01b142f0e9a165d78d">
+				<resulttype classid="publication" classname="publication" schemeid="dnet:result_typologies" schemename="dnet:result_typologies"/><dateofacceptance>2017-01-01</dateofacceptance><publisher>PUBLIC LIBRARY SCIENCE</publisher><title classid="main title" classname="main title" schemeid="dnet:dataCite_title" schemename="dnet:dataCite_title">Identification of a Sjögren's syndrome susceptibility locus at OAS1 that influences isoform switching, protein expression, and responsiveness to type I interferons</title>
+			</result><result objidentifier="doajarticles::702f0aa74d162c0bab892c70a82ba3e1">
+				<resulttype classid="publication" classname="publication" schemeid="dnet:result_typologies" schemename="dnet:result_typologies"/><dateofacceptance>2017-06-01</dateofacceptance><publisher>Public Library of Science (PLoS)</publisher><title classid="main title" classname="main title" schemeid="dnet:dataCite_title" schemename="dnet:dataCite_title">Identification of a Sjögren's syndrome susceptibility locus at OAS1 that influences isoform switching, protein expression, and responsiveness to type I interferons.</title>
+			</result><result objidentifier="sygma_______::51f514c3a8450549294d8a872664f3be">
+				<resulttype classid="publication" classname="publication" schemeid="dnet:result_typologies" schemename="dnet:result_typologies"/><title classid="main title" classname="main title" schemeid="dnet:dataCite_title" schemename="dnet:dataCite_title">Identification of a Sjögren's syndrome susceptibility locus at OAS1 that influences isoform switching, protein expression, and responsiveness to type I interferons</title>
+			</result><instance id="opendoar____::8b6dd7db9af49e67306feb59a8bdc52c">
+			    <hostedby name="Europe PubMed Central" id="opendoar____::8b6dd7db9af49e67306feb59a8bdc52c"/><collectedfrom name="PubMed Central" id="opendoar____::eda80a3d5b344bc40f3bc04f65b7a357"/><dateofacceptance>2017-06-01</dateofacceptance><accessright classid="OPEN" classname="Open Access" schemeid="dnet:access_modes" schemename="dnet:access_modes"/><instancetype classid="0001" classname="Article" schemeid="dnet:publication_resource" schemename="dnet:publication_resource"/>
+				<webresource>
+				  <url>http://europepmc.org/articles/PMC5501660</url>
+				</webresource>
+
+			</instance>
+			<instance id="opendoar____::52720e003547c70561bf5e03b95aa99f">
+			    <hostedby name="Publikationer från Uppsala Universitet" id="opendoar____::52720e003547c70561bf5e03b95aa99f"/><collectedfrom name="Publikationer från Uppsala Universitet" id="opendoar____::52720e003547c70561bf5e03b95aa99f"/><dateofacceptance>2017-01-01</dateofacceptance><accessright classid="OPEN" classname="Open Access" schemeid="dnet:access_modes" schemename="dnet:access_modes"/><instancetype classid="0001" classname="Article" schemeid="dnet:publication_resource" schemename="dnet:publication_resource"/>
+				<webresource>
+				  <url>http://urn.kb.se/resolve?urn=urn:nbn:se:uu:diva-330755</url>
+				</webresource>
+
+			</instance>
+			<instance id="openaire____::55045bd2a65019fd8e6741a755395c8c">
+			    <hostedby name="Unknown Repository" id="openaire____::55045bd2a65019fd8e6741a755395c8c"/><collectedfrom name="Sygma" id="openaire____::a8db6f6b2ce4fe72e8b2314a9a93e7d9"/><license>https://creativecommons.org/publicdomain/zero/1.0/</license><accessright classid="UNKNOWN" classname="UNKNOWN" schemeid="dnet:access_modes" schemename="dnet:access_modes"/><instancetype classid="0001" classname="Article" schemeid="dnet:publication_resource" schemename="dnet:publication_resource"/>
+				<webresource>
+				  <url>http://dx.doi.org/10.1371/journal.pgen.1006820</url>
+				</webresource>
+
+			</instance>
+			<instance id="doajarticles::774f410ded35c2e3136dc96dd7e77480">
+			    <hostedby name="PLoS Genetics" id="doajarticles::774f410ded35c2e3136dc96dd7e77480"/><collectedfrom name="DOAJ-Articles" id="driver______::bee53aa31dc2cbb538c10c2b65fa5824"/><dateofacceptance>2017-06-01</dateofacceptance><accessright classid="OPEN" classname="Open Access" schemeid="dnet:access_modes" schemename="dnet:access_modes"/><instancetype classid="0001" classname="Article" schemeid="dnet:publication_resource" schemename="dnet:publication_resource"/>
+				<webresource>
+				  <url>https://doaj.org/toc/1553-7404</url>
+				</webresource>
+				<webresource>
+				  <url>http://europepmc.org/articles/PMC5501660?pdf=render</url>
+				</webresource>
+				<webresource>
+				  <url>https://doaj.org/toc/1553-7390</url>
+				</webresource>
+
+			</instance>
+
+		  </children>
+		</oaf:result>
+		<extraInfo name="result citations" typology="citations" provenance="iis::document_referencedDocuments" trust="0.9"><citations>
+		  <citation position="1">
+		    <rawText>1 Helmick CG, Felson DT, Lawrence RC, Gabriel S, Hirsch R, Kwoh CK, et al Estimates of the prevalence of arthritis and other rheumatic conditions in the United States. Part I. Arthritis Rheum. 2008;58(1):15–25. doi: 10.1002/art.23177 18163481</rawText>
+		    <id value="scholexplore::6cf7fff9235ea68a177aa80023f171b3" type="openaire" confidenceLevel="0.9"/>
+		    <id value="18163481" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="2">
+		    <rawText>2 Fox RI. Sjogren's syndrome. Lancet. 2005;366(9482):321–31. doi: 10.1016/S0140-6736(05)66990-5 16039337</rawText>
+		    <id value="16039337" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="3">
+		    <rawText>3 Fox RI, Stern M, Michelson P. Update in Sjogren syndrome. Curr Opin Rheumatol. 2000;12(5):391–8. 10990175</rawText>
+		    <id value="dedup_wf_001::117a44952764220ad8d4c18be8d0deb1" type="openaire" confidenceLevel="0.9"/>
+		    <id value="10990175" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="4">
+		    <rawText>4 Segal B, Thomas W, Rogers T, Leon JM, Hughes P, Patel D, et al Prevalence, severity, and predictors of fatigue in subjects with primary Sjogren's syndrome. Arthritis Rheum. 2008;59(12):1780–7. doi: 10.1002/art.24311 19035421</rawText>
+		    <id value="od_______908::7ddc9b0f0aac92df3318519a1578bf6a" type="openaire" confidenceLevel="0.9"/>
+		    <id value="19035421" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="5">
+		    <rawText>5 Zintzaras E, Voulgarelis M, Moutsopoulos HM. The risk of lymphoma development in autoimmune diseases: a meta-analysis. Arch Intern Med. 2005;165(20):2337–44. doi: 10.1001/archinte.165.20.2337 16287762</rawText>
+		    <id value="scholexplore::aa60705723024503cf45cd9cadadf753" type="openaire" confidenceLevel="0.9"/>
+		    <id value="16287762" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="6">
+		    <rawText>6 Theander E, Henriksson G, Ljungberg O, Mandl T, Manthorpe R, Jacobsson LT. Lymphoma and other malignancies in primary Sjogren's syndrome: a cohort study on cancer incidence and lymphoma predictors. Ann Rheum Dis. 2006;65(6):796–803. doi: 10.1136/ard.2005.041186 16284097</rawText>
+		    <id value="dedup_wf_001::e5b4550b48ee343941fd60b937232a60" type="openaire" confidenceLevel="0.9"/>
+		    <id value="16284097" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="7">
+		    <rawText>7 Vitali C, Bombardieri S, Jonsson R, Moutsopoulos HM, Alexander EL, Carsons SE, et al Classification criteria for Sjogren's syndrome: a revised version of the European criteria proposed by the American-European Consensus Group. Ann Rheum Dis. 2002;61(6):554–8. doi: 10.1136/ard.61.6.554 12006334</rawText>
+		    <id value="dedup_wf_001::58b0e0b552280cc835dade9ad2817cb2" type="openaire" confidenceLevel="0.9"/>
+		    <id value="12006334" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="8">
+		    <rawText>8 Toker E, Yavuz S, Direskeneli H. Anti-Ro/SSA and anti-La/SSB autoantibodies in the tear fluid of patients with Sjogren's syndrome. Br J Ophthalmol. 2004;88(3):384–7. doi: 10.1136/bjo.2003.028340 14977774</rawText>
+		    <id value="dedup_wf_001::176f3290139b3671ba42d85981e93844" type="openaire" confidenceLevel="0.9"/>
+		    <id value="14977774" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="9">
+		    <rawText>9 Hernandez-Molina G, Leal-Alegre G, Michel-Peregrina M. The meaning of anti-Ro and anti-La antibodies in primary Sjogren's syndrome. Autoimmun Rev. 2011;10(3):123–5. doi: 10.1016/j.autrev.2010.09.001 20833272</rawText>
+		    <id value="dedup_wf_001::fbd098b36a5880b2887c10ec3e0ac517" type="openaire" confidenceLevel="0.9"/>
+		    <id value="20833272" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="10">
+		    <rawText>10 Kyriakidis NC, Kapsogeorgou EK, Tzioufas AG. A comprehensive review of autoantibodies in primary Sjogren's syndrome: clinical phenotypes and regulatory mechanisms. J Autoimmun. 2014;51:67–74. doi: 10.1016/j.jaut.2013.11.001 24333103</rawText>
+		    <id value="scholexplore::d91a2bded543606a948f87623dd1be2b" type="openaire" confidenceLevel="0.9"/>
+		    <id value="24333103" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="11">
+		    <rawText>11 Lovgren T, Eloranta ML, Bave U, Alm GV, Ronnblom L. Induction of interferon-alpha production in plasmacytoid dendritic cells by immune complexes containing nucleic acid released by necrotic or late apoptotic cells and lupus IgG. Arthritis Rheum. 2004;50(6):1861–72. doi: 10.1002/art.20254 15188363</rawText>
+		    <id value="scholexplore::11fa3e0b659448cba8f0dae3e2982f37" type="openaire" confidenceLevel="0.9"/>
+		    <id value="15188363" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="12">
+		    <rawText>12 Bave U, Nordmark G, Lovgren T, Ronnelid J, Cajander S, Eloranta ML, et al Activation of the type I interferon system in primary Sjogren's syndrome: a possible etiopathogenic mechanism. Arthritis Rheumatol. 2005;52(4):1185–95.</rawText>
+		  </citation>
+		  <citation position="13">
+		    <rawText>13 Wiedeman AE, Santer DM, Yan W, Miescher S, Kasermann F, Elkon KB. Contrasting mechanisms of interfero n-alpha inhibition by intravenous immunoglobulin after induction by immune complexes versus Toll-like receptor agonists. Arthritis Rheum. 2013;65(10):2713–23. doi: 10.1002/art.38082 23840006</rawText>
+		    <id value="scholexplore::59059bea9ca09d98878a7d40c5936ee5" type="openaire" confidenceLevel="0.9"/>
+		    <id value="23840006" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="14">
+		    <rawText>14 Nocturne G, Mariette X. Advances in understanding the pathogenesis of primary Sjogren's syndrome. Nat Rev Rheumatol. 2013;9(9):544–56. doi: 10.1038/nrrheum.2013.110 23857130</rawText>
+		    <id value="dedup_wf_001::ee008f2c6d6e8e8c113af2ffc4591b08" type="openaire" confidenceLevel="0.9"/>
+		    <id value="23857130" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="15">
+		    <rawText>15 Lessard CJ, Li H, Adrianto I, Ice JA, Rasmussen A, Grundahl KM, et al Variants at multiple loci implicated in both innate and adaptive immune responses are associated with Sjogren's syndrome. Nat Genet. 2013;45(11):1284–92. doi: 10.1038/ng.2792 24097067</rawText>
+		    <id value="dedup_wf_001::43013309d9ec6a366206007bd0c1d599" type="openaire" confidenceLevel="0.9"/>
+		    <id value="24097067" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="16">
+		    <rawText>16 Li Y, Zhang K, Chen H, Sun F, Xu J, Wu Z, et al A genome-wide association study in Han Chinese identifies a susceptibility locus for primary Sjogren's syndrome at 7q11.23. Nat Genet. 2013;45(11):1361–5. doi: 10.1038/ng.2779 24097066</rawText>
+		    <id value="scholexplore::7e8581fa11a709e3f8bbb32f019ac129" type="openaire" confidenceLevel="0.9"/>
+		    <id value="24097066" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="17">
+		    <rawText>17 Youinou P, Pers JO, Saraux A, Pennec YL. Viruses contribute to the development of Sjogren's syndrome. Clin Exp Immunol. 2005;141(1):19–20. doi: 10.1111/j.1365-2249.2005.02827.x 15958065</rawText>
+		    <id value="dedup_wf_001::8ef5e5695d283802ddc8bd03b04d91a9" type="openaire" confidenceLevel="0.9"/>
+		    <id value="15958065" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="18">
+		    <rawText>18 Igoe A, Scofield RH. Autoimmunity and infection in Sjogren's syndrome. Curr Opin Rheumatol. 2013;25(4):480–7. doi: 10.1097/BOR.0b013e32836200d2 23719365</rawText>
+		    <id value="dedup_wf_001::82c0aaffa4652bc6dd28e478db75ad2f" type="openaire" confidenceLevel="0.9"/>
+		    <id value="23719365" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="19">
+		    <rawText>19 Voulgarelis M, Tzioufas AG. Pathogenetic mechanisms in the initiation and perpetuation of Sjogren's syndrome. Nat Rev Rheumatol. 2010;6(9):529–37. doi: 10.1038/nrrheum.2010.118 20683439</rawText>
+		    <id value="dedup_wf_001::3a1f88715fe530aaf20f21c8e207d12f" type="openaire" confidenceLevel="0.9"/>
+		    <id value="20683439" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="20">
+		    <rawText>20 Theander E, Jonsson R, Sjostrom B, Brokstad K, Olsson P, Henriksson G. Prediction of Sjogren's Syndrome Years Before Diagnosis and Identification of Patients With Early Onset and Severe Disease Course by Autoantibody Profiling. Arthritis Rheumatol. 2015;67(9):2427–36. doi: 10.1002/art.39214 26109563</rawText>
+		    <id value="26109563" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="21">
+		    <rawText>21 Poole BD, Scofield RH, Harley JB, James JA. Epstein-Barr virus and molecular mimicry in systemic lupus erythematosus. Autoimmunity. 2006;39(1):63–70. doi: 10.1080/08916930500484849 16455583</rawText>
+		    <id value="scholexplore::7fc2e3b4a088bd2ee4aad5a19287aa89" type="openaire" confidenceLevel="0.9"/>
+		    <id value="16455583" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="22">
+		    <rawText>22 Pasoto SG, Natalino RR, Chakkour HP, Viana Vdos S, Bueno C, Leon EP, et al EBV reactivation serological profile in primary Sjogren's syndrome: an underlying trigger of active articular involvement?Rheumatol Int. 2013;33(5):1149–57. doi: 10.1007/s00296-012-2504-3 22955798</rawText>
+		    <id value="22955798" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="23">
+		    <rawText>23 Mavragani CP, Sagalovskiy I, Guo Q, Nezos A, Kapsogeorgou EK, Lu P, et al Long interspersed nuclear element-1 retroelements are expressed in patients with systemic autoimmune disease and induce type I interferon. Arthritis Rheumatol. 2016.</rawText>
+		  </citation>
+		  <citation position="24">
+		    <rawText>24 Reksten TR, Jonsson MV, Szyszko EA, Brun JG, Jonsson R, Brokstad KA. Cytokine and autoantibody profiling related to histopathological features in primary Sjogren's syndrome. Rheumatology (Oxford). 2009;48(9):1102–6.19574472</rawText>
+		    <id value="19574472" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="25">
+		    <rawText>25 Ivashkiv LB, Donlin LT. Regulation of type I interferon responses. Nat Rev Immunol. 2014;14(1):36–49. doi: 10.1038/nri3581 24362405</rawText>
+		    <id value="dedup_wf_001::9f13476252b6d01c1de92e170aaf8201" type="openaire" confidenceLevel="0.9"/>
+		    <id value="24362405" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="26">
+		    <rawText>26 Crow MK. Type I interferon in organ-targeted autoimmune and inflammatory diseases. Arthritis Res Ther. 2010;12 Suppl 1:S5.21303493</rawText>
+		    <id value="dedup_wf_001::150bc7b05f29220fef4d61fc5c6f3752" type="openaire" confidenceLevel="0.9"/>
+		    <id value="21303493" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="27">
+		    <rawText>27 Ronnblom L, Eloranta ML. The interferon signature in autoimmune diseases. Curr Opin Rheumatol. 2013;25(2):248–53. doi: 10.1097/BOR.0b013e32835c7e32 23249830</rawText>
+		    <id value="dedup_wf_001::c581c09b5ce5d9081e78a3b744b2f39c" type="openaire" confidenceLevel="0.9"/>
+		    <id value="23249830" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="28">
+		    <rawText>28 van der Pouw Kraan TC, Wijbrandts CA, van Baarsen LG, Voskuyl AE, Rustenburg F, Baggen JM, et al Rheumatoid arthritis subtypes identified by genomic profiling of peripheral blood cells: assignment of a type I interferon signature in a subpopulation of patients. Ann Rheum Dis. 2007;66(8):1008–14. doi: 10.1136/ard.2006.063412 17223656</rawText>
+		    <id value="scholexplore::f547b04845d91a2db9ec33630ea9dbe2" type="openaire" confidenceLevel="0.9"/>
+		    <id value="17223656" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="29">
+		    <rawText>29 van Baarsen LG, Wijbrandts CA, Rustenburg F, Cantaert T, van der Pouw Kraan TC, Baeten DL, et al Regulation of IFN response gene activity during infliximab treatment in rheumatoid arthritis is associated with clinical response to treatment. Arthritis Res Ther. 2010;12(1):R11 doi: 10.1186/ar2912 20096109</rawText>
+		    <id value="dedup_wf_001::ac8cbe9d639eaa210bed7f90da503015" type="openaire" confidenceLevel="0.9"/>
+		    <id value="20096109" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="30">
+		    <rawText>30 Raterman HG, Vosslamber S, de Ridder S, Nurmohamed MT, Lems WF, Boers M, et al The interferon type I signature towards prediction of non-response to rituximab in rheumatoid arthritis patients. Arthritis Res Ther. 2012;14(2):R95 doi: 10.1186/ar3819 22540992</rawText>
+		    <id value="dedup_wf_001::ac0923e99ad3f9fe8b4c250d3c2c13e5" type="openaire" confidenceLevel="0.9"/>
+		    <id value="22540992" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="31">
+		    <rawText>31 Baechler EC, Batliwalla FM, Karypis G, Gaffney PM, Ortmann WA, Espe KJ, et al Interferon-inducible gene expression signature in peripheral blood cells of patients with severe lupus. Proc Natl Acad Sci U S A. 2003;100(5):2610–5. doi: 10.1073/pnas.0337679100 12604793</rawText>
+		    <id value="dedup_wf_001::51e8b8b8d81241f8657d2608b4cb591a" type="openaire" confidenceLevel="0.9"/>
+		    <id value="12604793" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="32">
+		    <rawText>32 Bauer JW, Baechler EC, Petri M, Batliwalla FM, Crawford D, Ortmann WA, et al Elevated serum levels of interferon-regulated chemokines are biomarkers for active human systemic lupus erythematosus. PLoS Med. 2006;3(12):e491 doi: 10.1371/journal.pmed.0030491 17177599</rawText>
+		    <id value="dedup_wf_001::2f0c792335b69414b0d8b5b6e1a464dc" type="openaire" confidenceLevel="0.9"/>
+		    <id value="17177599" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="33">
+		    <rawText>33 Ronnblom L, Alm GV, Eloranta ML. Type I interferon and lupus. Curr Opin Rheumatol. 2009;21(5):471–7. doi: 10.1097/BOR.0b013e32832e089e 19 525849</rawText>
+		    <id value="19525849" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="34">
+		    <rawText>34 Emamian ES, Leon JM, Lessard CJ, Grandits M, Baechler EC, Gaffney PM, et al Peripheral blood gene expression profiling in Sjogren's syndrome. Genes &amp; Immunity. 2009;10(4):285–96.19404300</rawText>
+		    <id value="dedup_wf_001::e65570ebe3305ec82a64d53b90cc64a8" type="openaire" confidenceLevel="0.9"/>
+		    <id value="19404300" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="35">
+		    <rawText>35 Gottenberg JE, Cagnard N, Lucchesi C, Letourneur F, Mistou S, Lazure T, et al Activation of IFN pathways and plasmacytoid dendritic cell recruitment in target organs of primary Sjogren's syndrome. Proc Natl Acad Sci U S A. 2006;103(8):2770–5. doi: 10.1073/pnas.0510837103 16477017</rawText>
+		    <id value="dedup_wf_001::5fa27f4d1ac66536538b38f4ea96763c" type="openaire" confidenceLevel="0.9"/>
+		    <id value="16477017" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="36">
+		    <rawText>36 Hjelmervik TO, Petersen K, Jonassen I, Jonsson R, Bolstad AI. Gene expression profiling of minor salivary glands clearly distinguishes primary Sjogren's syndrome patients from healthy control subjects. Arthritis Rheum. 2005;52(5):1534–44. doi: 10.1002/art.21006 15880807</rawText>
+		    <id value="scholexplore::a3fd2873ad35f82e2d6c1fca53b68c1f" type="openaire" confidenceLevel="0.9"/>
+		    <id value="15880807" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="37">
+		    <rawText>37 Perez P, Anaya JM, Aguilera S, Urzua U, Munroe D, Molina C, et al Gene expression and chromosomal location for susceptibility to Sjogren's syndrome. J Autoimmun. 2009;33(2):99–108. doi: 10.1016/j.jaut.2009.05.001 19523788</rawText>
+		    <id value="scholexplore::5e7e970fa80fc18a6f771e9f246cd1a9" type="openaire" confidenceLevel="0.9"/>
+		    <id value="19523788" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="38">
+		    <rawText>38 Li H, Ice JA, Lessard CJ, Sivils KL. Interferons in Sjogren's Syndrome: Genes, Mechanisms, and Effects. Front Immunol. 2013;4:290 doi: 10.3389/fimmu.2013.00290 24062752</rawText>
+		    <id value="dedup_wf_001::ded37e08fb382b3ae4ae609541fe321f" type="openaire" confidenceLevel="0.9"/>
+		    <id value="24062752" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="39">
+		    <rawText>39 International Consortium for Systemic Lupus Erythematosus Genetics, Harley JB, Alarcon-Riquelme ME, Criswell LA, Jacob CO, Kimberly RP, et al Genome-wide association scan in women with systemic lupus erythematosus identifies susceptibility variants in ITGAM, PXK, KIAA1542 and other loci. Nat Genet. 2008;40(2):204–10. doi: 10.1038/ng.81 18204446</rawText>
+		    <id value="od_______908::6ed5bb734c1608a7a009269f80f9fb20" type="openaire" confidenceLevel="0.9"/>
+		    <id value="18204446" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="40">
+		    <rawText>40 Lessard CJ, Adrianto I, Ice JA, Wiley GB, Kelly JA, Glenn SB, et al Identification of IRF8, TMEM39A, and IKZF3-ZPBP2 as susceptibility loci for systemic lupus erythematosus in a large-scale multiracial replication study. Am J Hum Genet. 2012;90(4):648–60. doi: 10.1016/j.ajhg.2012.02.023 22464253</rawText>
+		    <id value="dedup_wf_001::945ce924c020a906cbb36999f6d379c9" type="openaire" confidenceLevel="0.9"/>
+		    <id value="22464253" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="41">
+		    <rawText>41 Stahl EA, Raychaudhuri S, Remmers EF, Xie G, Eyre S, Thomson BP, et al Genome-wide association study meta-analysis identifies seven new rheumatoid arthritis risk loci. Nat Genet. 2010;42(6):508–14. doi: 10.1038/ng.582 20453842</rawText>
+		    <id value="scholexplore::d668eaa1229ba70552aff3ad1e37813b" type="openaire" confidenceLevel="0.9"/>
+		    <id value="20453842" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="42">
+		    <rawText>42 Miceli-Richard C, Comets E, Loiseau P, Puechal X, Hachulla E, Mariette X. Association of an IRF5 gene functional polymorphism with Sjogren's syndrome. Arthritis Rheum. 2007;56(12):3989–94. doi: 10.1002/art.23142 18050197</rawText>
+		    <id value="dedup_wf_001::a2ae45b9ff9bb45124b24c94a0c163a8" type="openaire" confidenceLevel="0.9"/>
+		    <id value="18050197" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="43">
+		    <rawText>43 Nordmark G, Kristjansdottir G, Theander E, Eriksson P, Brun JG, Wang C, et al Additive effects of the major risk alleles of IRF5 and STAT4 in primary Sjogren's syndrome. Genes &amp; Immunity. 2009;10(1):68–76.19092842</rawText>
+		    <id value="dedup_wf_001::763e64534cf018a10abc4bd8a11af149" type="openaire" confidenceLevel="0.9"/>
+		    <id value="19092842" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="44">
+		    <rawText>44 Lien C, Fang CM, Huso D, Livak F, Lu R, Pitha PM. Critical role of IRF-5 in regulation of B-cell differentiation. Proc Natl Acad Sci U S A. 2010;107(10):4664–8. doi: 10.1073/pnas.0911193107 20176957</rawText>
+		    <id value="scholexplore::fa0765ca07df68c08bba9823592b8dca" type="openaire" confidenceLevel="0.9"/>
+		    <id value="20176957" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="45">
+		    <rawText>45 Wang J, Basagoudanavar SH, Wang X, Hopewell E, Albrecht R, Garcia-Sastre A, et al NF-kappa B RelA subunit is crucial for early IFN-beta expression and resistance to RNA virus replication. J Immunol. 2010;185(3):1720–9. doi: 10.4049/jimmunol.1000114 20610653</rawText>
+		    <id value="od_______908::89b3628c66f77b5e2d187d16a7838668" type="openaire" confidenceLevel="0.9"/>
+		    <id value="20610653" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="46">
+		    <rawText>46 Hindorff LA, Sethupathy P, Junkins HA, Ramos EM, Mehta JP, Collins FS, et al Potential etiologic and functional implications of genome-wide association loci for human diseases and traits. Proc Natl Acad Sci U S A. 2009;106(23):9362–7. doi: 10.1073/pnas.0903103106 19474294</rawText>
+		    <id value="dedup_wf_001::ce68e1fd0f18d0b46e53cad4e40715c6" type="openaire" confidenceLevel="0.9"/>
+		    <id value="19474294" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="47">
+		    <rawText>47 Gupta RM, Musunuru K. Mapping novel pathways in cardiovascular disease using eQTL data: the past, present, and future of gene expression analysis. Front Genet. 2012;3:232 doi: 10.3389/fgene.2012.00232 23755065</rawText>
+		    <id value="dedup_wf_001::1f3d2ac10c90d93e0517a21343853a73" type="openaire" confidenceLevel="0.9"/>
+		    <id value="23755065" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="48">
+		    <rawText>48 Encode Project Consortium. An integrated encyclopedia of DNA elements in the human genome. Nature. 2012;489(7414):57–74. doi: 10.1038/nature11247 22955616</rawText>
+		    <id value="dedup_wf_001::f947e78a3e8936dbe13e8095f19faeca" type="openaire" confidenceLevel="0.9"/>
+		    <id value="22955616" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="49">
+		    <rawText>49 Kabakchiev B, Silverberg MS. Expression quantitative trait loci analysis identifies associations between genotype and gene expression in human intestine. Gastroenterology. 2013;144(7):1488–96, 96 e1–3. doi: 10.1053/j.gastro.2013.03.001 23474282</rawText>
+		    <id value="dedup_wf_001::235a59cf1b01f2b39d7431d0317127e7" type="openaire" confidenceLevel="0.9"/>
+		    <id value="23474282" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="50">
+		    <rawText>50 Kim Y, Xia K, Tao R, Giusti-Rodriguez P, Vladimirov V, van den Oord E, et al A meta-analysis of gene expression quantitative trait loci in brain. Transl Psychiatry. 2014;4:e459 doi: 10.1038/tp.2014.96 25290266</rawText>
+		    <id value="dedup_wf_001::174314c382066225496b64674f7ab039" type="openaire" confidenceLevel="0.9"/>
+		    <id value="25290266" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="51">
+		    <rawText>51 Bonnevie-Nielsen V, Field LL, Lu S, Zheng DJ, Li M, Martensen PM, et al Variation in antiviral 2',5'-oligoadenylate synthetase (2'5'AS) enzyme activity is controlled by a single-nucleotide polymorphism at a splice-acceptor site in the OAS1 gene. Am J Hum Genet. 2005;76(4):623–33. doi: 10.1086/429391 15732009</rawText>
+		    <id value="dedup_wf_001::a1d13cfb499ee0efdb9508311c3c7575" type="openaire" confidenceLevel="0.9"/>
+		    <id value="15732009" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="52">
+		    <rawText>52 Kent WJ, Sugnet CW, Furey TS, Roskin KM, Pringle TH, Zahler AM, et al The human genome browser at UCSC. Genome Res. 2002;12(6):996–1006. doi: 10.1101/gr.229102 12045153</rawText>
+		    <id value="dedup_wf_001::1eb7f72538448b4d9c96b73a2524a887" type="openaire" confidenceLevel="0.9"/>
+		    <id value="12045153" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="53">
+		    <rawText>53 Hormozdiari F, Kostem E, Kang EY, Pasaniuc B, Eskin E. Identifying causal variants at loci with multiple signals of association. Genetics. 2014;198(2):497–508. doi: 10.1534/genetics.114.167908 25104515</rawText>
+		    <id value="dedup_wf_001::245feda77ad3658d32ee5882fcdafa31" type="openaire" confidenceLevel="0.9"/>
+		    <id value="25104515" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="54">
+		    <rawText>54 Kjaer KH, Pahus J, Hansen MF, Poulsen JB, Christensen EI, Justesen J, et al Mitochondrial localization of the OAS1 p46 isoform associated with a common single nucleotide polymorphism. BMC Cell Biol. 2014;15:33 doi: 10.1186/1471-2121-15-33 25205466</rawText>
+		    <id value="dedup_wf_001::0ad2ce05b126d1505d1fda75df22d061" type="openaire" confidenceLevel="0.9"/>
+		    <id value="25205466" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="55">
+		    <rawText>55 Lalonde E, Ha KC, Wang Z, Bemmo A, Kleinman CL, Kwan T, et al RNA sequencing reveals the role of splicing polymorphisms in regulating human gene expression. Genome Res. 2011;21(4):545–54. doi: 10.1101/gr.111211.110 21173033</rawText>
+		    <id value="dedup_wf_001::401cfb726dfe5e09e6dbcfad73c03786" type="openaire" confidenceLevel="0.9"/>
+		    <id value="21173033" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="56">
+		    <rawText>56 Noguchi S, Hamano E, Matsushita I, Hijikata M, Ito H, Nagase T, et al Differential effects of a common splice site polymorphism on the generation of OAS1 variants in human bronchial epithelial cells. Hum Immunol. 2013;74(3):395–401. doi: 10.1016/j.humimm.2012.11.011 23220500</rawText>
+		    <id value="scholexplore::2131ba389d7410767fd928459774b104" type="openaire" confidenceLevel="0.9"/>
+		    <id value="23220500" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="57">
+		    <rawText>57 Trapnell C, Pachter L, Salzberg SL. TopHat: discovering splice junctions with RNA-Seq. Bioinformatics. 2009;25(9):1105–11. doi: 10.1093/bioinformatics/btp120 19289445</rawText>
+		    <id value="dedup_wf_001::1658b9fca16234d12c7adc13ca1bd5dd" type="openaire" confidenceLevel="0.9"/>
+		    <id value="19289445" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="58">
+		    <rawText>58 Trapnell C, Williams BA, Pertea G, Mortazavi A, Kwan G, van Baren MJ, et al Transcript assembly and quantification by RNA-Seq reveals unannotated transcripts and isoform switching during cell differentiation. Nat Biotechnol. 2010;28(5):511–5. doi: 10.1038/nbt.1621 20436464</rawText>
+		    <id value="dedup_wf_001::6a6fed2f69f33fa48d33295e8dd80b62" type="openaire" confidenceLevel="0.9"/>
+		    <id value="20436464" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="59">
+		    <rawText>59 Cagliani R, Fumagalli M, Guerini FR, Riva S, Galimberti D, Comi GP, et al Identification of a new susceptibility variant for multiple sclerosis in OAS1 by population genetics analysis. Hum Genet. 2012;131(1):87–97. doi: 10.1007/s00439-011-1053-2 21735172</rawText>
+		    <id value="scholexplore::87fe801ba8b6a8d58d8bb813cd84465b" type="openaire" confidenceLevel="0.9"/>
+		    <id value="21735172" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="60">
+		    <rawText>60 Lim JK, Lisco A, McDermott DH, Huynh L, Ward JM, Johnson B, et al Genetic variation in OAS1 is a risk factor for initial infection with West Nile virus in man. PLoS Pathog. 2009;5(2):e1000321 doi: 10.1371/journal.ppat.1000321 19247438</rawText>
+		    <id value="dedup_wf_001::b6a733ce58723a364afb58413584c2d5" type="openaire" confidenceLevel="0.9"/>
+		    <id value="19247438" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="61">
+		    <rawText>61 Zhao Y, Kang H, Ji Y, Chen X. Evaluate the relationship between polymorphisms of OAS1 gene and susceptibility to chronic hepatitis C with high resolution melting analysis. Clin Exp Med. 2013;13(3):171–6. doi: 10.1007/s10238-012-0193-6 22710942</rawText>
+		    <id value="scholexplore::781eabba5481d9e39aa02299c4f75175" type="openaire" confidenceLevel="0.9"/>
+		    <id value="22710942" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="62">
+		    <rawText>62 Hovanessian AG, Justesen J. The human 2'-5'oligoadenylate synthetase family: unique interferon-inducible enzymes catalyzing 2'-5' instead of 3'-5' phosphodiester bond formation. Biochimie. 2007;89(6–7):779–88. doi: 10.1016/j.biochi.2007.02.003 17408844</rawText>
+		    <id value="dedup_wf_001::81cca61af589250d7872c72c9258912c" type="openaire" confidenceLevel="0.9"/>
+		    <id value="17408844" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="63">
+		    <rawText>63 Silverman RH. A scientific journey through the 2-5A/RNase L system. Cytokine Growth Factor Rev. 2007;18(5–6):381–8. doi: 10.1016/j.cytogfr.2007.06.012 17681844</rawText>
+		    <id value="dedup_wf_001::8b920596d70a8fbf3bcd493869501b30" type="openaire" confidenceLevel="0.9"/>
+		    <id value="17681844" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="64">
+		    <rawText>64 Hung T, Pratt GA, Sundararaman B, Townsend MJ, Chaivorapol C, Bhangale T, et al The Ro60 autoantigen binds endogenous retroelements and regulates inflammatory gene expression. Science. 2015;350(6259):455–9. doi: 10.1126/science.aac7442 26382853</rawText>
+		    <id value="dedup_wf_001::c5d974f7777065fe53f64321d4173811" type="openaire" confidenceLevel="0.9"/>
+		    <id value="26382853" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="65">
+		    <rawText>65 Weller ML, Gardener MR, Bogus ZC, Smith MA, Astorri E, Michael DG, et al Hepatitis Delta Virus Detected in Salivary Glands of Sjogren's Syndrome Patients and Recapitulates a Sjogren's Syndrome-Like Phenotype in Vivo. Pathog Immun. 2016;1(1):12–40. 27294212</rawText>
+		    <id value="dedup_wf_001::e22a73dc732b8e1bc5fa7e90a96d33c2" type="openaire" confidenceLevel="0.9"/>
+		    <id value="27294212" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="66">
+		    <rawText>66 Ding M, Zhang J. Epitope spreading induced by immunization with synthetic SSB peptides. Exp Ther Med. 2016;12(1):147–50. doi: 10.3892/etm.2016.3267 27347030</rawText>
+		    <id value="dedup_wf_001::1352503a138a84a2c6886a0f7cb35d0e" type="openaire" confidenceLevel="0.9"/>
+		    <id value="27347030" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="67">
+		    <rawText>67 Paisansinsup T, Deshmukh US, Chowdhary VR, Luthra HS, Fu SM, David CS. HLA class II influences the immune response and antibody diversification to Ro60/Sjogren's syndrome-A: heightened antibody responses and epitope spreading in mice expressing HLA-DR molecules. J Immunol. 2002;168(11):5876–84. 12023392</rawText>
+		    <id value="dedup_wf_001::4f89dfac5939e178d159c41ab5915e72" type="openaire" confidenceLevel="0.9"/>
+		    <id value="12023392" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="68">
+		    <rawText>68 Szymula A, Rosenthal J, Szczerba BM, Bagavant H, Fu SM, Deshmukh US. T cell epitope mimicry between Sjogren's syndrome Antigen A (SSA)/Ro60 and oral, gut, skin and vaginal bacteria. Clin Immunol. 2014;152(1–2):1–9. doi: 10.1016/j.clim.2014.02.004 24576620</rawText>
+		    <id value="dedup_wf_001::56048003f7e3cf0b1e8cd38b5082ef5f" type="openaire" confidenceLevel="0.9"/>
+		    <id value="24576620" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="69">
+		    <rawText>69 Albert LJ, Inman RD. Molecular mimicry and autoimmunity. N Engl J Med. 1999;341(27):2068–74. doi: 10.1056/NEJM199912303412707 10615080</rawText>
+		    <id value="dedup_wf_001::880daad25775da63a8c3e3acbd2d769d" type="openaire" confidenceLevel="0.9"/>
+		    <id value="10615080" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="70">
+		    <rawText>70 Justesen J, Hartmann R, Kjeldgaard NO. Gene structure and function of the 2'-5'-oligoadenylate synthetase family. Cell Mol Life Sci. 2000;57(11):1593–612. 11092454</rawText>
+		    <id value="dedup_wf_001::50cca26735b75bc989bf5ab3181f8037" type="openaire" confidenceLevel="0.9"/>
+		    <id value="11092454" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="71">
+		    <rawText>71 Imran M, Manzoor S, Khattak NM, Tariq M, Khalid M, Javed F, et al Correlation of OAS1 gene polymorphism at exon 7 splice accepter site with interferon-based therapy of HCV infection in Pakistan. Viral Immunol. 2014;27(3):105–11. doi: 10.1089/vim.2013.0107 24673406</rawText>
+		    <id value="24673406" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="72">
+		    <rawText>72 Bader El Din NG, Anany MA, Dawood RM, Ibrahim MK, El-Shenawy R, El Abd YS, et al Impact of OAS1 Exon 7 rs10774671 Genetic Variation on Liver Fibrosis Progression in Egyptian HCV Genotype 4 Patients. Viral Immunol. 2015;28(9):509–16. doi: 10.1089/vim.2015.0041 26505957</rawText>
+		    <id value="dedup_wf_001::b6b09b55859cc2435020772337bf3f34" type="openaire" confidenceLevel="0.9"/>
+		    <id value="26505957" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="73">
+		    <rawText>73 Ghosh A, Sarkar SN, Guo W, Bandyopadhyay S, Sen GC. Enzymatic activity of 2'-5'-oligoadenylate synthetase is impaired by specific mutations that affect oligomerization of the protein. J Biol Chem. 1997;272(52):33220–6. 9407111</rawText>
+		    <id value="dedup_wf_001::72ae42357372a0caac781e660dbf9519" type="openaire" confidenceLevel="0.9"/>
+		    <id value="9407111" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="74">
+		    <rawText>74 Mullan PB, Hosey AM, Buckley NE, Quinn JE, Kennedy RD, Johnston PG, et al The 2,5 oligoadenylate synthetase/RNaseL pathway is a novel effector of BRCA1- and interferon-gamma-mediated apoptosis. Oncogene. 2005;24(35):5492–501. doi: 10.1038/sj.onc.1208698 15940267</rawText>
+		    <id value="15940267" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="75">
+		    <rawText>75 Ghosh A, Sarkar SN, Rowe TM, Sen GC. A specific isozyme of 2'-5' oligoadenylate synthetase is a dual function proapoptotic protein of the Bcl-2 family. J Biol Chem. 2001;276(27):25447–55. doi: 10.1074/jbc.M100496200 11323417</rawText>
+		    <id value="dedup_wf_001::687b09aedce773c9a86b0686c6c04901" type="openaire" confidenceLevel="0.9"/>
+		    <id value="11323417" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="76">
+		    <rawText>76 Jauharoh SN, Saegusa J, Sugimoto T, Ardianto B, Kasagi S, Sugiyama D, et al SS-A/Ro52 promotes apoptosis by regulating Bcl-2 production. Biochem Biophys Res Commun. 2012;417(1):582–7. doi: 10.1016/j.bbrc.2011.12.010 22178074</rawText>
+		    <id value="dedup_wf_001::9d78d2512e2816aaa4b815047b69158c" type="openaire" confidenceLevel="0.9"/>
+		    <id value="22178074" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="77">
+		    <rawText>77 Kamachi M, Kawakami A, Yamasaki S, Hida A, Nakashima T, Nakamura H, et al Regulation of apoptotic cell death by cytokines in a human salivary gland cell line: distinct and synergistic mechanisms in apoptosis induced by tumor necrosis factor alpha and interferon gamma. J Lab Clin Med. 2002;139(1):13–9. 11873240</rawText>
+		    <id value="11873240" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="78">
+		    <rawText>78 Rogozin IB, Aravind L, Koonin EV. Differential action of natural selection on the N and C-terminal domains of 2'-5' oligoadenylate synthetases and the potential nuclease function of the C-terminal domain. J Mol Biol. 2003;326(5):1449–61. 12595257</rawText>
+		    <id value="12595257" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="79">
+		    <rawText>79 O'Brien M, Lonergan R, Costelloe L, O'Rourke K, Fletcher JM, Kinsella K, et al OAS1: a multiple sclerosis susceptibility gene that influences disease severity. Neurology. 2010;75(5):411–8. doi: 10.1212/WNL.0b013e3181ebdd2b 20679634</rawText>
+		    <id value="dedup_wf_001::49f7fe797fc95742b7249d476bcd3826" type="openaire" confidenceLevel="0.9"/>
+		    <id value="20679634" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="80">
+		    <rawText>80 Consortium GT. The Genotype-Tissue Expression (GTEx) project. Nat Genet. 2013;45(6):580–5. doi: 10.1038/ng.2653 23715323</rawText>
+		    <id value="dedup_wf_001::262005891057db57955c1400246c1b57" type="openaire" confidenceLevel="0.9"/>
+		    <id value="23715323" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="81">
+		    <rawText>81 Field LL, Bonnevie-Nielsen V, Pociot F, Lu S, Nielsen TB, Beck-Nielsen H. OAS1 splice site polymorphism controlling antiviral enzyme activity influences susceptibility to type 1 diabetes. Diabetes. 2005;54(5):1588–91. 15855350</rawText>
+		    <id value="dedup_wf_001::5bca599772978a60d7da155d8e2f350c" type="openaire" confidenceLevel="0.9"/>
+		    <id value="15855350" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="82">
+		    <rawText>82 Miceli-Richard C, Gestermann N, Simoneta F, Boudaoud S, Nocturne G, Lecluze Y, et al Interleukin 12 Is Involved in an Interferon Type I Signature Through Crosstalk of CD4+ T Cells and Plasmacytoid Dendritic Cells. Arthritis Rheum. 2012;64:Abstract 2321.</rawText>
+		  </citation>
+		  <citation position="83">
+		    <rawText>83 Cho SS, Bacon CM, Sudarshan C, Rees RC, Finbloom D, Pine R, et al Activation of STAT4 by IL-12 and IFN-alpha: evidence for the involvement of ligand-induced tyrosine and serine phosphorylation. J Immunol. 1996;157(11):4781–9. 8943379</rawText>
+		    <id value="orcid_______::56820a6573e856601836c97fa8a3d184" type="openaire" confidenceLevel="0.62954044"/>
+		    <id value="8943379" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="84">
+		    <rawText>84 Nguyen KB, Watford WT, Salomon R, Hofmann SR, Pien GC, Morinobu A, et al Critical role for STAT4 activation by type 1 interferons in the interferon-gamma response to viral infection. Science. 2002;297(5589):2063–6. doi: 10.1126/science.1074900 12242445</rawText>
+		    <id value="scholexplore::da17b169291b21fde51ac6f287d3ec77" type="openaire" confidenceLevel="0.9"/>
+		    <id value="12242445" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="85">
+		    <rawText>85 Lawless VA, Zhang S, Ozes ON, Bruns HA, Oldham I, Hoey T, et al Stat4 regulates multiple components of IFN-gamma-inducing signaling pathways. J Immunol. 2000;165(12):6803–8. 11120802</rawText>
+		    <id value="11120802" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="86">
+		    <rawText>86 Barnes BJ, Moore PA, Pitha PM. Virus-specific activation of a novel interferon regulatory factor, IRF-5, results in the induction of distinct interferon alpha genes. J Biol Chem. 2001;276(26):23382–90. doi: 10.1074/jbc.M101216200 11303025</rawText>
+		    <id value="scholexplore::d5c7f7971029a2c836a90916759262fe" type="openaire" confidenceLevel="0.9"/>
+		    <id value="11303025" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="87">
+		    <rawText>87 Westra H-J, Peters MJ, Esko T, Yaghootkar H, Schurmann C, Kettunen J, et al Systematic identification of trans eQTLs as putative drivers of known disease associations. Nat Genet. 2013;45(10):1238–43. doi: 10.1038/ng.2756 24013639</rawText>
+		    <id value="scholexplore::78908010dce61cbd11172e527406355a" type="openaire" confidenceLevel="0.9"/>
+		    <id value="24013639" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="88">
+		    <rawText>88 Pickrell JK, Marioni JC, Pai AA, Degner JF, Engelhardt BE, Nkadori E, et al Understanding mechanisms underlying human gene expression variation with RNA sequencing. Nature. 2010;464(7289):768–72. doi: 10.1038/nature08872 20220758</rawText>
+		    <id value="dedup_wf_001::69e1df8c2e305efe92379fc75e31e9ce" type="openaire" confidenceLevel="0.9"/>
+		    <id value="20220758" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="89">
+		    <rawText>89 Fairfax BP, Humburg P, Makino S, Naranbhai V, Wong D, Lau E, et al Innate immune activity conditions the effect of regulatory variants upon monocyte gene expression. Science. 2014;343(6175):1246949 doi: 10.1126/science.1246949 24604202</rawText>
+		    <id value="dedup_wf_001::0148f2846cc0b0cc4edc017489b12343" type="openaire" confidenceLevel="0.9"/>
+		    <id value="24604202" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="90">
+		    <rawText>90 Rasmussen A, Ice JA, Li H, Grundahl K, Kelly JA, Radfar L, et al Comparison of the American-European Consensus Group Sjogren's syndrome classification criteria to newly proposed American College of Rheumatology criteria in a large, carefully characterised sicca cohort. Ann Rheum Dis. 2014;73(1):31–8. doi: 10.1136/annrheumdis-2013-203845 23968620</rawText>
+		    <id value="dedup_wf_001::3f04ded63df61f6f9d3f3e4010b37f68" type="openaire" confidenceLevel="0.9"/>
+		    <id value="23968620" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="91">
+		    <rawText>91 Purcell S, Neale B, Todd-Brown K, Thomas L, Ferreira MA, Bender D, et al PLINK: a tool set for whole-genome association and population-based linkage analyses. Am J Hum Genet. 2007;81(3):559–75. doi: 10.1086/519795 17701901</rawText>
+		    <id value="dedup_wf_001::2d28bf9441b0f8a38fa793f9f6f3e2eb" type="openaire" confidenceLevel="0.9"/>
+		    <id value="17701901" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="92">
+		    <rawText>92 Kauffmann A, Gentleman R, Huber W. arrayQualityMetrics—a bioconductor package for quality assessment of microarray data. Bioinformatics. 2009;25(3):415–6. doi: 10.1093/bioinformatics/btn647 19106121</rawText>
+		    <id value="dedup_wf_001::c8127c6fe646f52b8b9791d980922866" type="openaire" confidenceLevel="0.9"/>
+		    <id value="19106121" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="93">
+		    <rawText>93 Barbosa-Morais NL, Dunning MJ, Samarajiwa SA, Darot JF, Ritchie ME, Lynch AG, et al A re-annotation pipeline for Illumina BeadArrays: improving the interpretation of gene expression data. Nucleic Acids Res. 2010;38(3):e17 doi: 10.1093/nar/gkp942 19923232</rawText>
+		    <id value="dedup_wf_001::1ffb3e8fa9b31269b54482e217696eb7" type="openaire" confidenceLevel="0.9"/>
+		    <id value="19923232" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="94">
+		    <rawText>94 Irizarry RA, Hobbs B, Collin F, Beazer-Barclay YD, Antonellis KJ, Scherf U, et al Exploration, normalization, and summaries of high density oligonucleotide array probe level data. Biostatistics. 2003;4(2):249–64. doi: 10.1093/biostatistics/4.2.249 12925520</rawText>
+		    <id value="dedup_wf_001::400033762ce035ce4a1ba2988bb2a42b" type="openaire" confidenceLevel="0.9"/>
+		    <id value="12925520" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="95">
+		    <rawText>95 Johnson WE, Li C, Rabinovic A. Adjusting batch effects in microarray expression data using empirical Bayes methods. Biostatistics. 2007;8(1):118–27. doi: 10.1093/biostatistics/kxj037 16632515</rawText>
+		    <id value="dedup_wf_001::902ab149c26be7608b0822197633976f" type="openaire" confidenceLevel="0.9"/>
+		    <id value="16632515" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="96">
+		    <rawText>96 de Hoon MJ, Imoto S, Nolan J, Miyano S. Open so urce clustering software. Bioinformatics. 2004;20(9):1453–4. doi: 10.1093/bioinformatics/bth078 14871861</rawText>
+		    <id value="scholexplore::12ab9f7ad407abaf5f095881152518df" type="openaire" confidenceLevel="0.9"/>
+		    <id value="14871861" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="97">
+		    <rawText>97 Saldanha AJ. Java Treeview—extensible visualization of microarray data. Bioinformatics. 2004;20(17):3246–8. doi: 10.1093/bioinformatics/bth349 15180930</rawText>
+		    <id value="dedup_wf_001::bf969528678ef556bc2b47af0dd9400c" type="openaire" confidenceLevel="0.9"/>
+		    <id value="15180930" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="98">
+		    <rawText>98 International HapMap Consortium, Frazer KA, Ballinger DG, Cox DR, Hinds DA, Stuve LL, et al A second generation human haplotype map of over 3.1 million SNPs. Nature. 2007;449(7164):851–61. doi: 10.1038/nature06258 17943122</rawText>
+		    <id value="scholexplore::15427519caec70b1c8addc5bd139ccf5" type="openaire" confidenceLevel="0.9"/>
+		    <id value="17943122" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="99">
+		    <rawText>99 Howie BN, Donnelly P, Marchini J. A flexible and accurate genotype imputation method for the next generation of genome-wide association studies. PLoS Genet. 2009;5(6):e1000529 doi: 10.1371/journal.pgen.1000529 19543373</rawText>
+		    <id value="dedup_wf_001::bfef89700f490883da1a8d8f730b4806" type="openaire" confidenceLevel="0.9"/>
+		    <id value="19543373" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="100">
+		    <rawText>100 Via M, Gignoux C, Burchard EG. The 1000 Genomes Project: new opportunities for research and social challenges. Genome Med. 2010;2(1):3 doi: 10.1186/gm124 20193048</rawText>
+		    <id value="dedup_wf_001::fa9dd37d19d471ac8b755cbf0ed148d9" type="openaire" confidenceLevel="0.9"/>
+		    <id value="20193048" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="101">
+		    <rawText>101 Price AL, Patterson NJ, Plenge RM, Weinblatt ME, Shadick NA, Reich D. Principal components analysis corrects for stratification in genome-wide association studies. Nat Genet. 2006;38(8):904–9. doi: 10.1038/ng1847 16862161</rawText>
+		    <id value="scholexplore::015fa35179bcfd31116d7a52c0459114" type="openaire" confidenceLevel="0.9"/>
+		    <id value="16862161" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="102">
+		    <rawText>102 McKeigue PM, Carpenter JR, Parra EJ, Shriver MD. Estimation of admixture and detection of linkage in admixed populations by a Bayesian approach: application to African-American populations. Ann Hum Genet. 2000;64(Pt 2):171–86. doi: 10.1017/S0003480000008022 11246470</rawText>
+		    <id value="dedup_wf_001::277c1ae7f1879276d0e795fda3c63b76" type="openaire" confidenceLevel="0.9"/>
+		    <id value="11246470" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="103">
+		    <rawText>103 Halder I, Shriver M, Thomas M, Fernandez JR, Frudakis T. A panel of ancestry informative markers for estimating individual biogeographical ancestry and admixture from four continents: utility and applications. Hum Mutat. 2008;29(5):648–58. doi: 10.1002/humu.20695 18286470</rawText>
+		    <id value="dedup_wf_001::b620f3a1749bfa31e1a75aacf6017742" type="openaire" confidenceLevel="0.9"/>
+		    <id value="18286470" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="104">
+		    <rawText>104 Cattell RB. The Scree test for the number of factors. Multivariate Behav Res. 1966;1(2):245–76. doi: 10.1207/s15327906mbr0102_10 26828106</rawText>
+		    <id value="dedup_wf_001::170fd0c76725332b009ef4bebaae16ba" type="openaire" confidenceLevel="0.9"/>
+		    <id value="26828106" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="105">
+		    <rawText>105 Willer CJ, Li Y, Abecasis GR. METAL: fast and efficient meta-analysis of genomewide association scans. Bioinformatics. 2010;26(17):2190–1. doi: 10.1093/bioinformatics/btq340 20616382</rawText>
+		    <id value="dedup_wf_001::eb71e3974cccf9f7946756b0303ac9ee" type="openaire" confidenceLevel="0.9"/>
+		    <id value="20616382" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="106">
+		    <rawText>106 Barrett JC, Fry B, Maller J, Daly MJ. Haploview: analysis and visualization of LD and haplotype maps. Bioinformatics. 2005;21(2):263–5. doi: 10.1093/bioinformatics/bth457 15297300</rawText>
+		    <id value="dedup_wf_001::0e183eaf75c51b175e0d9d36f0ee9e96" type="openaire" confidenceLevel="0.9"/>
+		    <id value="15297300" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="107">
+		    <rawText>107 Shabalin AA. Matrix eQTL: ultra fast eQTL analysis via large matrix operations. Bioinformatics. 2012;28(10):1353–8. doi: 10.1093/bioinformatics/bts163 22492648</rawText>
+		    <id value="dedup_wf_001::161e8ffa7f1821c073f23430038e598a" type="openaire" confidenceLevel="0.9"/>
+		    <id value="22492648" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="108">
+		    <rawText>108 Stegle O, Parts L, Durbin R, Winn J. A Bayesian framework to account for complex non-genetic factors in gene expression levels greatly increases power in eQTL studies. PLoS Comput Biol. 2010;6(5):e1000770 doi: 10.1371/journal.pcbi.1000770 20463871</rawText>
+		    <id value="dedup_wf_001::2892105a2985b8a76370d7f222b8ed53" type="openaire" confidenceLevel="0.9"/>
+		    <id value="20463871" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="109">
+		    <rawText>109 Anders S, Huber W. Differential expression analysis for sequence count data. Genome Biol. 2010;11(10):R106 doi: 10.1186/gb-2010-11-10-r106 20979621</rawText>
+		    <id value="scholexplore::11acffb99e1f4276f1398c4ea7784cb5" type="openaire" confidenceLevel="0.9"/>
+		    <id value="20979621" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="110">
+		    <rawText>110 Thorvaldsdottir H, Robinson JT, Mesirov JP. Integrative Genomics Viewer (IGV): high-performance genomics data visualization and exploration. Brief Bioinform. 2013;14(2):178–92. doi: 10.1093/bib/bbs017 22517427</rawText>
+		    <id value="dedup_wf_001::0405ed78c7c39e5b2564e7ce2d2709b0" type="openaire" confidenceLevel="0.9"/>
+		    <id value="22517427" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="111">
+		    <rawText>111 Schulze-Koops H. Lymp hopenia and autoimmune diseases. Arthritis Res Ther. 2004;6(4):178–80. doi: 10.1186/ar1208 15225363</rawText>
+		    <id value="dedup_wf_001::a478958a443bb2620c134431cb1c7194" type="openaire" confidenceLevel="0.9"/>
+		    <id value="15225363" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="112">
+		    <rawText>112 Le Campion A, Gagnerault MC, Auffray C, Becourt C, Poitrasson-Riviere M, Lallemand E, et al Lymphopenia-induced spontaneous T-cell proliferation as a cofactor for autoimmune disease development. Blood. 2009;114(9):1784–93. doi: 10.1182/blood-2008-12-192120 19561321</rawText>
+		    <id value="dedup_wf_001::fd59aa802b683bc4366a1181ba67cdb5" type="openaire" confidenceLevel="0.9"/>
+		    <id value="19561321" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		  <citation position="113">
+		    <rawText>113 Zhang N, Bevan MJ. TGF-beta signaling to T cells inhibits autoimmunity during lymphopenia-driven proliferation. Nat Immunol. 2012;13(7):667–73. doi: 10.1038/ni.2319 22634866</rawText>
+		    <id value="dedup_wf_001::3b23fab98aa6da36602233dd42385afa" type="openaire" confidenceLevel="0.9"/>
+		    <id value="22634866" type="pmid" confidenceLevel="0.9"/>
+		  </citation>
+		</citations></extraInfo>
+      </oaf:entity>
+    </metadata>
+  </result>
+</record>
