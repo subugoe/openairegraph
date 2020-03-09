@@ -7,6 +7,7 @@
 #' @importFrom xml2 xml_find_all xml_find_first xml_text
 #' @importFrom tibble tibble
 #' @importFrom purrr map_df
+#' @importFrom dplyr bind_rows
 #'
 #' @return data.frame with project information linked to a publication
 #'

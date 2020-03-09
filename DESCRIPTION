@@ -15,6 +15,9 @@ Imports:
     xml2,
     tibble,
     purrr,
+    progress,
+    base64enc,
+    dplyr,
     methods
 RoxygenNote: 6.1.1
 Suggests: 
