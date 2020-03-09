@@ -6,7 +6,7 @@
 #' @importFrom xml2 xml_text xml_find_first
 #' @importFrom tibble tibble
 #' @export
-publications_md <- function(doc) {
+oarg_publications_md <- function(doc) {
   if (!any(is(doc) == "xml_document"))
     stop("No valid XML")
   else

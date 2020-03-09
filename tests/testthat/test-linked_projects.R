@@ -1,6 +1,6 @@
 test_that("parser linked_projects works", {
-  a <- linked_projects(xml2::read_xml("../multiple_projects.xml"))
-  b <- linked_projects(xml2::read_xml("../one_project.xml"))
+  a <- oarg_linked_projects(xml2::read_xml("../multiple_projects.xml"))
+  b <- oarg_linked_projects(xml2::read_xml("../one_project.xml"))
 
   expect_is(a, "tbl_df")
   expect_match(unique(a$to), "project")

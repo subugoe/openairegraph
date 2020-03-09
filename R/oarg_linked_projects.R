@@ -11,7 +11,7 @@
 #' @return data.frame with project information linked to a publication
 #'
 #' @export
-linked_projects <- function(doc) {
+oarg_linked_projects <- function(doc) {
   if (!any(is(doc) == "xml_document"))
     stop("No valid XML")
   else

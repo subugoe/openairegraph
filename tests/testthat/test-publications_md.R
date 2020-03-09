@@ -1,6 +1,6 @@
 test_that("publication parser publications_md works", {
-  a <- publications_md(xml2::read_xml("../multiple_projects.xml"))
-  b <- publications_md(xml2::read_xml("../one_project.xml"))
+  a <- oarg_publications_md(xml2::read_xml("../multiple_projects.xml"))
+  b <- oarg_publications_md(xml2::read_xml("../one_project.xml"))
 
   expect_is(a, "tbl_df")
   expect_is(a$authors, "list")
