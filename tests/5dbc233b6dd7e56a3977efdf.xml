@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record>
+  <result xmlns:dri="http://www.driver-repository.eu/namespace/dri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <header>
+      <dri:objIdentifier>dedup_wf_001::cee3d6ee256cbabc8bca3bb190fb366e</dri:objIdentifier>
+      <dri:dateOfCollection>2019-01-25T18:32:15.512Z</dri:dateOfCollection>
+      <dri:dateOfTransformation>2019-08-13T13:40:28.539Z</dri:dateOfTransformation>
+      <counters>
+	  <counter_outcome_inferred value="2"/><counter_outcome value="2"/><counter_dedup value="4"/><counter_doi value="1"/>
+	  </counters>
+    </header>
+    <metadata>
+      <oaf:entity xmlns:oaf="http://namespace.openaire.eu/oaf" xsi:schemaLocation="http://namespace.openaire.eu/oaf https://www.openaire.eu/schema/1.0/oaf-1.0.xsd">
+		<oaf:result>
+			<publisher>IEEE</publisher><description>Finding landmarks on objects like faces is a challenging computer vision problem, especially in real life conditions (or in-the-wild) and Active Appearance Models have been widely used to solve it. State-of-the-art algorithms for fitting an AAM to a new image are based on Gauss-Newton (GN) optimization. Recently fast GN algorithms have been proposed for both forward additive and inverse compositional fitting frameworks. In this paper, we propose a fast and exact bi-directional (Fast-Bd) approach to AAM fitting by combining both approaches. Although such a method might appear to increase computational burden, we show that by capitalizing on results from optimization theory, an exact solution, as computationally efficient as the original forward or inverse formulation, can be derived. Our proposed bi-directional approach achieves state-of-the-art performance and superior convergence properties. These findings are validated on two challenging, in-the-wild data sets, LFPW and Helen, and comparison is provided to the state-of-the art methods for Active Appearance Models fitting.</description><dateofacceptance>2015-09-28</dateofacceptance><creator rank="1" name="Jean" surname="Kossaifi">Kossaifi, Jean</creator><creator rank="2" name="Georgios" surname="Tzimiropoulos">Tzimiropoulos, Georgios</creator><creator rank="3" name="Maja" surname="Pantic">Pantic, Maja</creator><source>2015 IEEE International Conference on Image Processing (ICIP)</source><source>IEEE International Conference on Image Processing (ICIP 2015)</source><source>eisbn: 978-1-4799-8339-1</source><language classid="eng" classname="English" schemeid="dnet:languages" schemename="dnet:languages"/><format>application/pdf</format><format>application/pdf</format><title classid="main title" classname="main title" schemeid="dnet:dataCite_title" schemename="dnet:dataCite_title">Fast and exact bi-directional fitting of active appearance models</title><resulttype classid="publication" classname="publication" schemeid="dnet:result_typologies" schemename="dnet:result_typologies"/><fulltext>http://eprints.nottingham.ac.uk/31443/1/tzimiroICIP15.pdf</fulltext><journal issn="" eissn="" lissn="" ep="" iss="" sp="" vol="">IEEE</journal><country classid="GB" classname="GB" schemeid="dnet:countries" schemename="dnet:countries" dataInfo="inferred: true    trust: &quot;0.9&quot;    inferenceprovenance: &quot;propagation&quot;    provenanceaction {      classid: &quot;propagation:country:instrepos&quot;      classname: &quot;Propagation of country information from datasources belonging to institutional repositories&quot;      schemeid: &quot;dnet:provenanceActions&quot;      schemename: &quot;dnet:provenanceActions&quot;    }    "/><country classid="NL" classname="NL" schemeid="dnet:countries" schemename="dnet:countries" dataInfo="inferred: true    trust: &quot;0.9&quot;    inferenceprovenance: &quot;propagation&quot;    provenanceaction {      classid: &quot;propagation:country:instrepos&quot;      classname: &quot;Propagation of country information from datasources belonging to institutional repositories&quot;      schemeid: &quot;dnet:provenanceActions&quot;      schemename: &quot;dnet:provenanceActions&quot;    }    "/><subject classid="" classname="" schemeid="" schemename=""/><relevantdate classid="" classname="" schemeid="" schemename=""/><embargoenddate/><contributor/><resourcetype classid="" classname="" schemeid="" schemename=""/><coverage/><refereed/><storagedate/><device/><size/><version/><lastmetadataupdate/><metadataversionnumber/><documentationUrl/><codeRepositoryUrl/><programmingLanguage classid="" classname="" schemeid="" schemename=""/><contactperson/><contactgroup/><tool/><originalId>10.1109/icip.2015.7350977</originalId><originalId>oai:doc.utwente.nl:99506</originalId><originalId>oai:eprints.nottingham.ac.uk:31443</originalId><pid classid="doi" classname="doi" schemeid="dnet:pid_types" schemename="dnet:pid_types">10.1109/icip.2015.7350977</pid><collectedfrom name="Sygma" id="openaire____::a8db6f6b2ce4fe72e8b2314a9a93e7d9"/><collectedfrom name="UnpayWall" id="openaire____::8ac8380272269217cb09a928c8caa993"/><collectedfrom name="CORE" id="openaire____::437f4b072b1aa198adcbc35910ff3b98"/><collectedfrom name="Universiteit Twente Repository" id="opendoar____::8dd48d6a2e2cad213179a3992c0be53c"/><collectedfrom name="Crossref" id="openaire____::081b82f96300b6a6e3d282bad31cb6e2"/><collectedfrom name="ORCID" id="openaire____::806360c771262b4d6770e7cdf04b5c5a"/><collectedfrom name="Microsoft Academic Graph" id="openaire____::5f532a3fc4f1ea403f37070f59a7a53a"/><bestaccessright classid="OPEN" classname="Open Access" schemeid="dnet:access_modes" schemename="dnet:access_modes"/><context id="EC" label="European Commission" type="funding"><category id="EC::H2020" label="Horizon 2020 Framework Programme"><concept id="EC::H2020::IA" label="Innovation action"/></category><category id="EC::FP7" label="SEVENTH FRAMEWORK PROGRAMME"><concept id="EC::FP7::SP1" label="SP1-Cooperation"/><concept id="EC::FP7::SP1::ICT" label="Information and Communication Technologies"/></category></context><datainfo><inferred>true</inferred><deletedbyinference>false</deletedbyinference><trust>0.9</trust><inferenceprovenance>dedup-similarity-result-levenstein</inferenceprovenance><provenanceaction classid="sysimport:dedup" classname="sysimport:dedup" schemeid="dnet:provenanceActions" schemename="dnet:provenanceActions"/></datainfo>
+		  <rels>
+		    <rel inferred="true" trust="0.9" inferenceprovenance="" provenanceaction="sysimport:crosswalk:repository">
+		      <to class="isProducedBy" scheme="dnet:result_project_relations" type="project">corda__h2020::50df5114a5ceb38f6e2c92459401c8ab</to>
+		      <code>645094</code><acronym>SEWA</acronym><contracttype classid="IA" classname="Innovation action" schemeid="ec:h2020toas" schemename="Horizon 2020 - Type of Actions"/><funding><funder id="ec__________::EC" shortname="EC" name="European Commission" jurisdiction="EU"/><funding_level_0 name="H2020">ec__________::EC::H2020</funding_level_0><funding_level_1 name="IA">ec__________::EC::H2020::IA</funding_level_1></funding><title>Automatic Sentiment Estimation in the Wild</title>
+		    </rel><rel inferred="true" trust="0.9" inferenceprovenance="" provenanceaction="sysimport:crosswalk:repository">
+		      <to class="isProducedBy" scheme="dnet:result_project_relations" type="project">corda_______::2c9819408cfb6120a38e2d9bb44dab52</to>
+		      <code>611153</code><contracttype classid="CP" classname="Collaborative project" schemeid="ec:FP7contractTypes" schemename="ec:FP7contractTypes"/><title>Telepresence Reinforcement-learning Social Agent</title><funding><funder id="ec__________::EC" shortname="EC" name="European Commission" jurisdiction="EU"/><funding_level_0 name="FP7">ec__________::EC::FP7</funding_level_0><funding_level_1 name="SP1">ec__________::EC::FP7::SP1</funding_level_1><funding_level_2 name="ICT">ec__________::EC::FP7::SP1::ICT</funding_level_2></funding><acronym>TERESA</acronym>
+		    </rel>
+		  </rels>
+		  <children>
+			<result objidentifier="core________::cee3d6ee256cbabc8bca3bb190fb366e">
+				<dateofacceptance>2015-09-28</dateofacceptance><title classid="main title" classname="main title" schemeid="dnet:dataCite_title" schemename="dnet:dataCite_title">Fast and exact bi-directional fitting of active appearance models</title><resulttype classid="publication" classname="publication" schemeid="dnet:result_typologies" schemename="dnet:result_typologies"/>
+			</result><result objidentifier="sygma_______::c72e1a020d50752c0bf20db5a0b62f25">
+				<publisher>IEEE</publisher><title classid="main title" classname="main title" schemeid="dnet:dataCite_title" schemename="dnet:dataCite_title">Fast and exact bi-directional fitting of active appearance models</title><resulttype classid="publication" classname="publication" schemeid="dnet:result_typologies" schemename="dnet:result_typologies"/>
+			</result><result objidentifier="doiboost____::c72e1a020d50752c0bf20db5a0b62f25">
+				<title classid="main title" classname="main title" schemeid="dnet:dataCite_title" schemename="dnet:dataCite_title">Fast and exact bi-directional fitting of active appearance models</title><resulttype classid="publication" classname="publication" schemeid="dnet:result_typologies" schemename="dnet:result_typologies"/>
+			</result><result objidentifier="od_______354::0c704c0c69652b8e6f1d98f51bcf653d">
+				<publisher>IEEE Computer Society</publisher><dateofacceptance>2015-01-01</dateofacceptance><title classid="main title" classname="main title" schemeid="dnet:dataCite_title" schemename="dnet:dataCite_title">Fast and exact Bi-directional Fitting of Active Appearance Models</title><resulttype classid="publication" classname="publication" schemeid="dnet:result_typologies" schemename="dnet:result_typologies"/>
+			</result><instance id="opendoar____::9cfdf10e8fc047a44b08ed031e1f0ed1">
+			    <hostedby name="Nottingham ePrints" id="opendoar____::9cfdf10e8fc047a44b08ed031e1f0ed1"/><instancetype classid="0004" classname="Conference object" schemeid="dnet:publication_resource" schemename="dnet:publication_resource"/><dateofacceptance>2015-09-28</dateofacceptance><license>http://eprints.nottingham.ac.uk/end_user_agreement.pdf</license><collectedfrom name="CORE" id="openaire____::437f4b072b1aa198adcbc35910ff3b98"/><accessright classid="OPEN" classname="Open Access" schemeid="dnet:access_modes" schemename="dnet:access_modes"/>
+				<webresource>
+				  <url>http://eprints.nottingham.ac.uk/31443/1/tzimiroICIP15.pdf</url>
+				</webresource>
+
+			</instance>
+			<instance id="openaire____::55045bd2a65019fd8e6741a755395c8c">
+			    <hostedby name="Unknown Repository" id="openaire____::55045bd2a65019fd8e6741a755395c8c"/><instancetype classid="0004" classname="Conference object" schemeid="dnet:publication_resource" schemename="dnet:publication_resource"/><collectedfrom name="Sygma" id="openaire____::a8db6f6b2ce4fe72e8b2314a9a93e7d9"/><accessright classid="UNKNOWN" classname="UNKNOWN" schemeid="dnet:access_modes" schemename="dnet:access_modes"/>
+				<webresource>
+				  <url>http://dx.doi.org/10.1109/icip.2015.7350977</url>
+				</webresource>
+
+			</instance>
+			<instance id="opendoar____::8dd48d6a2e2cad213179a3992c0be53c">
+			    <hostedby name="Universiteit Twente Repository" id="opendoar____::8dd48d6a2e2cad213179a3992c0be53c"/><instancetype classid="0004" classname="Conference object" schemeid="dnet:publication_resource" schemename="dnet:publication_resource"/><dateofacceptance>2015-01-01</dateofacceptance><collectedfrom name="Universiteit Twente Repository" id="opendoar____::8dd48d6a2e2cad213179a3992c0be53c"/><accessright classid="RESTRICTED" classname="Restricted" schemeid="dnet:access_modes" schemename="dnet:access_modes"/>
+				<webresource>
+				  <url>http://purl.utwente.nl/publications/99506</url>
+				</webresource>
+
+			</instance>
+			<instance id="openaire____::55045bd2a65019fd8e6741a755395c8c">
+			    <hostedby name="Unknown Repository" id="openaire____::55045bd2a65019fd8e6741a755395c8c"/><instancetype classid="0004" classname="Conference object" schemeid="dnet:publication_resource" schemename="dnet:publication_resource"/><collectedfrom name="Crossref" id="openaire____::081b82f96300b6a6e3d282bad31cb6e2"/><accessright classid="RESTRICTED" classname="Restricted" schemeid="dnet:access_modes" schemename="dnet:access_modes"/>
+				<webresource>
+				  <url>http://xplorestaging.ieee.org/ielx7/7328364/7350743/07350977.pdf?arnumber=7350977</url>
+				</webresource>
+				<webresource>
+				  <url>http://dx.doi.org/10.1109/icip.2015.7350977</url>
+				</webresource>
+
+			</instance>
+			<instance id="openaire____::55045bd2a65019fd8e6741a755395c8c">
+			    <hostedby name="Unknown Repository" id="openaire____::55045bd2a65019fd8e6741a755395c8c"/><instancetype classid="0004" classname="Conference object" schemeid="dnet:publication_resource" schemename="dnet:publication_resource"/><collectedfrom name="UnpayWall" id="openaire____::8ac8380272269217cb09a928c8caa993"/><accessright classid="OPEN" classname="Open Access" schemeid="dnet:access_modes" schemename="dnet:access_modes"/>
+				<webresource>
+				  <url>http://eprints.nottingham.ac.uk/31443/1/tzimiroICIP15.pdf</url>
+				</webresource>
+
+			</instance>
+
+		  </children>
+		</oaf:result>
+		<extraInfo name="result citations" typology="citations" provenance="iis::document_referencedDocuments" trust="0.9"><citations>
+		  <citation position="1">
+		    <rawText>[1] Gareth J. Edwards, Christopher J. Taylor, and Timothy F. Cootes, “Interpreting face images using active appearance models,” in FG. 1998, pp. 300-305, IEEE Computer Society. 1</rawText>
+		  </citation>
+		  <citation position="2">
+		    <rawText>[2] Iain Matthews and Simon Baker, “Active appearance models revisited,” International Journal of Computer Vision, vol. 60, no. 2, pp. 135 - 164, November 2004. 1, 2</rawText>
+		  </citation>
+		  <citation position="3">
+		    <rawText>[3] J. Kossaifi, G. Tzimiropoulos, and M. Pantic, “Fast newton active appearance models,” in IEEE International Conference on Image Processing (ICIP), 2014. 1</rawText>
+		  </citation>
+		  <citation position="4">
+		    <rawText>[4] Bruce D Lucas, Takeo Kanade, et al., “An iterative image registration technique with an application to stereo vision,” in Proceedings of the 7th international joint conference on Artificial intelligence, 1981. 1</rawText>
+		  </citation>
+		  <citation position="5">
+		    <rawText>[5] Gregory D. Hager and Peter N. Belhumeur, “Efficient region tracking with parametric models of geometry and illumination,” IEEE TPAMI, vol. 20, no. 10, pp. 1025- 1039, 1998. 1</rawText>
+		  </citation>
+		  <citation position="6">
+		    <rawText>[6] I. Matthews and S. Baker, “Active appearance models revisited,” IJCV, vol. 60, no. 2, pp. 135-164, 2004. 1, 2</rawText>
+		  </citation>
+		  <citation position="7">
+		    <rawText>[7] S. Baker, R. Gross, and I. Matthews, “Lucas-kanade 20 years on: Part 3,” Robotics Institute, Carnegie Mellon University, Tech. Rep. CMU-RI-TR-03-35, 2003. 1, 2</rawText>
+		  </citation>
+		  <citation position="8">
+		    <rawText>[8] R. Gross, I. Matthews, and S. Baker, “Generic vs. person specific active appearance models,” Image and Vision Computing, vol. 23, no. 12, pp. 1080-1093, 2005. 1</rawText>
+		  </citation>
+		  <citation position="9">
+		    <rawText>[9] G. Tzimiropoulos and M. Pantic, “Optimization problems for fast aam fitting in-the-wild,” in Proceedings of IEEE Intl Conf. on Computer Vision (ICCV 2013). 1, 2, 3</rawText>
+		  </citation>
+		  <citation position="10">
+		    <rawText>[10] Peter N. Belhumeur, David W. Jacobs, David J. Kriegman, and Neeraj Kumar, “Localizing parts of faces using a consensus of exemplars,” in The 24th IEEE Conference on Computer Vision and Pattern Recognition (CVPR), June 2011. 2, 3</rawText>
+		  </citation>
+		  <citation position="11">
+		    <rawText>[11] J. Brandt F. Zhou and Z. Lin, “Exemplar-based graph matching for robust facial landmark localization,” in IEEE International Conference on Computer Vision (ICCV), 2013. 2, 3</rawText>
+		  </citation>
+		  <citation position="12">
+		    <rawText>[12] A. Mollahosseini and M.H. Mahoor, “Bidirectional warping of active appearance model,” in Computer Vision and Pattern Recognition Workshops (CVPRW), June 2013, pp. 875-880. 2, 3, 4</rawText>
+		  </citation>
+		  <citation position="13">
+		    <rawText>[13] Stephen Boyd and Lieven Vandenberghe, Convex optimization, Cambridge university press, 2004. 2</rawText>
+		  </citation>
+		  <citation position="14">
+		    <rawText>[14] Christos Sagonas, Georgios Tzimiropoulos, Stefanos Zafeiriou, and Maja Pantic, “A semi-automatic methodology for facial landmark annotation,” in CVPR Workshops, 2013. 3</rawText>
+		  </citation>
+		  <citation position="15">
+		    <rawText>[15] Christos Sagonas, Georgios Tzimiropoulos, Stefanos Zafeiriou, and Maja Pantic, “300 faces in-the-wild challenge: The first facial landmark localization challenge,” in The IEEE International Conference on Computer Vision (ICCV) Workshops, December 2013. 3</rawText>
+		  </citation>
+		  <citation position="16">
+		    <rawText>[16] X. Zhu and D. Ramanan, “Face detection, pose estimation, and landmark estimation in the wild.,” in CVPR, 2012. 3</rawText>
+		  </citation>
+		  <citation position="17">
+		    <rawText>[17] Georgios Tzimiropoulos and Maja Pantic, “Gaussnewton deformable part models for face alignment inthe-wild,” in CVPR, 2014. 4</rawText>
+		  </citation>
+		  <citation position="18">
+		    <rawText>[18] Georgios Tzimiropoulos, Joan Alabort-i-Medina, Stefanos Zafeiriou, and Maja Pantic, “Generic active appearance models revisited,” in Computer Vision-ACCV 2012, pp. 650-663. Springer, 2013. 4</rawText>
+		  </citation>
+		  <citation position="19">
+		    <rawText>[19] A. Asthana, S. Zafeiriou, G. Tzimiropoulos, S. Cheng, and M. Pantic, “From pixels to response maps: Discriminative image filtering for face alignment in the wild,” IEEE Transactions on Pattern Analysis and Machine Intelligence (T-PAMI). In Press., 2015. 4</rawText>
+		  </citation>
+		  <citation position="20">
+		    <rawText>[20] E. Antonakos, J. Alabort-i-Medina, G. Tzimiropoulos, and S. Zafeiriou, “Feature-based lucas-kanade and active appearance models,” IEEE Transactions on Image Processing, Accepted for publication. 4</rawText>
+		  </citation>
+		  <citation position="21">
+		    <rawText>[21] Georgios Tzimiropoulos, “Project-out cascaded regression with an application to face alignment,” in CVPR, 2015. 4</rawText>
+		    <id value="dedup_wf_001::da467f16f99128abd019c6c54212102f" type="openaire" confidenceLevel="0.6932851"/>
+		  </citation>
+		</citations></extraInfo>
+      </oaf:entity>
+    </metadata>
+  </result>
+</record>

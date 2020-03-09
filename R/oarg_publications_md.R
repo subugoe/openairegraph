@@ -22,7 +22,8 @@ oarg_publications_md <- function(doc) {
     resource_type = xml_text(xml_find_first(pubs_node, "//resoucetype//@classname")),
     authors = list(get_authors(pubs_node)),
     pids = list(get_pids(pubs_node)),
-    collected_from = list(get_sources(pubs_node))
+    collected_from = list(get_sources(pubs_node)),
+    source_ids = list(xml_text(xml_find_all(pubs_node, "./originalId")))
   )
   out[out == ""] <- NA
   out
@@ -38,8 +39,7 @@ get_pids <- function(pubs_node) {
 get_sources <- function(pubs_node) {
   tibble::tibble(
     collected_from_name = xml_text(xml_find_all(pubs_node, "./collectedfrom/@name")),
-    collected_from_source_id = xml_text(xml_find_all(pubs_node, "./collectedfrom/@id")),
-    collected_from_pub_id = xml_text(xml_find_all(pubs_node, "./originalId"))
+    collected_from_source_id = xml_text(xml_find_all(pubs_node, "./collectedfrom/@id"))
   )
 }
 
@@ -47,9 +47,9 @@ get_authors <- function(pubs_node) {
   orcid_nodes <-  xml_find_all(pubs_node, "//creator")
   out <- tibble::tibble(
     author_full_name = xml_text(xml_find_all(pubs_node, "./creator")),
-    author_name = xml_text(xml_find_all(pubs_node, "./creator/@name")),
-    author_surname = xml_text(xml_find_all(pubs_node, "./creator/@surname")),
     author_order = as.numeric(xml_text(xml_find_all(pubs_node, "./creator/@rank"))),
+    author_name = sapply(orcid_nodes, function(x) xml_text(xml_find_first(x, "@name"))),
+    author_surname = sapply(orcid_nodes, function(x) xml_text(xml_find_first(x, "@surname"))),
     author_orcid = sapply(orcid_nodes, function(x) xml_text(xml_find_first(x, "@ORCID")))
   )
   out[order(out$author_order),]
