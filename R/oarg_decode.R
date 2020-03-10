@@ -25,6 +25,8 @@ oarg_decode <-
     oaire_binary <-
       tibble::tibble(id = oaire$`_id`$`$oid`,
                      bin_xml = oaire$body$`$binary`)
+    if (limit > nrow(oaire_binary))
+       limit <- NULL
     if (!is.null(limit))
       oaire_binary <- oaire_binary[c(1:limit), ]
     if (!dir.exists(records_path))

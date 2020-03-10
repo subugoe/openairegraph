@@ -9,12 +9,12 @@ test_that("publication parser publications_md works", {
   expect_equal(ncol(data.frame(a$collected_from)), 2)
   expect_equal(ncol(data.frame(a$pids)), 2)
   expect_equal(ncol(data.frame(a$authors)), 5)
-  expect_equal(ncol(a), 11)
+  expect_equal(ncol(a), 12)
   expect_equal(nrow(a), 1)
 
   expect_is(b, "tbl_df")
   expect_is(b$authors, "list")
-  expect_equal(ncol(b), 11)
+  expect_equal(ncol(b), 12)
   expect_equal(ncol(data.frame(b$collected_from)), 2)
   expect_equal(ncol(data.frame(b$pids)), 2)
   expect_equal(ncol(data.frame(b$authors)), 5)
@@ -26,7 +26,7 @@ test_that("publication parser publications_md works", {
   expect_equal(ncol(data.frame(c$collected_from)), 2)
   expect_equal(ncol(data.frame(c$pids)), 2)
   expect_equal(ncol(data.frame(c$authors)), 5)
-  expect_equal(ncol(c), 11)
+  expect_equal(ncol(c), 12)
   expect_equal(nrow(c), 1)
 
   expect_is(d, "tbl_df")
@@ -34,7 +34,7 @@ test_that("publication parser publications_md works", {
   expect_equal(ncol(data.frame(d$collected_from)), 2)
   expect_equal(ncol(data.frame(d$pids)), 2)
   expect_equal(ncol(data.frame(d$authors)), 5)
-  expect_equal(ncol(d), 11)
+  expect_equal(ncol(d), 12)
   expect_equal(nrow(d), 1)
   # can deal with missing author attributes
   expect_equal(is.na(unique(data.frame(d$authors)$author_surname)), TRUE)

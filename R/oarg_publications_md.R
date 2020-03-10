@@ -13,6 +13,7 @@ oarg_publications_md <- function(doc) {
    pubs_node <- xml2::xml_find_first(doc,
                        "//oaf:entity//oaf:result")
   out <- tibble::tibble(
+    type = xml_text(xml_find_first(pubs_node, "//resulttype//@classname")),
     title = xml_text(xml_find_first(pubs_node, "//title[@classid='main title']")),
     journal = xml_text(xml_find_first(pubs_node, "//journal")),
     publisher = xml_text(xml_find_first(pubs_node, "//publisher")),
