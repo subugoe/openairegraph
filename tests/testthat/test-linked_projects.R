@@ -4,12 +4,12 @@ test_that("parser linked_projects works", {
 
   expect_is(a, "tbl_df")
   expect_match(unique(a$to), "project")
-  expect_equal(ncol(a), 7)
+  expect_equal(ncol(a), 9)
   expect_equal(nrow(a), 22)
 
   expect_is(b, "tbl_df")
   expect_match(unique(a$to), "project")
-  expect_equal(ncol(b), 7)
+  expect_equal(ncol(b), 9)
   expect_equal(nrow(b), 1)
 
   # not a valid xml

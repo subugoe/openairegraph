@@ -26,8 +26,14 @@ oarg_linked_projects <- function(doc) {
       to =  xml_text(xml_find_first(x, ".//to/@type")),
       project_title = xml_text(xml_find_first(x, ".//title")),
       funder = xml_text(xml_find_first(x, ".//funding/funder/@name")),
-      funding_stream = xml_text(xml_find_first(
+      funding_level_0 = xml_text(xml_find_first(
         x, ".//funding/funding_level_0/@name"
+      )),
+      funding_level_1 = xml_text(xml_find_first(
+        x, ".//funding/funding_level_1/@name"
+      )),
+      funding_level_2 = xml_text(xml_find_first(
+        x, ".//funding/funding_level_2/@name"
       )),
       project_code = xml_text(xml_find_first(x, ".//code")),
       project_acronym = xml_text(xml_find_first(x, ".//acronym")),
