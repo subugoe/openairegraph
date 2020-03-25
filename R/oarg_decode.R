@@ -1,5 +1,3 @@
-
-
 #' Decode and store OpenAIRE Research Graph files
 #'
 #'
@@ -33,10 +31,12 @@ oarg_decode <-
       stop("No folder found to store the decoded record files")
     if (verbose)
       pb <- progress_bar$new(total = nrow(oaire_binary))
-    purrr::pmap(oaire_binary, function(bin_xml, id, verbose) {
+   tt <- purrr::pmap(oaire_binary, function(bin_xml, id, verbose) {
       if (verbose)
         pb$tick()
+      con <- file(paste0(records_path, id, ".zip"),  "wb")
       out <- base64enc::base64decode(what = bin_xml)
-      writeBin(out, paste0(records_path, id, ".zip"))
+      writeBin(out, con)
+      close(con)
     }, verbose)
   }
