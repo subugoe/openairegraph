@@ -1,7 +1,6 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
-^data-raw$
-^LICENSE\.md$
+^LICENSE.md$
 ^README\.Rmd$
 ^CODE_OF_CONDUCT\.md$
 ^\.travis\.yml$
@@ -10,3 +9,4 @@
 ^pkgdown$
 ^doc$
 ^Meta$
+^vignettes/intro_h2020$

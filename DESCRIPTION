@@ -3,8 +3,12 @@ Type: Package
 Title: Read and manipulate the OpenAIRE Research Graph Dump
 Version: 0.0.1
 Authors@R: c(
-    person("Najko", "Jahn", role = c("aut", "cre"), email = "najko.jahn@gmail.com")
-    )
+    person(
+    "Najko", "Jahn", 
+    role = c("aut", "cre"), 
+    email = "najko.jahn@gmail.com",
+    comment = c(ORCID = "0000-0001-5105-1463")
+    ))
 Description: Helper functions to obtain and manipualte data from the OpenAIRE Research Graph 
     Dumps <https://api.openaire.eu/graph-dumps.html>. 
     This package focuses on research results funded by EC framework programme HORIZON 2020. 
@@ -13,6 +17,7 @@ Encoding: UTF-8
 LazyData: true
 Imports: 
     xml2,
+    jsonlite,
     tibble,
     purrr,
     progress,
@@ -22,6 +27,15 @@ Imports:
 RoxygenNote: 6.1.1
 Suggests: 
     testthat (>= 2.1.0),
+    remotes,
+    future,
+    future.apply,
+    tictoc,
+    tidyr,
+    cowplot,
+    scales,
+    ggplot2,
+    plotly,
     roxygen2,
     knitr,
     rmarkdown

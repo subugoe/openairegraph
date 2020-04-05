@@ -49,6 +49,18 @@
 <li>
   <a href="reference/index.html">Reference</a>
 </li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Articles
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+<li>
+      <a href="articles/intro_h2020/oaire_graph_post.html">Accessing and analysing the OpenAIRE Research Graph data dumps</a>
+    </li>
+  </ul>
+</li>
       </ul>
 <ul class="nav navbar-nav navbar-right"></ul>
 </div>
@@ -87,7 +99,7 @@
 <div id="parse-publication-metadata" class="section level3">
 <h3 class="hasAnchor">
 <a href="#parse-publication-metadata" class="anchor"></a>Parse publication metadata</h3>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>openairegraph<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/openairegraph/man/publications_md.html">publications_md</a></span>(my_record)</span>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>openairegraph<span class="op">::</span><span class="kw">publications_md</span>(my_record)</span>
 <span id="cb3-2"><a href="#cb3-2"></a><span class="co">#&gt; # A tibble: 1 x 10</span></span>
 <span id="cb3-3"><a href="#cb3-3"></a><span class="co">#&gt;   title journal publisher date_of_accepta… best_access_rig… embargo_enddate</span></span>
 <span id="cb3-4"><a href="#cb3-4"></a><span class="co">#&gt;   &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;     &lt;chr&gt;            &lt;chr&gt;            &lt;chr&gt;          </span></span>
@@ -95,7 +107,7 @@
 <span id="cb3-6"><a href="#cb3-6"></a><span class="co">#&gt; # … with 4 more variables: resource_type &lt;chr&gt;, authors &lt;list&gt;,</span></span>
 <span id="cb3-7"><a href="#cb3-7"></a><span class="co">#&gt; #   pids &lt;list&gt;, collected_from &lt;list&gt;</span></span></code></pre></div>
 <p>Author infos</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>openairegraph<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/openairegraph/man/publications_md.html">publications_md</a></span>(my_record)<span class="op">$</span>authors</span>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>openairegraph<span class="op">::</span><span class="kw">publications_md</span>(my_record)<span class="op">$</span>authors</span>
 <span id="cb4-2"><a href="#cb4-2"></a><span class="co">#&gt; [[1]]</span></span>
 <span id="cb4-3"><a href="#cb4-3"></a><span class="co">#&gt; # A tibble: 64 x 5</span></span>
 <span id="cb4-4"><a href="#cb4-4"></a><span class="co">#&gt;    author_full_name  author_name author_surname author_order author_orcid  </span></span>
@@ -112,7 +124,7 @@
 <span id="cb4-15"><a href="#cb4-15"></a><span class="co">#&gt; 10 Glenn, Stuart B.  Stuart B.   Glenn                    10 &lt;NA&gt;          </span></span>
 <span id="cb4-16"><a href="#cb4-16"></a><span class="co">#&gt; # … with 54 more rows</span></span></code></pre></div>
 <p>Linked persistent identifier (PID) to research publication</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>openairegraph<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/openairegraph/man/publications_md.html">publications_md</a></span>(my_record)<span class="op">$</span>pids</span>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>openairegraph<span class="op">::</span><span class="kw">publications_md</span>(my_record)<span class="op">$</span>pids</span>
 <span id="cb5-2"><a href="#cb5-2"></a><span class="co">#&gt; [[1]]</span></span>
 <span id="cb5-3"><a href="#cb5-3"></a><span class="co">#&gt; # A tibble: 3 x 2</span></span>
 <span id="cb5-4"><a href="#cb5-4"></a><span class="co">#&gt;   pid_type pid                         </span></span>
@@ -124,7 +136,7 @@
 <div id="linked-projects" class="section level3">
 <h3 class="hasAnchor">
 <a href="#linked-projects" class="anchor"></a>Linked projects</h3>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>openairegraph<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/openairegraph/man/linked_projects.html">linked_projects</a></span>(my_record)</span>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>openairegraph<span class="op">::</span><span class="kw">linked_projects</span>(my_record)</span>
 <span id="cb6-2"><a href="#cb6-2"></a><span class="co">#&gt; # A tibble: 22 x 7</span></span>
 <span id="cb6-3"><a href="#cb6-3"></a><span class="co">#&gt;    to    project_title funder funding_stream project_code project_acronym</span></span>
 <span id="cb6-4"><a href="#cb6-4"></a><span class="co">#&gt;    &lt;chr&gt; &lt;chr&gt;         &lt;chr&gt;  &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;          </span></span>
@@ -197,7 +209,7 @@
 <div class="developers">
 <h2>Developers</h2>
 <ul class="list-unstyled">
-<li>Najko Jahn <br><small class="roles"> Author, maintainer </small>  </li>
+<li>Najko Jahn <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0001-5105-1463" target="orcid.widget"><img src="https://members.orcid.org/sites/default/files/vector_iD_icon.svg" class="orcid" alt="ORCID"></a> </li>
 </ul>
 </div>
 
