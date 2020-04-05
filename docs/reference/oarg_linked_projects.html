@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Parse projects — oarg_linked_projects • openairegraph</title>
+<title>Get project metadata — oarg_linked_projects • openairegraph</title>
 
 
 <!-- jquery -->
@@ -37,8 +37,8 @@
   <link href="../extra.css" rel="stylesheet">
   
 
-<meta property="og:title" content="Parse projects — oarg_linked_projects" />
-<meta property="og:description" content="Obtain project metadata linked to OpenAIRE publications" />
+<meta property="og:title" content="Get project metadata — oarg_linked_projects" />
+<meta property="og:description" content="Parse project metadata linked to a OpenAIRE Research Graph record" />
 <meta name="twitter:card" content="summary" />
 
 
@@ -114,13 +114,13 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Parse projects</h1>
+    <h1>Get project metadata</h1>
     
     <div class="hidden name"><code>oarg_linked_projects.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Obtain project metadata linked to OpenAIRE publications</p>
+    <p>Parse project metadata linked to a OpenAIRE Research Graph record</p>
     </div>
 
     <pre class="usage"><span class='fu'>oarg_linked_projects</span>(<span class='no'>doc</span>)</pre>
@@ -136,14 +136,38 @@
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>data.frame with project information linked to a publication</p>
+    <p>The result is a tibble with project metadata.
+ Here are the returned columns and descriptions:</p>
+<p></p><table class='table'>
+<tr><td><code>to</code></td><td>Link type</td></tr>
+<tr><td><code>project_title</code></td><td>Title of the project</td></tr>
+<tr><td><code>funder</code></td><td>Funder name</td></tr>
+<tr><td><code>funding_level_0</code></td><td>Funding sub-category (top -level), e.g. H2020</td></tr>
+<tr><td><code>funding_level_1</code></td><td>Funding sub-category (middle-level), e.g. H2020-ERC</td></tr>
+<tr><td><code>funding_level_2</code></td><td>Funding sub-category (micro-level)</td></tr>
+<tr><td><code>project_code</code></td><td>Grant ID</td></tr>
+<tr><td><code>project_acronym</code></td><td>Project's acronym</td></tr>
+<tr><td><code>contract_type</code></td><td>Type of action</td></tr>
+</table>
 
+
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
+<span class='co'># sample file delivered with this package</span>
+<span class='no'>dump_eg</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span>(<span class='st'>"extdata"</span>, <span class='st'>"multiple_projects.xml"</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>"openairegraph"</span>)
+<span class='co'># load xml file</span>
+<span class='no'>my_record</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>xml2</span><span class='kw ns'>::</span><span class='fu'><a href='http://xml2.r-lib.org/reference/read_xml.html'>read_xml</a></span>(<span class='no'>dump_eg</span>)
+<span class='co'># parse full text links</span>
+<span class='fu'>oarg_linked_projects</span>(<span class='no'>my_record</span>)
+}</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
       <li><a href="#value">Value</a></li>
+      <li><a href="#examples">Examples</a></li>
     </ul>
 
   </div>

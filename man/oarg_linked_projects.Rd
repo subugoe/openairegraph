@@ -2,7 +2,7 @@
 % Please edit documentation in R/oarg_linked_projects.R
 \name{oarg_linked_projects}
 \alias{oarg_linked_projects}
-\title{Parse projects}
+\title{Get project metadata}
 \usage{
 oarg_linked_projects(doc)
 }
@@ -10,8 +10,32 @@ oarg_linked_projects(doc)
 \item{doc}{document of class `xml_document` from the OpenAIRE research graph publication subset}
 }
 \value{
-data.frame with project information linked to a publication
+The result is a tibble with project metadata.
+ Here are the returned columns and descriptions:
+
+ \tabular{ll}{
+ \code{to}              \tab Link type \cr
+ \code{project_title}   \tab Title of the project \cr
+ \code{funder}          \tab Funder name \cr
+ \code{funding_level_0} \tab Funding sub-category (top -level), e.g. H2020 \cr
+ \code{funding_level_1} \tab Funding sub-category (middle-level), e.g. H2020-ERC \cr
+ \code{funding_level_2} \tab Funding sub-category (micro-level) \cr
+ \code{project_code}    \tab Grant ID \cr
+ \code{project_acronym}  \tab Project's acronym \cr
+ \code{contract_type}   \tab Type of action \cr
+ }
 }
 \description{
-Obtain project metadata linked to OpenAIRE publications
+Parse project metadata linked to a OpenAIRE Research Graph record
+}
+\examples{
+\dontrun{
+# sample file delivered with this package
+dump_eg <- system.file("extdata", "multiple_projects.xml", package = "openairegraph")
+# load xml file
+my_record <- xml2::read_xml(dump_eg)
+# parse full text links
+oarg_linked_projects(my_record)
+}
+
 }

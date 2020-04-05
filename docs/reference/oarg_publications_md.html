@@ -38,7 +38,7 @@
   
 
 <meta property="og:title" content="Get publication metadata — oarg_publications_md" />
-<meta property="og:description" content="Get publication metadata" />
+<meta property="og:description" content="Parse basic publication metadata from a decoded OpenAIRE Research Graph record." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -120,7 +120,7 @@
     </div>
 
     <div class="ref-description">
-    <p>Get publication metadata</p>
+    <p>Parse basic publication metadata from a decoded OpenAIRE Research Graph record.</p>
     </div>
 
     <pre class="usage"><span class='fu'>oarg_publications_md</span>(<span class='no'>doc</span>)</pre>
@@ -136,14 +136,37 @@
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>data.frame with publication metadata</p>
+    <p>The result is a tibble with each row representing a publication.
+  Here are the returned columns and descriptions:</p>
+<p></p><table class='table'>
+<tr><td><code>type</code></td><td>Research output type (literature publication, dataset, software)</td></tr>
+<tr><td><code>title</code></td><td>Publication title</td></tr>
+<tr><td><code>journal</code></td><td>Journal title</td></tr>
+<tr><td><code>publisher</code></td><td>Publisher</td></tr>
+<tr><td><code>date_of_acceptance</code></td><td>Date of acceptance for publication</td></tr>
+<tr><td><code>best_access_right</code></td><td>Access level</td></tr>
+<tr><td><code>embargo_enddate</code></td><td>Date when the publication becomes openly available</td></tr>
+<tr><td><code>resource_type</code></td><td>Type of dataset</td></tr>
+<tr><td><code>authors</code></td><td>List-column with author details including names,
+order and ORCID</td></tr>
+<tr><td><code>pid</code></td><td>List-column with persistent identifiers (PIDS)
+referencing the publication, e.g. DOI, PMID or PMCID.
+PIDs are particularly useful when cross-linking to other scholarly data sources</td></tr>
+<tr><td><code>collected_from</code></td><td>Name and identifier of metadata source</td></tr>
+<tr><td><code>source_ids</code></td><td>metadata source ids like OAI identifier</td></tr>
+</table>
 
+
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
       <li><a href="#value">Value</a></li>
+      <li><a href="#examples">Examples</a></li>
     </ul>
 
   </div>

@@ -39,7 +39,7 @@ By default, a progress bar presents the current state of the process.
 \examples{
 \dontrun{
 library(jsonlite)
-dump_file <- system.file("extdata", "multiple_projects.xml", package = "openairegraph")
+dump_file <- system.file("extdata", "", package = "openairegraph")
 # a dump file is in json format
 loaded_dump <- jsonlite::stream_in(file("dump_file"))
 # writes out each XML-formatted record as a zip file to a specified folder

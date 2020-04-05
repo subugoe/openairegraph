@@ -10,8 +10,44 @@ oarg_publications_md(doc)
 \item{doc}{document of class `xml_document` from the OpenAIRE research graph publication subset}
 }
 \value{
-data.frame with publication metadata
+The result is a tibble with each row representing a publication.
+  Here are the returned columns and descriptions:
+
+  \tabular{ll}{
+  \code{type}               \tab Research output type (literature publication, dataset, software) \cr
+  \code{title}              \tab Publication title \cr
+  \code{journal}            \tab Journal title \cr
+  \code{publisher}          \tab Publisher \cr
+  \code{date_of_acceptance} \tab Date of acceptance for publication \cr
+  \code{best_access_right}  \tab Access level \cr
+  \code{embargo_enddate}    \tab Date when the publication becomes openly available \cr
+  \code{resource_type}      \tab Type of dataset \cr
+  \code{authors}            \tab List-column with author details including names,
+order and ORCID \cr
+  \code{pid}                \tab List-column with persistent identifiers (PIDS)
+referencing the publication, e.g. DOI, PMID or PMCID.
+PIDs are particularly useful when cross-linking to other scholarly data sources \cr
+  \code{collected_from}     \tab Name and identifier of metadata source \cr
+  \code{source_ids}         \tab metadata source ids like OAI identifier
+  }
 }
 \description{
-Get publication metadata
+Parse basic publication metadata from a decoded OpenAIRE Research Graph record.
+}
+\examples{
+\dontrun{
+# sample file delivered with this package
+dump_eg <- system.file("extdata", "multiple_projects.xml", package = "openairegraph")
+# load xml file
+my_record <- xml2::read_xml(dump_eg)
+# parse
+out <- openairegraph::oarg_publications_md(my_record)
+out
+
+# Detailed author infos
+openairegraph::oarg_publications_md(out)$authors
+
+Obtain linked persistent identifiers (PID)
+openairegraph::oarg_publications_md(my_record)$pids
+}
 }

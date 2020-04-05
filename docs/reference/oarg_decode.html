@@ -168,7 +168,7 @@ the output first.</p>
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
 <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>jsonlite</span>)
-<span class='no'>dump_file</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span>(<span class='st'>"extdata"</span>, <span class='st'>"multiple_projects.xml"</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>"openairegraph"</span>)
+<span class='no'>dump_file</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span>(<span class='st'>"extdata"</span>, <span class='st'>""</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>"openairegraph"</span>)
 <span class='co'># a dump file is in json format</span>
 <span class='no'>loaded_dump</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>jsonlite</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/jsonlite/man/stream_in.html'>stream_in</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/connections.html'>file</a></span>(<span class='st'>"dump_file"</span>))
 <span class='co'># writes out each XML-formatted record as a zip file to a specified folder</span>

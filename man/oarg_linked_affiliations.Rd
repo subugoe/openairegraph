@@ -2,7 +2,7 @@
 % Please edit documentation in R/oarg_linked_affiliations.R
 \name{oarg_linked_affiliations}
 \alias{oarg_linked_affiliations}
-\title{Parse affiliations}
+\title{Get affiliations}
 \usage{
 oarg_linked_affiliations(doc)
 }
@@ -10,8 +10,26 @@ oarg_linked_affiliations(doc)
 \item{doc}{document of class `xml_document` from the OpenAIRE research graph publication subset}
 }
 \value{
-data.frame with affiliations linked to a publication
+The result is a tibble with project metadata.
+ Here are the returned columns and descriptions:
+
+ \tabular{ll}{
+ \code{legal_name}    \tab Name of the organisation \cr
+ \code{country}       \tab Country of the organisation \cr
+ \code{trust_score}   \tab Accuracy measure
+ }
 }
 \description{
-Obtain affiliation metadata from OpenAIRE publications
+Obtain affiliation metadata from authors linked to an OpenAIRE-indexed publication.
+}
+\examples{
+\dontrun{
+# sample file delivered with this package
+dump_eg <- system.file("extdata", "multiple_projects.xml", package = "openairegraph")
+# load xml file
+my_record <- xml2::read_xml(dump_eg)
+# parse full text links
+oarg_linked_affiliations(my_record)
+}
+
 }
