@@ -48,6 +48,8 @@ convert data from these XML files to a tibble.
 
 For a long-form documentation including a use-case, see:
 
+<https://subugoe.github.io/openairegraph/articles/intro_h2020/oaire_graph_post.html>
+
 ## Installation
 
 You can install the development version of openairegraph from GitHub
