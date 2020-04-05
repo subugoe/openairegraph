@@ -13,6 +13,8 @@ Description: Helper functions to obtain and manipualte data from the OpenAIRE Re
     Dumps <https://api.openaire.eu/graph-dumps.html>. 
     This package focuses on research results funded by EC framework programme HORIZON 2020. 
 License: MIT + file LICENSE
+URL: https://subugoe.github.io/openairegraph/, https://github.com/subugoe/openairegraph
+BugReports: https://github.com/subugoe/openairegraph/issues
 Encoding: UTF-8
 LazyData: true
 Imports: 
