@@ -2,7 +2,7 @@
 % Please edit documentation in R/oarg_decode.R
 \name{oarg_decode}
 \alias{oarg_decode}
-\title{Decode and store OpenAIRE Research Graph files}
+\title{Decode and store records from OpenAIRE Research Graph files}
 \usage{
 oarg_decode(oaire = NULL, limit = NULL, records_path = NULL,
   verbose = TRUE)
@@ -17,8 +17,32 @@ oarg_decode(oaire = NULL, limit = NULL, records_path = NULL,
 \item{verbose}{print some information on what is going on}
 }
 \value{
-files
+Exports de-compressed XML-formatted record, storing them locally
+ as zip files. The file name represents the record identifier.
 }
 \description{
-Decode and store OpenAIRE Research Graph files
+OpenAIRE Research Graph files are json-files that contain a record identifier
+and a BASE64 encoded text string representing the metadata. This function
+decodes these strings and saves them locally.
+}
+\details{
+De-coding and storing the records individually from an OpenAIRE Research Graph
+dump allows to process the records independent from each other, which is a
+common approach when working with big data.
+
+Because the dumps are quite large, the function furthermore has a
+parameter that allows setting a limit, which is helpful for inspecting
+the output first.
+
+By default, a progress bar presents the current state of the process.
+}
+\examples{
+\dontrun{
+library(jsonlite)
+dump_file <- system.file("extdata", "multiple_projects.xml", package = "openairegraph")
+# a dump file is in json format
+loaded_dump <- jsonlite::stream_in(file("dump_file"))
+# writes out each XML-formatted record as a zip file to a specified folder
+oaire_decode(loaded_dump, limit = 10, records_path = "data/")
+}
 }

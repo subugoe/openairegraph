@@ -38,5 +38,6 @@ Suggests:
     plotly,
     roxygen2,
     knitr,
-    rmarkdown
+    rmarkdown,
+    covr
 VignetteBuilder: knitr

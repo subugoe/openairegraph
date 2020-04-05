@@ -10,3 +10,4 @@
 ^doc$
 ^Meta$
 ^vignettes/intro_h2020$
+^codecov\.yml$

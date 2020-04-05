@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Decode and store OpenAIRE Research Graph files — oarg_decode • openairegraph</title>
+<title>Decode and store records from OpenAIRE Research Graph files — oarg_decode • openairegraph</title>
 
 
 <!-- jquery -->
@@ -37,8 +37,10 @@
   <link href="../extra.css" rel="stylesheet">
   
 
-<meta property="og:title" content="Decode and store OpenAIRE Research Graph files — oarg_decode" />
-<meta property="og:description" content="Decode and store OpenAIRE Research Graph files" />
+<meta property="og:title" content="Decode and store records from OpenAIRE Research Graph files — oarg_decode" />
+<meta property="og:description" content="OpenAIRE Research Graph files are json-files that contain a record identifier
+and a BASE64 encoded text string representing the metadata. This function
+decodes these strings and saves them locally." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -114,13 +116,15 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Decode and store OpenAIRE Research Graph files</h1>
+    <h1>Decode and store records from OpenAIRE Research Graph files</h1>
     
     <div class="hidden name"><code>oarg_decode.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Decode and store OpenAIRE Research Graph files</p>
+    <p>OpenAIRE Research Graph files are json-files that contain a record identifier
+and a BASE64 encoded text string representing the metadata. This function
+decodes these strings and saves them locally.</p>
     </div>
 
     <pre class="usage"><span class='fu'>oarg_decode</span>(<span class='kw'>oaire</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>records_path</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
@@ -149,14 +153,35 @@
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>files</p>
+    <p>Exports de-compressed XML-formatted record, storing them locally
+ as zip files. The file name represents the record identifier.</p>
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
+    <p>De-coding and storing the records individually from an OpenAIRE Research Graph
+dump allows to process the records independent from each other, which is a
+common approach when working with big data.</p>
+<p>Because the dumps are quite large, the function furthermore has a
+parameter that allows setting a limit, which is helpful for inspecting
+the output first.</p>
+<p>By default, a progress bar presents the current state of the process.</p>
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
+<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>jsonlite</span>)
+<span class='no'>dump_file</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span>(<span class='st'>"extdata"</span>, <span class='st'>"multiple_projects.xml"</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>"openairegraph"</span>)
+<span class='co'># a dump file is in json format</span>
+<span class='no'>loaded_dump</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>jsonlite</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/jsonlite/man/stream_in.html'>stream_in</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/connections.html'>file</a></span>(<span class='st'>"dump_file"</span>))
+<span class='co'># writes out each XML-formatted record as a zip file to a specified folder</span>
+<span class='fu'>oaire_decode</span>(<span class='no'>loaded_dump</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10</span>, <span class='kw'>records_path</span> <span class='kw'>=</span> <span class='st'>"data/"</span>)
+}</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
       <li><a href="#value">Value</a></li>
+      <li><a href="#details">Details</a></li>
+      <li><a href="#examples">Examples</a></li>
     </ul>
 
   </div>

@@ -74,120 +74,187 @@
 
       </header><div class="row">
   <div class="contents col-md-9">
-<div id="openairegraph---read-and-manipulate-the-openaire-research-graph-dump" class="section level1">
+<div id="openairegraph---read-and-manipulate-the-openaire-research-graph-dump-with-r" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
-<a href="#openairegraph---read-and-manipulate-the-openaire-research-graph-dump" class="anchor"></a>openairegraph - Read and manipulate the OpenAIRE Research Graph Dump</h1></div>
+<a href="#openairegraph---read-and-manipulate-the-openaire-research-graph-dump-with-r" class="anchor"></a>openairegraph - Read and manipulate the OpenAIRE Research Graph Dump with R</h1></div>
 <!-- badges: start -->
 
-<p>The goal of openairegraph is to provide parsing functions to consume metadata from the OpenAIRE Research Graph.</p>
-<p>Dump: Manghi, Paolo, Atzori, Claudio, Bardi, Alessia, Shirrwagen, Jochen, Dimitropoulos, Harry, La Bruzzo, Sandro, … Summan, Friedrich. (2019). OpenAIRE Research Graph Dump (Version 1.0.0-beta) [Data set]. Zenodo. <a href="http://doi.org/10.5281/zenodo.3516918" class="uri">http://doi.org/10.5281/zenodo.3516918</a></p>
-<p>Documentation: <a href="https://api.openaire.eu/graph-dumps.html" class="uri">https://api.openaire.eu/graph-dumps.html</a></p>
+<div id="about" class="section level2">
+<h2 class="hasAnchor">
+<a href="#about" class="anchor"></a>About</h2>
+<p>This R package provides helpers for splitting, de-compressing and parsing OpenAIRE Research Graph dumps, a big scholarly data dump comprising metadata about various kinds of grant-supported research outpus, as well as the relationships between them. The package <code>openairegraph</code> targets users who wish to conduct their own analysis using the OpenAIRE Research Graph, but are wary of handling its large data dumps.</p>
+<p>More information about OpenAIRE Research Graph, the dumps and the documentation of their structure can be found at</p>
+<p>Manghi, Paolo, Atzori, Claudio, Bardi, Alessia, Schirrwagen, Jochen, Dimitropoulos, Harry, La Bruzzo, Sandro, … Summan, Friedrich. (2019). OpenAIRE Research Graph Dump (Version 1.0.0-beta) Zenodo. <a href="http://doi.org/10.5281/zenodo.3516918" class="uri">http://doi.org/10.5281/zenodo.3516918</a></p>
+<p>The data model is more thoroughly explained here:</p>
+<p>Manghi, Paolo, Bardi, Alessia, Atzori, Claudio, Baglioni, Miriam, Manola, Natalia, Schirrwagen, Jochen, &amp; Principe, Pedro. (2019, April 17). The OpenAIRE Research Graph Data Model (Version 1.3). Zenodo. <a href="http://doi.org/10.5281/zenodo.2643199" class="uri">http://doi.org/10.5281/zenodo.2643199</a></p>
+</div>
+<div id="currently-implemented-methods" class="section level2">
+<h2 class="hasAnchor">
+<a href="#currently-implemented-methods" class="anchor"></a>Currently implemented methods</h2>
+<p>So far, <code>openairegraph</code> has been tested to work with the H2020 dump, <code>h2020_results.gz</code>. The first set provides helpers to split a large OpenAIRE Research Graph data dump into separate, de-coded XML records that can be stored individually. The other set consists of parsers that convert data from these XML files to a tibble.</p>
+<p>For a long-form documentation including a use-case, see:</p>
+</div>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
 <p>You can install the development version of openairegraph from GitHub using the remotes package</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>remotes<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/remotes/man/install_github.html">install_github</a></span>(<span class="st">"openairegraph"</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>remotes<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/remotes/man/install_github.html">install_github</a></span>(<span class="st">"subugoe/openairegraph"</span>)</span></code></pre></div>
 </div>
-<div id="example" class="section level2">
+<div id="quick-start" class="section level2">
 <h2 class="hasAnchor">
-<a href="#example" class="anchor"></a>Example</h2>
-<p>OpenAIRE data are provided as XML files.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(xml2)</span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(openairegraph)</span>
-<span id="cb2-3"><a href="#cb2-3"></a>dump_eg &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span>(<span class="st">"extdata"</span>, <span class="st">"multiple_projects.xml"</span>, <span class="dt">package =</span> <span class="st">"openairegraph"</span>)</span>
-<span id="cb2-4"><a href="#cb2-4"></a>my_record &lt;-<span class="st"> </span>xml2<span class="op">::</span><span class="kw"><a href="http://xml2.r-lib.org/reference/read_xml.html">read_xml</a></span>(dump_eg)</span></code></pre></div>
-<div id="parse-publication-metadata" class="section level3">
+<a href="#quick-start" class="anchor"></a>Quick start</h2>
+<p>The workflow starts with loading a downloaded OpenAIRE Research Graph dump. After that, the package helps you to de-code and split into several locally stored files. Dedicated parser will obtain data from these files.</p>
+<div id="de-code-and-split-openaire-research-graph-dumps" class="section level3">
 <h3 class="hasAnchor">
-<a href="#parse-publication-metadata" class="anchor"></a>Parse publication metadata</h3>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>openairegraph<span class="op">::</span><span class="kw">publications_md</span>(my_record)</span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="co">#&gt; # A tibble: 1 x 10</span></span>
-<span id="cb3-3"><a href="#cb3-3"></a><span class="co">#&gt;   title journal publisher date_of_accepta… best_access_rig… embargo_enddate</span></span>
-<span id="cb3-4"><a href="#cb3-4"></a><span class="co">#&gt;   &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;     &lt;chr&gt;            &lt;chr&gt;            &lt;chr&gt;          </span></span>
-<span id="cb3-5"><a href="#cb3-5"></a><span class="co">#&gt; 1 Iden… PLoS G… Public L… 2017-06-01       Open Access      &lt;NA&gt;           </span></span>
-<span id="cb3-6"><a href="#cb3-6"></a><span class="co">#&gt; # … with 4 more variables: resource_type &lt;chr&gt;, authors &lt;list&gt;,</span></span>
-<span id="cb3-7"><a href="#cb3-7"></a><span class="co">#&gt; #   pids &lt;list&gt;, collected_from &lt;list&gt;</span></span></code></pre></div>
+<a href="#de-code-and-split-openaire-research-graph-dumps" class="anchor"></a>De-code and split OpenAIRE Research Graph dumps</h3>
+<p>OpenAIRE Research Graph dumps are json-files that contain a record identifier and a <a href="https://en.wikipedia.org/wiki/Base64">Base64</a>-encoded text string representing the metadata.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(jsonlite)</span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(tibble)</span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="co"># sample file delivered with this package</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a>dump_file &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span>(<span class="st">"extdata"</span>, <span class="st">"h2020_results_short.gz"</span>, <span class="dt">package =</span> <span class="st">"openairegraph"</span>)</span>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="co"># a dump file is in json format</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a>loaded_dump &lt;-<span class="st"> </span>jsonlite<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/jsonlite/man/stream_in.html">stream_in</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/connections.html">file</a></span>(dump_file), <span class="dt">verbose =</span> <span class="ot">FALSE</span>)</span>
+<span id="cb2-7"><a href="#cb2-7"></a>tibble<span class="op">::</span><span class="kw"><a href="https://tibble.tidyverse.org/reference/as_tibble.html">as_tibble</a></span>(loaded_dump)</span>
+<span id="cb2-8"><a href="#cb2-8"></a><span class="co">#&gt; # A tibble: 100 x 2</span></span>
+<span id="cb2-9"><a href="#cb2-9"></a><span class="co">#&gt;    `_id`$`$oid`        body$`$binary`                              $`$type`</span></span>
+<span id="cb2-10"><a href="#cb2-10"></a><span class="co">#&gt;    &lt;chr&gt;               &lt;chr&gt;                                       &lt;chr&gt;   </span></span>
+<span id="cb2-11"><a href="#cb2-11"></a><span class="co">#&gt;  1 5dbc22f81e82127b58… UEsDBBQACAgIAIRiYU8AAAAAAAAAAAAAAAAEAAAAYm… 00      </span></span>
+<span id="cb2-12"><a href="#cb2-12"></a><span class="co">#&gt;  2 5dbc22f9b531c546e8… UEsDBBQACAgIAIRiYU8AAAAAAAAAAAAAAAAEAAAAYm… 00      </span></span>
+<span id="cb2-13"><a href="#cb2-13"></a><span class="co">#&gt;  3 5dbc22fa45e3122d97… UEsDBBQACAgIAIViYU8AAAAAAAAAAAAAAAAEAAAAYm… 00      </span></span>
+<span id="cb2-14"><a href="#cb2-14"></a><span class="co">#&gt;  4 5dbc22fa45e3122d97… UEsDBBQACAgIAIViYU8AAAAAAAAAAAAAAAAEAAAAYm… 00      </span></span>
+<span id="cb2-15"><a href="#cb2-15"></a><span class="co">#&gt;  5 5dbc22fa4e0c061a4d… UEsDBBQACAgIAIViYU8AAAAAAAAAAAAAAAAEAAAAYm… 00      </span></span>
+<span id="cb2-16"><a href="#cb2-16"></a><span class="co">#&gt;  6 5dbc22fb81f3c12c00… UEsDBBQACAgIAIViYU8AAAAAAAAAAAAAAAAEAAAAYm… 00      </span></span>
+<span id="cb2-17"><a href="#cb2-17"></a><span class="co">#&gt;  7 5dbc22fb895be12461… UEsDBBQACAgIAIViYU8AAAAAAAAAAAAAAAAEAAAAYm… 00      </span></span>
+<span id="cb2-18"><a href="#cb2-18"></a><span class="co">#&gt;  8 5dbc22fbe56570673e… UEsDBBQACAgIAIViYU8AAAAAAAAAAAAAAAAEAAAAYm… 00      </span></span>
+<span id="cb2-19"><a href="#cb2-19"></a><span class="co">#&gt;  9 5dbc22fc81f3c12bfe… UEsDBBQACAgIAIViYU8AAAAAAAAAAAAAAAAEAAAAYm… 00      </span></span>
+<span id="cb2-20"><a href="#cb2-20"></a><span class="co">#&gt; 10 5dbc22fcb531c546e8… UEsDBBQACAgIAIZiYU8AAAAAAAAAAAAAAAAEAAAAYm… 00      </span></span>
+<span id="cb2-21"><a href="#cb2-21"></a><span class="co">#&gt; # … with 90 more rows</span></span></code></pre></div>
+<p><code>openairegraph::oaire_decode()</code> decodes these strings and saves them locally. It writes out each XML-formatted record as a zip file to a specified folder.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(openairegraph)</span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="co"># writes out each XML-formatted record as a zip file to a specified folder</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a>openairegraph<span class="op">::</span><span class="kw">oaire_decode</span>(loaded_dump, <span class="dt">limit =</span> <span class="dv">10</span>, <span class="dt">records_path =</span> <span class="st">"data/"</span>)</span></code></pre></div>
+<p>These files can be loaded using the <code>xml2</code> package.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(xml2)</span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(openairegraph)</span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="co"># sample file delivered with this package</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a>dump_eg &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span>(<span class="st">"extdata"</span>, <span class="st">"multiple_projects.xml"</span>, </span>
+<span id="cb4-5"><a href="#cb4-5"></a>                       <span class="dt">package =</span> <span class="st">"openairegraph"</span>)</span>
+<span id="cb4-6"><a href="#cb4-6"></a>my_record &lt;-<span class="st"> </span>xml2<span class="op">::</span><span class="kw"><a href="http://xml2.r-lib.org/reference/read_xml.html">read_xml</a></span>(dump_eg)</span>
+<span id="cb4-7"><a href="#cb4-7"></a>my_record</span>
+<span id="cb4-8"><a href="#cb4-8"></a><span class="co">#&gt; {xml_document}</span></span>
+<span id="cb4-9"><a href="#cb4-9"></a><span class="co">#&gt; &lt;record&gt;</span></span>
+<span id="cb4-10"><a href="#cb4-10"></a><span class="co">#&gt; [1] &lt;result xmlns:dri="http://www.driver-repository.eu/namespace/dri" xm ...</span></span></code></pre></div>
+</div>
+<div id="xml-parsers" class="section level3">
+<h3 class="hasAnchor">
+<a href="#xml-parsers" class="anchor"></a>XML-Parsers</h3>
+<p>So far, there are four parsers available to consume the H2020 results set:</p>
+<ul>
+<li>
+<code><a href="reference/oarg_publications_md.html">openairegraph::oarg_publications_md()</a></code> retrieves basic publication metadata complemented by author details and access status</li>
+<li>
+<code><a href="reference/oarg_linked_projects.html">openairegraph::oarg_linked_projects()</a></code> parses grants linked to publications</li>
+<li>
+<code><a href="reference/oarg_linked_ftxt.html">openairegraph::oarg_linked_ftxt()</a></code> gives full-text links including access information</li>
+<li>
+<code><a href="reference/oarg_linked_affiliations.html">openairegraph::oarg_linked_affiliations()</a></code> parses affiliation data</li>
+</ul>
+<div id="basic-publication-metadata" class="section level4">
+<h4 class="hasAnchor">
+<a href="#basic-publication-metadata" class="anchor"></a>Basic publication metadata</h4>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>openairegraph<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/openairegraph/man/oarg_publications_md.html">oarg_publications_md</a></span>(my_record)</span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="co">#&gt; # A tibble: 1 x 12</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="co">#&gt;   type  title journal publisher date_of_accepta… best_access_rig…</span></span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="co">#&gt;   &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;     &lt;chr&gt;            &lt;chr&gt;           </span></span>
+<span id="cb5-5"><a href="#cb5-5"></a><span class="co">#&gt; 1 publ… Iden… PLoS G… Public L… 2017-06-01       Open Access     </span></span>
+<span id="cb5-6"><a href="#cb5-6"></a><span class="co">#&gt; # … with 6 more variables: embargo_enddate &lt;chr&gt;, resource_type &lt;chr&gt;,</span></span>
+<span id="cb5-7"><a href="#cb5-7"></a><span class="co">#&gt; #   authors &lt;list&gt;, pids &lt;list&gt;, collected_from &lt;list&gt;, source_ids &lt;list&gt;</span></span></code></pre></div>
 <p>Author infos</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>openairegraph<span class="op">::</span><span class="kw">publications_md</span>(my_record)<span class="op">$</span>authors</span>
-<span id="cb4-2"><a href="#cb4-2"></a><span class="co">#&gt; [[1]]</span></span>
-<span id="cb4-3"><a href="#cb4-3"></a><span class="co">#&gt; # A tibble: 64 x 5</span></span>
-<span id="cb4-4"><a href="#cb4-4"></a><span class="co">#&gt;    author_full_name  author_name author_surname author_order author_orcid  </span></span>
-<span id="cb4-5"><a href="#cb4-5"></a><span class="co">#&gt;    &lt;chr&gt;             &lt;chr&gt;       &lt;chr&gt;                 &lt;dbl&gt; &lt;chr&gt;         </span></span>
-<span id="cb4-6"><a href="#cb4-6"></a><span class="co">#&gt;  1 Li, He            He          Li                        1 &lt;NA&gt;          </span></span>
-<span id="cb4-7"><a href="#cb4-7"></a><span class="co">#&gt;  2 Reksten, Tove Ra… Tove Ragna  Reksten                   2 &lt;NA&gt;          </span></span>
-<span id="cb4-8"><a href="#cb4-8"></a><span class="co">#&gt;  3 Ice, John A.      John A.     Ice                       3 &lt;NA&gt;          </span></span>
-<span id="cb4-9"><a href="#cb4-9"></a><span class="co">#&gt;  4 Kelly, Jennifer … Jennifer A. Kelly                     4 &lt;NA&gt;          </span></span>
-<span id="cb4-10"><a href="#cb4-10"></a><span class="co">#&gt;  5 Adrianto, Indra   Indra       Adrianto                  5 &lt;NA&gt;          </span></span>
-<span id="cb4-11"><a href="#cb4-11"></a><span class="co">#&gt;  6 Rasmussen, Astrid Astrid      Rasmussen                 6 0000-0001-774…</span></span>
-<span id="cb4-12"><a href="#cb4-12"></a><span class="co">#&gt;  7 Wang, Shaofeng    Shaofeng    Wang                      7 &lt;NA&gt;          </span></span>
-<span id="cb4-13"><a href="#cb4-13"></a><span class="co">#&gt;  8 He, Bo            Bo          He                        8 &lt;NA&gt;          </span></span>
-<span id="cb4-14"><a href="#cb4-14"></a><span class="co">#&gt;  9 Grundahl, Kiely … Kiely M.    Grundahl                  9 &lt;NA&gt;          </span></span>
-<span id="cb4-15"><a href="#cb4-15"></a><span class="co">#&gt; 10 Glenn, Stuart B.  Stuart B.   Glenn                    10 &lt;NA&gt;          </span></span>
-<span id="cb4-16"><a href="#cb4-16"></a><span class="co">#&gt; # … with 54 more rows</span></span></code></pre></div>
-<p>Linked persistent identifier (PID) to research publication</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>openairegraph<span class="op">::</span><span class="kw">publications_md</span>(my_record)<span class="op">$</span>pids</span>
-<span id="cb5-2"><a href="#cb5-2"></a><span class="co">#&gt; [[1]]</span></span>
-<span id="cb5-3"><a href="#cb5-3"></a><span class="co">#&gt; # A tibble: 3 x 2</span></span>
-<span id="cb5-4"><a href="#cb5-4"></a><span class="co">#&gt;   pid_type pid                         </span></span>
-<span id="cb5-5"><a href="#cb5-5"></a><span class="co">#&gt;   &lt;chr&gt;    &lt;chr&gt;                       </span></span>
-<span id="cb5-6"><a href="#cb5-6"></a><span class="co">#&gt; 1 pmc      PMC5501660                  </span></span>
-<span id="cb5-7"><a href="#cb5-7"></a><span class="co">#&gt; 2 doi      10.1371/journal.pgen.1006820</span></span>
-<span id="cb5-8"><a href="#cb5-8"></a><span class="co">#&gt; 3 pmid     28640813</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>openairegraph<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/openairegraph/man/oarg_publications_md.html">oarg_publications_md</a></span>(my_record)<span class="op">$</span>authors</span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="co">#&gt; [[1]]</span></span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="co">#&gt; # A tibble: 64 x 5</span></span>
+<span id="cb6-4"><a href="#cb6-4"></a><span class="co">#&gt;    author_full_name  author_order author_name author_surname author_orcid  </span></span>
+<span id="cb6-5"><a href="#cb6-5"></a><span class="co">#&gt;    &lt;chr&gt;                    &lt;dbl&gt; &lt;chr&gt;       &lt;chr&gt;          &lt;chr&gt;         </span></span>
+<span id="cb6-6"><a href="#cb6-6"></a><span class="co">#&gt;  1 Li, He                       1 He          Li             &lt;NA&gt;          </span></span>
+<span id="cb6-7"><a href="#cb6-7"></a><span class="co">#&gt;  2 Reksten, Tove Ra…            2 Tove Ragna  Reksten        &lt;NA&gt;          </span></span>
+<span id="cb6-8"><a href="#cb6-8"></a><span class="co">#&gt;  3 Ice, John A.                 3 John A.     Ice            &lt;NA&gt;          </span></span>
+<span id="cb6-9"><a href="#cb6-9"></a><span class="co">#&gt;  4 Kelly, Jennifer …            4 Jennifer A. Kelly          &lt;NA&gt;          </span></span>
+<span id="cb6-10"><a href="#cb6-10"></a><span class="co">#&gt;  5 Adrianto, Indra              5 Indra       Adrianto       &lt;NA&gt;          </span></span>
+<span id="cb6-11"><a href="#cb6-11"></a><span class="co">#&gt;  6 Rasmussen, Astrid            6 Astrid      Rasmussen      0000-0001-774…</span></span>
+<span id="cb6-12"><a href="#cb6-12"></a><span class="co">#&gt;  7 Wang, Shaofeng               7 Shaofeng    Wang           &lt;NA&gt;          </span></span>
+<span id="cb6-13"><a href="#cb6-13"></a><span class="co">#&gt;  8 He, Bo                       8 Bo          He             &lt;NA&gt;          </span></span>
+<span id="cb6-14"><a href="#cb6-14"></a><span class="co">#&gt;  9 Grundahl, Kiely …            9 Kiely M.    Grundahl       &lt;NA&gt;          </span></span>
+<span id="cb6-15"><a href="#cb6-15"></a><span class="co">#&gt; 10 Glenn, Stuart B.            10 Stuart B.   Glenn          &lt;NA&gt;          </span></span>
+<span id="cb6-16"><a href="#cb6-16"></a><span class="co">#&gt; # … with 54 more rows</span></span></code></pre></div>
+<p>Linked persistent identifiers (PID) to a research publication</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>openairegraph<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/openairegraph/man/oarg_publications_md.html">oarg_publications_md</a></span>(my_record)<span class="op">$</span>pids</span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="co">#&gt; [[1]]</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="co">#&gt; # A tibble: 3 x 2</span></span>
+<span id="cb7-4"><a href="#cb7-4"></a><span class="co">#&gt;   pid_type pid                         </span></span>
+<span id="cb7-5"><a href="#cb7-5"></a><span class="co">#&gt;   &lt;chr&gt;    &lt;chr&gt;                       </span></span>
+<span id="cb7-6"><a href="#cb7-6"></a><span class="co">#&gt; 1 pmc      PMC5501660                  </span></span>
+<span id="cb7-7"><a href="#cb7-7"></a><span class="co">#&gt; 2 doi      10.1371/journal.pgen.1006820</span></span>
+<span id="cb7-8"><a href="#cb7-8"></a><span class="co">#&gt; 3 pmid     28640813</span></span></code></pre></div>
 </div>
-<div id="linked-projects" class="section level3">
-<h3 class="hasAnchor">
-<a href="#linked-projects" class="anchor"></a>Linked projects</h3>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>openairegraph<span class="op">::</span><span class="kw">linked_projects</span>(my_record)</span>
-<span id="cb6-2"><a href="#cb6-2"></a><span class="co">#&gt; # A tibble: 22 x 7</span></span>
-<span id="cb6-3"><a href="#cb6-3"></a><span class="co">#&gt;    to    project_title funder funding_stream project_code project_acronym</span></span>
-<span id="cb6-4"><a href="#cb6-4"></a><span class="co">#&gt;    &lt;chr&gt; &lt;chr&gt;         &lt;chr&gt;  &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;          </span></span>
-<span id="cb6-5"><a href="#cb6-5"></a><span class="co">#&gt;  1 proj… Genetische u… Deuts… Klinische For… 160564869 /… &lt;NA&gt;           </span></span>
-<span id="cb6-6"><a href="#cb6-6"></a><span class="co">#&gt;  2 proj… Modulation o… Natio… NATIONAL INST… 5U19AI05636… &lt;NA&gt;           </span></span>
-<span id="cb6-7"><a href="#cb6-7"></a><span class="co">#&gt;  3 proj… Functional E… Natio… NATIONAL INST… 5R01AR06595… &lt;NA&gt;           </span></span>
-<span id="cb6-8"><a href="#cb6-8"></a><span class="co">#&gt;  4 proj… HARMONIzatio… Europ… H2020          731944       HarmonicSS     </span></span>
-<span id="cb6-9"><a href="#cb6-9"></a><span class="co">#&gt;  5 proj… Genomics Core Natio… NATIONAL INST… 1P30GM11076… &lt;NA&gt;           </span></span>
-<span id="cb6-10"><a href="#cb6-10"></a><span class="co">#&gt;  6 proj… Susceptibili… Natio… NATIONAL INST… 5R01DE01820… &lt;NA&gt;           </span></span>
-<span id="cb6-11"><a href="#cb6-11"></a><span class="co">#&gt;  7 proj… Molecular Me… Natio… NATIONAL INST… 5P20GM10345… &lt;NA&gt;           </span></span>
-<span id="cb6-12"><a href="#cb6-12"></a><span class="co">#&gt;  8 proj… Genetic Link… Natio… NATIONAL INST… 4R37AI02471… &lt;NA&gt;           </span></span>
-<span id="cb6-13"><a href="#cb6-13"></a><span class="co">#&gt;  9 proj… Science in a… Natio… NATIONAL INST… 8P30GM10351… &lt;NA&gt;           </span></span>
-<span id="cb6-14"><a href="#cb6-14"></a><span class="co">#&gt; 10 proj… A Genetic Ri… Natio… NATIONAL INST… 5P01AR04908… &lt;NA&gt;           </span></span>
-<span id="cb6-15"><a href="#cb6-15"></a><span class="co">#&gt; # … with 12 more rows, and 1 more variable: contract_type &lt;chr&gt;</span></span></code></pre></div>
+<div id="linked-projects" class="section level4">
+<h4 class="hasAnchor">
+<a href="#linked-projects" class="anchor"></a>Linked projects</h4>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>openairegraph<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/openairegraph/man/oarg_linked_projects.html">oarg_linked_projects</a></span>(my_record)</span>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="co">#&gt; # A tibble: 22 x 9</span></span>
+<span id="cb8-3"><a href="#cb8-3"></a><span class="co">#&gt;    to    project_title funder funding_level_0 funding_level_1</span></span>
+<span id="cb8-4"><a href="#cb8-4"></a><span class="co">#&gt;    &lt;chr&gt; &lt;chr&gt;         &lt;chr&gt;  &lt;chr&gt;           &lt;chr&gt;          </span></span>
+<span id="cb8-5"><a href="#cb8-5"></a><span class="co">#&gt;  1 proj… Genetische u… Deuts… Klinische Fors… &lt;NA&gt;           </span></span>
+<span id="cb8-6"><a href="#cb8-6"></a><span class="co">#&gt;  2 proj… Modulation o… Natio… NATIONAL INSTI… &lt;NA&gt;           </span></span>
+<span id="cb8-7"><a href="#cb8-7"></a><span class="co">#&gt;  3 proj… Functional E… Natio… NATIONAL INSTI… &lt;NA&gt;           </span></span>
+<span id="cb8-8"><a href="#cb8-8"></a><span class="co">#&gt;  4 proj… HARMONIzatio… Europ… H2020           RIA            </span></span>
+<span id="cb8-9"><a href="#cb8-9"></a><span class="co">#&gt;  5 proj… Genomics Core Natio… NATIONAL INSTI… &lt;NA&gt;           </span></span>
+<span id="cb8-10"><a href="#cb8-10"></a><span class="co">#&gt;  6 proj… Susceptibili… Natio… NATIONAL INSTI… &lt;NA&gt;           </span></span>
+<span id="cb8-11"><a href="#cb8-11"></a><span class="co">#&gt;  7 proj… Molecular Me… Natio… NATIONAL INSTI… &lt;NA&gt;           </span></span>
+<span id="cb8-12"><a href="#cb8-12"></a><span class="co">#&gt;  8 proj… Genetic Link… Natio… NATIONAL INSTI… &lt;NA&gt;           </span></span>
+<span id="cb8-13"><a href="#cb8-13"></a><span class="co">#&gt;  9 proj… Science in a… Natio… NATIONAL INSTI… &lt;NA&gt;           </span></span>
+<span id="cb8-14"><a href="#cb8-14"></a><span class="co">#&gt; 10 proj… A Genetic Ri… Natio… NATIONAL INSTI… &lt;NA&gt;           </span></span>
+<span id="cb8-15"><a href="#cb8-15"></a><span class="co">#&gt; # … with 12 more rows, and 4 more variables: funding_level_2 &lt;chr&gt;,</span></span>
+<span id="cb8-16"><a href="#cb8-16"></a><span class="co">#&gt; #   project_code &lt;chr&gt;, project_acronym &lt;chr&gt;, contract_type &lt;chr&gt;</span></span></code></pre></div>
 </div>
-<div id="linked-full-texts" class="section level3">
-<h3 class="hasAnchor">
-<a href="#linked-full-texts" class="anchor"></a>Linked Full-Texts</h3>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="kw"><a href="reference/oarg_linked_ftxt.html">oarg_linked_ftxt</a></span>(my_record)</span>
-<span id="cb7-2"><a href="#cb7-2"></a><span class="co">#&gt; # A tibble: 4 x 5</span></span>
-<span id="cb7-3"><a href="#cb7-3"></a><span class="co">#&gt;   access_right collected_from       instance_type hosted_by        web_urls</span></span>
-<span id="cb7-4"><a href="#cb7-4"></a><span class="co">#&gt;   &lt;chr&gt;        &lt;chr&gt;                &lt;chr&gt;         &lt;chr&gt;            &lt;list&gt;  </span></span>
-<span id="cb7-5"><a href="#cb7-5"></a><span class="co">#&gt; 1 Open Access  PubMed Central       Article       Europe PubMed C… &lt;chr [1…</span></span>
-<span id="cb7-6"><a href="#cb7-6"></a><span class="co">#&gt; 2 Open Access  Publikationer från … Article       Publikationer f… &lt;chr [1…</span></span>
-<span id="cb7-7"><a href="#cb7-7"></a><span class="co">#&gt; 3 UNKNOWN      Sygma                Article       Unknown Reposit… &lt;chr [1…</span></span>
-<span id="cb7-8"><a href="#cb7-8"></a><span class="co">#&gt; 4 Open Access  DOAJ-Articles        Article       PLoS Genetics    &lt;chr [3…</span></span></code></pre></div>
+<div id="linked-full-texts" class="section level4">
+<h4 class="hasAnchor">
+<a href="#linked-full-texts" class="anchor"></a>Linked Full-Texts</h4>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>openairegraph<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/openairegraph/man/oarg_linked_ftxt.html">oarg_linked_ftxt</a></span>(my_record)</span>
+<span id="cb9-2"><a href="#cb9-2"></a><span class="co">#&gt; # A tibble: 4 x 5</span></span>
+<span id="cb9-3"><a href="#cb9-3"></a><span class="co">#&gt;   access_right collected_from       instance_type hosted_by        web_urls</span></span>
+<span id="cb9-4"><a href="#cb9-4"></a><span class="co">#&gt;   &lt;chr&gt;        &lt;chr&gt;                &lt;chr&gt;         &lt;chr&gt;            &lt;list&gt;  </span></span>
+<span id="cb9-5"><a href="#cb9-5"></a><span class="co">#&gt; 1 Open Access  PubMed Central       Article       Europe PubMed C… &lt;chr [1…</span></span>
+<span id="cb9-6"><a href="#cb9-6"></a><span class="co">#&gt; 2 Open Access  Publikationer från … Article       Publikationer f… &lt;chr [1…</span></span>
+<span id="cb9-7"><a href="#cb9-7"></a><span class="co">#&gt; 3 UNKNOWN      Sygma                Article       Unknown Reposit… &lt;chr [1…</span></span>
+<span id="cb9-8"><a href="#cb9-8"></a><span class="co">#&gt; 4 Open Access  DOAJ-Articles        Article       PLoS Genetics    &lt;chr [3…</span></span></code></pre></div>
 </div>
-<div id="affiliation-data" class="section level3">
-<h3 class="hasAnchor">
-<a href="#affiliation-data" class="anchor"></a>Affiliation data</h3>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="kw"><a href="reference/oarg_linked_affiliations.html">oarg_linked_affiliations</a></span>(my_record)</span>
-<span id="cb8-2"><a href="#cb8-2"></a><span class="co">#&gt; # A tibble: 52 x 3</span></span>
-<span id="cb8-3"><a href="#cb8-3"></a><span class="co">#&gt;    legal_name                                       country     trust_score</span></span>
-<span id="cb8-4"><a href="#cb8-4"></a><span class="co">#&gt;    &lt;chr&gt;                                            &lt;chr&gt;       &lt;chr&gt;      </span></span>
-<span id="cb8-5"><a href="#cb8-5"></a><span class="co">#&gt;  1 Massachusetts Eye and Ear Infirmary              United Sta… 0.8996     </span></span>
-<span id="cb8-6"><a href="#cb8-6"></a><span class="co">#&gt;  2 University of Santo Tomas Hospital               Philippines 0.9        </span></span>
-<span id="cb8-7"><a href="#cb8-7"></a><span class="co">#&gt;  3 University of Birmingham                         United Kin… 0.8244     </span></span>
-<span id="cb8-8"><a href="#cb8-8"></a><span class="co">#&gt;  4 Cedars-Sinai Medical Center                      United Sta… 0.9        </span></span>
-<span id="cb8-9"><a href="#cb8-9"></a><span class="co">#&gt;  5 Oklahoma Baptist University                      United Sta… 0.8998     </span></span>
-<span id="cb8-10"><a href="#cb8-10"></a><span class="co">#&gt;  6 NATIONAL INSTITUTE OF HEALTH                     United Sta… 0.7938     </span></span>
-<span id="cb8-11"><a href="#cb8-11"></a><span class="co">#&gt;  7 University of Minnesota - University of Minneso… United Sta… 0.8433     </span></span>
-<span id="cb8-12"><a href="#cb8-12"></a><span class="co">#&gt;  8 Haukeland University Hospital                    Norway      0.9        </span></span>
-<span id="cb8-13"><a href="#cb8-13"></a><span class="co">#&gt;  9 Newcastle University                             United Kin… 0.9        </span></span>
-<span id="cb8-14"><a href="#cb8-14"></a><span class="co">#&gt; 10 Johns Hopkins University                         United Sta… 0.8998     </span></span>
-<span id="cb8-15"><a href="#cb8-15"></a><span class="co">#&gt; # … with 42 more rows</span></span></code></pre></div>
+<div id="affiliation-data" class="section level4">
+<h4 class="hasAnchor">
+<a href="#affiliation-data" class="anchor"></a>Affiliation data</h4>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>openairegraph<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/openairegraph/man/oarg_linked_affiliations.html">oarg_linked_affiliations</a></span>(my_record)</span>
+<span id="cb10-2"><a href="#cb10-2"></a><span class="co">#&gt; # A tibble: 52 x 3</span></span>
+<span id="cb10-3"><a href="#cb10-3"></a><span class="co">#&gt;    legal_name                                       country     trust_score</span></span>
+<span id="cb10-4"><a href="#cb10-4"></a><span class="co">#&gt;    &lt;chr&gt;                                            &lt;chr&gt;       &lt;chr&gt;      </span></span>
+<span id="cb10-5"><a href="#cb10-5"></a><span class="co">#&gt;  1 Massachusetts Eye and Ear Infirmary              United Sta… 0.8996     </span></span>
+<span id="cb10-6"><a href="#cb10-6"></a><span class="co">#&gt;  2 University of Santo Tomas Hospital               Philippines 0.9        </span></span>
+<span id="cb10-7"><a href="#cb10-7"></a><span class="co">#&gt;  3 University of Birmingham                         United Kin… 0.8244     </span></span>
+<span id="cb10-8"><a href="#cb10-8"></a><span class="co">#&gt;  4 Cedars-Sinai Medical Center                      United Sta… 0.9        </span></span>
+<span id="cb10-9"><a href="#cb10-9"></a><span class="co">#&gt;  5 Oklahoma Baptist University                      United Sta… 0.8998     </span></span>
+<span id="cb10-10"><a href="#cb10-10"></a><span class="co">#&gt;  6 NATIONAL INSTITUTE OF HEALTH                     United Sta… 0.7938     </span></span>
+<span id="cb10-11"><a href="#cb10-11"></a><span class="co">#&gt;  7 University of Minnesota - University of Minneso… United Sta… 0.8433     </span></span>
+<span id="cb10-12"><a href="#cb10-12"></a><span class="co">#&gt;  8 Haukeland University Hospital                    Norway      0.9        </span></span>
+<span id="cb10-13"><a href="#cb10-13"></a><span class="co">#&gt;  9 Newcastle University                             United Kin… 0.9        </span></span>
+<span id="cb10-14"><a href="#cb10-14"></a><span class="co">#&gt; 10 Johns Hopkins University                         United Sta… 0.8998     </span></span>
+<span id="cb10-15"><a href="#cb10-15"></a><span class="co">#&gt; # … with 42 more rows</span></span></code></pre></div>
+</div>
 </div>
 </div>
 <div id="meta" class="section level2">
 <h2 class="hasAnchor">
 <a href="#meta" class="anchor"></a>Meta</h2>
-<p>Please note that the ‘openairegraph’ project is released with a <a href="CODE_OF_CONDUCT.html">Contributor Code of Conduct</a>. By contributing to this project, you agree to abide by its terms.</p>
+<p>Please note that the <code>openairegraph</code> project is released with a <a href="CODE_OF_CONDUCT.html">Contributor Code of Conduct</a>. By contributing to this project, you agree to abide by its terms.</p>
+<p>License: MIT</p>
+<p>Please use the issue tracker for bug reporting and feature requests.</p>
 </div>
 </div>
   </div>
@@ -216,7 +283,9 @@
   <div class="dev-status">
 <h2>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="https://travis-ci.org/njahn82/openairegraph"><img src="https://travis-ci.org/njahn82/openairegraph.svg?branch=master" alt="Travis build status"></a></li>
+<li><a href="https://travis-ci.org/subugoe/openairegraph"><img src="https://travis-ci.org/subugoe/openairegraph.svg?branch=master" alt="Travis build status"></a></li>
+<li><a href="https://www.tidyverse.org/lifecycle/#experimental"><img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg" alt="Lifecycle: experimental"></a></li>
+<li><a href="https://codecov.io/gh/subugoe/openairegraph?branch=master"><img src="https://codecov.io/gh/subugoe/openairegraph/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></li>
 </ul>
 </div>
 </div>

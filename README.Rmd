@@ -13,77 +13,131 @@ knitr::opts_chunk$set(
 )
 ```
 
-# openairegraph - Read and manipulate the OpenAIRE Research Graph Dump
+# openairegraph - Read and manipulate the OpenAIRE Research Graph Dump with R
 
 <!-- badges: start -->
-[![Travis build status](https://travis-ci.org/njahn82/openairegraph.svg?branch=master)](https://travis-ci.org/njahn82/openairegraph)
+[![Travis build status](https://travis-ci.org/subugoe/openairegraph.svg?branch=master)](https://travis-ci.org/subugoe/openairegraph)
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![Codecov test coverage](https://codecov.io/gh/subugoe/openairegraph/branch/master/graph/badge.svg)](https://codecov.io/gh/subugoe/openairegraph?branch=master)
 <!-- badges: end -->
 
-The goal of openairegraph is to provide parsing functions to consume metadata from the OpenAIRE Research Graph.
+## About
 
-Dump: Manghi, Paolo, Atzori, Claudio, Bardi, Alessia, Shirrwagen, Jochen, Dimitropoulos, Harry, La Bruzzo, Sandro, … Summan, Friedrich. (2019). OpenAIRE Research Graph Dump (Version 1.0.0-beta) [Data set]. Zenodo. <http://doi.org/10.5281/zenodo.3516918>
+This R package provides helpers for splitting, de-compressing and parsing OpenAIRE Research Graph dumps, a big scholarly data dump comprising metadata about various kinds of grant-supported research outpus, as well as the relationships between them. 
+The package `openairegraph` targets users who wish to conduct their own analysis using the OpenAIRE Research Graph, but are wary of handling its large data dumps.
 
-Documentation: <https://api.openaire.eu/graph-dumps.html>
+More information about OpenAIRE Research Graph, the dumps and the documentation of their structure can be found at 
 
+Manghi, Paolo, Atzori, Claudio, Bardi, Alessia, Schirrwagen, Jochen, Dimitropoulos, Harry, La Bruzzo, Sandro, … Summan, Friedrich. (2019). OpenAIRE Research Graph Dump (Version 1.0.0-beta) Zenodo. <http://doi.org/10.5281/zenodo.3516918>
+
+The data model is more thoroughly explained here:
+
+Manghi, Paolo, Bardi, Alessia, Atzori, Claudio, Baglioni, Miriam, Manola, Natalia, Schirrwagen, Jochen, & Principe, Pedro. (2019, April 17). The OpenAIRE Research Graph Data Model (Version 1.3). Zenodo. <http://doi.org/10.5281/zenodo.2643199>
+
+## Currently implemented methods
+
+So far,  `openairegraph` has been tested to work with the H2020 dump, `h2020_results.gz`. The first set provides helpers to split a large OpenAIRE Research Graph data dump into separate, de-coded XML records that can be stored individually. The other set consists of parsers that convert data from these XML files to a tibble.
+
+For a long-form documentation including a use-case, see:
 
 ## Installation
 
 You can install the development version of openairegraph from GitHub using the remotes package
 
 ``` r
-remotes::install_github("openairegraph")
+remotes::install_github("subugoe/openairegraph")
 ```
 
-## Example
+## Quick start
 
-OpenAIRE data are provided as XML files.
+The workflow starts with loading a downloaded OpenAIRE Research Graph dump. After that, the package helps you to de-code and split into several locally stored files. Dedicated parser will obtain data from these files. 
+
+### De-code and split OpenAIRE Research Graph dumps
+
+OpenAIRE Research Graph dumps are json-files that contain a record identifier and a [Base64](https://en.wikipedia.org/wiki/Base64)-encoded text string representing the metadata.
+
+```{r}
+library(jsonlite)
+library(tibble)
+# sample file delivered with this package
+dump_file <- system.file("extdata", "h2020_results_short.gz", package = "openairegraph")
+# a dump file is in json format
+loaded_dump <- jsonlite::stream_in(file(dump_file), verbose = FALSE)
+tibble::as_tibble(loaded_dump)
+```
+
+`openairegraph::oaire_decode()` decodes these strings and saves them locally. It writes out each XML-formatted record as a zip file to a specified folder.
+
+```r
+library(openairegraph)
+# writes out each XML-formatted record as a zip file to a specified folder
+openairegraph::oaire_decode(loaded_dump, limit = 10, records_path = "data/")
+```
+
+These files can be loaded using the `xml2` package.
 
 ```{r}
 library(xml2)
 library(openairegraph)
-dump_eg <- system.file("extdata", "multiple_projects.xml", package = "openairegraph")
+# sample file delivered with this package
+dump_eg <- system.file("extdata", "multiple_projects.xml", 
+                       package = "openairegraph")
 my_record <- xml2::read_xml(dump_eg)
+my_record
 ```
 
-### Parse publication metadata
+### XML-Parsers
+
+So far, there are four parsers available to consume the H2020 results set:
+
+- `openairegraph::oarg_publications_md()` retrieves basic publication metadata complemented by author details and access status
+- `openairegraph::oarg_linked_projects()` parses grants linked to publications
+- `openairegraph::oarg_linked_ftxt()` gives full-text links including access information
+- `openairegraph::oarg_linked_affiliations()` parses affiliation data
+
+#### Basic publication metadata
 
 ```{r}
-openairegraph::publications_md(my_record)
+openairegraph::oarg_publications_md(my_record)
 ```
 
 Author infos
 
 ```{r}
-openairegraph::publications_md(my_record)$authors
+openairegraph::oarg_publications_md(my_record)$authors
 ```
 
-Linked persistent identifier (PID) to research publication
+Linked persistent identifiers (PID) to a research publication
 
 ```{r}
-openairegraph::publications_md(my_record)$pids
+openairegraph::oarg_publications_md(my_record)$pids
 ```
 
-### Linked projects
+#### Linked projects
 
 ```{r}
-openairegraph::linked_projects(my_record)
+openairegraph::oarg_linked_projects(my_record)
 ```
 
-### Linked Full-Texts
+#### Linked Full-Texts
 
 ```{r}
-oarg_linked_ftxt(my_record)
+openairegraph::oarg_linked_ftxt(my_record)
 ```
 
-### Affiliation data
+#### Affiliation data
 
 ```{r}
-oarg_linked_affiliations(my_record)
+openairegraph::oarg_linked_affiliations(my_record)
 ```
-
 
 ## Meta 
 
-Please note that the 'openairegraph' project is released with a
+Please note that the `openairegraph` project is released with a
 [Contributor Code of Conduct](CODE_OF_CONDUCT.md).
 By contributing to this project, you agree to abide by its terms.
+
+License: MIT
+
+Please use the issue tracker for bug reporting and feature requests.
+
