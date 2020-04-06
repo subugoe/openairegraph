@@ -100,7 +100,12 @@
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        
+        <li>
+  <a href="https://github.com/subugoe/openairegraph">
+    <span class="fab fa fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
       </ul>
       
     </div><!--/.nav-collapse -->
@@ -115,7 +120,7 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Get publication metadata</h1>
-    
+    <small class="dont-index">Source: <a href='https://github.com/subugoe/openairegraph/blob/master/R/oarg_publications_md.R'><code>R/oarg_publications_md.R</code></a></small>
     <div class="hidden name"><code>oarg_publications_md.Rd</code></div>
     </div>
 
@@ -159,7 +164,20 @@ PIDs are particularly useful when cross-linking to other scholarly data sources<
 
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"></pre>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
+<span class='co'># sample file delivered with this package</span>
+<span class='no'>dump_eg</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span>(<span class='st'>"extdata"</span>, <span class='st'>"multiple_projects.xml"</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>"openairegraph"</span>)
+<span class='co'># load xml file</span>
+<span class='no'>my_record</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>xml2</span><span class='kw ns'>::</span><span class='fu'><a href='http://xml2.r-lib.org/reference/read_xml.html'>read_xml</a></span>(<span class='no'>dump_eg</span>)
+<span class='co'># parse</span>
+<span class='no'>out</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>openairegraph</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/openairegraph/man/oarg_publications_md.html'>oarg_publications_md</a></span>(<span class='no'>my_record</span>)
+
+<span class='co'># Detailed author infos</span>
+<span class='kw pkg'>openairegraph</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/openairegraph/man/oarg_publications_md.html'>oarg_publications_md</a></span>(<span class='no'>out</span>)$<span class='no'>authors</span>
+
+<span class='co'># Obtain linked persistent identifiers (PID)</span>
+<span class='kw pkg'>openairegraph</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/openairegraph/man/oarg_publications_md.html'>oarg_publications_md</a></span>(<span class='no'>my_record</span>)$<span class='no'>pids</span>
+}</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

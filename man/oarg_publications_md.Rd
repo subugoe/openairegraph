@@ -42,12 +42,11 @@ dump_eg <- system.file("extdata", "multiple_projects.xml", package = "openairegr
 my_record <- xml2::read_xml(dump_eg)
 # parse
 out <- openairegraph::oarg_publications_md(my_record)
-out
 
 # Detailed author infos
 openairegraph::oarg_publications_md(out)$authors
 
-Obtain linked persistent identifiers (PID)
+# Obtain linked persistent identifiers (PID)
 openairegraph::oarg_publications_md(my_record)$pids
 }
 }

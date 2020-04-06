@@ -1,7 +1,8 @@
 destination: docs
-URL: https://subugoe.github.io/openairegraph/ , https://github.com/subugoe/openairegraph
 template:
   params:
     bootswatch: cosmo
 navbar:
   type: inverse
+  structure:
+    right: [github]
