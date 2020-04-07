@@ -6,6 +6,10 @@ author:
     affiliation: State and University Library Göttingen
     affiliation_url: https://www.sub.uni-goettingen.de/
 bibliography: literature.bib
+output: 
+  bookdown::html_document2:
+    number_sections: false
+link-citations: yes
 pkgdown:
   as_is: true
 vignette: >
