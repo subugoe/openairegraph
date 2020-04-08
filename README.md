@@ -11,6 +11,8 @@ status](https://travis-ci.org/subugoe/openairegraph.svg?branch=master)](https://
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![Codecov test
 coverage](https://codecov.io/gh/subugoe/openairegraph/branch/master/graph/badge.svg)](https://codecov.io/gh/subugoe/openairegraph?branch=master)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3744651.svg)](https://doi.org/10.5281/zenodo.3744651)
+
 <!-- badges: end -->
 
 ## About
