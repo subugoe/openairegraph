@@ -48,7 +48,7 @@ In this blog post, I introduce the R package `openairegraph`, an experimental ef
 
 ## What is the R package `openairegraph` about?
 
-So far, the R package [`openairegraph`](https://github.com/subugoe/openairegraph), which is available on GitHub as a development verion, has two sets of functions. The first set provides helpers to split a large OpenAIRE Research Graph data dump into separate, de-coded XML records that can be stored individually. The other set consists of parsers that convert data from these XML files to a table-like representation following the tidyverse philosophy, a popular approach and toolset for doing data analysis with R [@tidyverse]. Splitting, de-coding and parsing are essential steps before analysing the OpenAIRE Research Graph.
+So far, the R package [`openairegraph`](https://github.com/subugoe/openairegraph), which is available on GitHub as a development version, has two sets of functions. The first set provides helpers to split a large OpenAIRE Research Graph data dump into separate, de-coded XML records that can be stored individually. The other set consists of parsers that convert data from these XML files to a table-like representation following the tidyverse philosophy, a popular approach and toolset for doing data analysis with R [@tidyverse]. Splitting, de-coding and parsing are essential steps before analysing the OpenAIRE Research Graph.
 
 ### Installation 
 

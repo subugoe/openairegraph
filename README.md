@@ -243,3 +243,9 @@ this project, you agree to abide by its terms.
 License: MIT
 
 Please use the issue tracker for bug reporting and feature requests.
+
+## Acknowledgments
+
+This work is supported by [OpenAIRE-Advance](https://www.openaire.eu/).
+OpenAIRE-Advance receives funding from the European Union’s Horizon 2020
+Research and Innovation programme under Grant Agreement No. 777541.
