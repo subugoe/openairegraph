@@ -1,0 +1,24 @@
+---
+title: "Accessing and analysing the OpenAIRE Research Graph data dumps"
+author:
+  - name: Najko Jahn 
+    url: https://twitter.com/najkoja
+    affiliation: State and University Library Göttingen
+    affiliation_url: https://www.sub.uni-goettingen.de/
+bibliography: literature.bib
+csl: springer-lecture-notes-in-computer-science.csl
+output:
+  pdf_document:
+    fig_caption: yes
+    keep_tex: yes
+    template: lncs.sty
+link-citations: yes
+pkgdown:
+  as_is: true
+vignette: >
+  %\VignetteIndexEntry{foo}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+hello, this is a test @jsonlite.
