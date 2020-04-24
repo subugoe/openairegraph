@@ -1,10 +1,5 @@
 ---
 title: "Accessing and analysing the OpenAIRE Research Graph data dumps"
-author:
-  - name: Najko Jahn 
-    url: https://twitter.com/najkoja
-    affiliation: State and University Library Göttingen
-    affiliation_url: https://www.sub.uni-goettingen.de/
 bibliography: literature.bib
 csl: springer-lecture-notes-in-computer-science.csl
 output:
@@ -21,4 +16,143 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-hello, this is a test @jsonlite.
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+knitr::opts_chunk$set(
+  comment = "#>",
+  collapse = TRUE,
+  warning = FALSE,
+  message = FALSE,
+  echo = FALSE
+)
+```
+
+# Introduction
+
+OpenAIRE has collected and interlinked scholarly data from various openly available sources for over ten years. In December 2019, this European open science network released the OpenAIRE Research Graph [@manghi_paolo_2019_3516918] as a big scholarly data dump that contains metadata about more than 100 million research publications and 10 million datasets, as well as the relationships between them. These metadata are furthermore connected to open access locations and disambiguated information about persons, organisations and funders. 
+
+Like most big scholarly data dumps, the OpenAIRE Research Graph offers many data analytics opportunities, but working with it is challenging. One reason is the sheer size of the data release. Although the OpenAIRE Research Graph Dump is already split into several files, most of these data files are too large to fit the memory of a moderately equipped laptop, when directly imported into statistical computing environments. Another challenge is the format. The dump consists of compressed XML-files following the comprehensive OpenAIRE data model [@manghi_paolo_2019_2643199], from which only certain elements may be needed for a specific data analysis.
+
+In this paper, we will introduce the R package `openairegraph`, an experimental effort, that helps to transform the large OpenAIRE Research Graph dumps into relevant small datasets for analytical purposes. We will review the R package structure and how it provides a standard way to ensure computational reproducibility. Our implementation consists of tools that allow to explore and parse specific information from the OpenAIRE Research Graph Dump. It aims at data analysts and researchers alike who wish to conduct their own analysis using the OpenAIRE Research Graph, but are wary of handling its large data dumps. To demonstrate the usefulness of consuming the OpenAIRE Research Graph dump with this R package, we will benchmark the open access activities of grant-supported projects affiliated with the University of Göttingen against the overall uptake across the funding activities in the European HORIZON 2020 funding programme.
+
+# Background
+
+- R tooling for data analytics workflow
+- review of related appproaches, 
+  - general,e.g. research compendium
+  - more domain specific, e.g. ropensci packages, bibliometrix
+
+# Implementation
+
+## Functionality
+
+## Documentation
+
+## Testing and continous integration
+
+## Licensing and publication
+
+# Use-Case
+
+Usually, it is not individual researchers who sign grant agreements with a funder, but the institution they are affiliated with. Universities and other research institutions hosting funded projects are therefore looking for ways to monitor the insitutions's overall compliance with funder rules. In the case of the open access mandate in Horizon 2020 (H2020), librarians are often assigned this task. Moreover, quantitative science studies have started to investigate the efficacy of funders’ open-access mandates. [@Larivi_re_2018]
+
+Here, we will illustrate how to make use of the OpenAIRE Research Graph, which links grants to publications and open access full-texts, to benchmark compliance with the open access mandate against other H2020 funding activities. Because of their large variations, we wanted to put the open access rates of H2020-funded projects in context when presenting the share for projects affiliated with the University of Göttingen. 
+
+```{r}
+library(openairegraph)
+library(jsonlite)
+library(tidyverse)
+library(scales)
+library(here)
+oaire_df <- jsonlite::stream_in(file(here("data", "h2020_parsed.json")), verbose = FALSE) %>%
+  tibble::as_tibble()
+
+pubs_projects <- oaire_df %>%
+  select(id, type, best_access_right, linked_projects) %>%
+  unnest(linked_projects) 
+
+oa_monitor_ec <- pubs_projects %>%
+  filter(funding_level_0 == "H2020") %>%
+  mutate(funding_scheme = fct_infreq(funding_level_1)) %>%
+  group_by(funding_scheme,
+           project_code,
+           project_acronym,
+           best_access_right) %>%
+  summarise(oa_n = n_distinct(id)) %>% # per pub
+  mutate(oa_prop = oa_n / sum(oa_n)) %>%
+  filter(best_access_right == "Open Access") %>%
+  ungroup() %>%
+  mutate(all_pub = as.integer(oa_n / oa_prop)) 
+  ```
+
+As a start, we loaded a dataset, which was compiled following the above-described methods using the whole h2020_results.gz dump. The dataset contains 84,781 literature publications from 9,008 H2020 projects. Using the whole dump made it possible to determine the open access uptake across projects. It revealed that 77% of projects having at least five publications complied with the H2020 open access mandate. However, uptake levels varied the funding schemes. In particular, ERC grants and Marie Skłodowska-Curie activities had higher levels of compliance compared to the overall average.
+
+After that, we identifed H2020 projects with participation from the university using data from CORDIS, the European Commission’s research information portal. 
+
+```{r}
+# load local copy downloaded from the EC open data portal
+cordis_org <-
+  readr::read_delim(
+    here("data", "cordis-h2020organizations.csv"),
+    delim = ";",
+    locale = locale(decimal_mark = ",")
+  ) %>%
+  # data cleaning
+  mutate_if(is.double, as.character)
+# tag projects affiliated with the University of Göttingen
+ugoe_projects <- cordis_org %>%
+  filter(shortName %in% c("UGOE", "UMG-GOE")) %>% 
+  select(project_id = projectID, role, project_acronym = projectAcronym)
+
+pubs_projects_ugoe <- pubs_projects %>%
+  mutate(ugoe_project = funding_level_0 == "H2020" & project_code %in% ugoe_projects$project_id)
+
+ugoe_funding_programme <- pubs_projects_ugoe %>% 
+  filter(ugoe_project == TRUE) %>%
+  group_by(funding_level_1, project_code) %>% 
+  # min 5 pubs
+  summarise(n = n_distinct(id)) %>%
+  filter(n >= 5) %>%
+  distinct(funding_level_1, project_code)
+goe_oa <- oa_monitor_ec %>%
+  # min 5 pubs
+  filter(all_pub >=5) %>%
+  filter(funding_scheme %in% ugoe_funding_programme$funding_level_1) %>%
+  mutate(ugoe = project_code %in% ugoe_funding_programme$project_code) %>%
+  mutate(`H2020 project` = paste0(project_acronym, " | OA share: ", round(oa_prop * 100, 0), "%"))
+# plot as interactive graph using plotly
+ggplot(goe_oa, aes(funding_scheme, oa_prop)) +
+  geom_boxplot() +
+  geom_jitter(data = filter(goe_oa, ugoe == TRUE),
+               aes(label = `H2020 project`),
+             colour = "#AF42AE",
+             alpha = 0.9,
+             size = 3,
+             width = 0.25) +
+  geom_hline(aes(
+    yintercept = mean(oa_prop),
+    color = paste0("Mean=", as.character(round(
+      mean(oa_prop) * 100, 0
+    )), "%")
+  ),
+  linetype = "dashed",
+  size = 1) +
+  geom_hline(aes(
+    yintercept = median(oa_prop),
+    color = paste0("Median=", as.character(round(
+      median(oa_prop) * 100, 0
+    )), "%")
+  ),
+  linetype = "dashed",
+  size = 1) +
+  scale_color_manual(NULL, values = c("orange", "darkred")) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 5L)) +
+  labs(x = NULL,
+       y = "Open Access Percentage",
+       caption = "Data: OpenAIRE Research Graph") +
+  theme_minimal() +
+  theme(legend.position = "top",
+        legend.justification = "right")
+
+```
+
+# Discussion and Conclusion
