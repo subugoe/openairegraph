@@ -32,29 +32,70 @@ OpenAIRE has collected and interlinked scholarly data from various openly availa
 
 Like most big scholarly data dumps, the OpenAIRE Research Graph offers many data analytics opportunities, but working with it can be challenging for data science practitioners. One reason is the sheer size of the data release. Although the OpenAIRE Research Graph Dump is already split into several files, most of these data files are too large to fit the memory of a moderately equipped personal computer, when directly imported into statistical computing environments like R. Another challenge is the format. Statistical methods require tidy data, i.e. datasets with a rectangular structure made up of unambiguous columns and rows [@Wickham_2014]. The dump, however, consists of compressed XML-files following the comprehensive OpenAIRE data model [@manghi_paolo_2019_2643199], from which only certain elements may be needed for a specific data analysis.
 
-In this paper, we will introduce the R package `openairegraph` that helps to transform the large OpenAIRE Research Graph dumps into relevant small datasets for analytical purposes. It aims at data science practitioners and researchers alike who wish to conduct their own statistical analysis using the OpenAIRE Research Graph, but are wary of handling its large data dumps.  Our implementation does not only consist of tools that allow to explore and parse specific information from the OpenAIRE Research Graph dump. Following the R package structure, it also provides a standard way to ensure the computational reproducibility of these tools. To demonstrate the usefulness of our implementation, we will benchmark the open access activities of grant-supported projects affiliated with the University of Göttingen against the overall uptake across the funding activities in the European HORIZON 2020 funding programme.
+In this paper, we will introduce the R package `openairegraph` that helps to transform the large OpenAIRE Research Graph dumps into relevant small datasets for analytical purposes. It aims at data science practitioners and researchers alike who wish to conduct their own statistical analysis using the OpenAIRE Research Graph, but are wary of handling its large data dumps.  Our implementation does not only consist of tools that allow to explore and parse specific information from the OpenAIRE Research Graph dump. The R package structure also provides a standard way to ensure the computational reproducibility of these tools. To demonstrate the usefulness of our implementation, we will benchmark the open access activities of grant-supported projects affiliated with the University of Göttingen against the overall uptake across the funding activities in the European HORIZON 2020 funding programme.
 
 # Background
 
 - R tooling for data analytics workflow
 - review of related appproaches, 
   - general,e.g. research compendium
-  - more domain specific, e.g. ropensci packages, bibliometrix
+  - more domain specific, e.g. ropensci packages and dev guide, bibliometrix
 
 # Implementation
 
-## Functionality
+The R package `openairegraph`, which is available on GitHub as a development version [^1], has two sets of functions. The first set provides helpers to split a large OpenAIRE Research Graph data dump into separate, de-coded XML records that can be stored individually. The other set consists of parsers that convert data from these XML files to a table-like representation following the tidyverse philosophy, a popular approach to practise data science [@tidyverse]. Splitting, de-coding and parsing are essential steps before analysing the OpenAIRE Research Graph.
 
-## Documentation
+The function `openairegraph::oarg_decode()` splits and de-codes each record. Storing the records individually will allow to process the files independent from each other, which is a common approach when working with big data. 
 
-## Testing and continous integration
+```r
+library(openairegraph)
+library(jsonlite) # tools to work with json files
+library(tidyverse) # tools from the tidyverse useful for data analysis
+# download the file from Zenodo and store it locally
+oaire <- jsonlite::stream_in(file("data/h2020_results.gz"))
+openairegraph::oarg_decode(oaire, records_path = "data/records/", 
+  limit = 500, verbose = FALSE)
+```
 
-## Licensing and publication
+Because the dumps are quite large, the function furthermore has a parameter that allows setting a limit, which is helpful for inspecting the output first. By default, a progress bar presents the current state of the process.
+
+So far, there are four parsers available to consume the H2020 results set:
+
+- `openairegraph::oarg_publications_md()` retrieves basic publication metadata complemented by author details and access status
+- `openairegraph::oarg_linked_projects()` parses grants linked to publications
+- `openairegraph::oarg_linked_ftxt()` gives full-text links including access information
+- `openairegraph::oarg_linked_affiliations()` parses affiliation data
+
+These parsers can be used alone, or together like this:
+
+```r
+library(xml2) # working with xml files
+library(future) # parallel computing
+library(future.apply) # functional programming in parallel 
+openaire_records <- list.files("data/records", full.names = TRUE)
+future::plan(multisession) # initalize parallel computing
+oaire_data <- future.apply::future_lapply(openaire_records,
+ function(files) {
+  # load xml file
+  doc <- xml2::read_xml(files)
+  # parser
+  out <- oarg_publications_md(doc)
+  out$linked_projects <- list(oarg_linked_projects(doc))
+  out$linked_ftxt <- list(oarg_linked_ftxt(doc))
+  # use file path as id
+  out$id <- files
+  out
+})
+oaire_df <- dplyr::bind_rows(oaire_data)
+```
+
+First, we obtained the locations of the de-coded XML records. After that, we read each XML file using the `xml2` [@xml2] package, and applied three parsers: `openairegraph::oarg_publications_md()`, `openairegraph::oarg_linked_projects()` and `openairegraph::oarg_linked_ftxt()`.  We used the `future` [@future] and `future.apply` [@future_apply] packages to enable reading and parsing these records simultaneously with multiple R sessions. Running code in parallel reduces the execution time. Finally, we put together the individually created datasets into one dataset.
+
+Documentation is an essential part of the R package workflow. For each parser, we documented the usage, as well as the returned output. The latter is represented as data coding tables with an description of each variables, making it easier to grasp the otherwise complex data structure of the OpenAIRE Research Graph. While executable examples are provided for each function, an introductory vignette, a long-form documentation, demonstrates a workflow using the package. All documentation is automatically rendered to an R manual, and a package website was built with `pkgdown` [@pkgdown].
 
 # Use-Case
 
 A main purpose of the OpenAIRE Research Graph, which links grants to publications and open access full-texts, is monitoring the efficacy of open access mandates. Here, we will demonstrate how to benchmark the compliance with the open access mandate of the European Commission’s HORIZON 2020 funding programme (H2020) against related funding activities using OpenAIRE data and our openairegraph package. We will focus on projects affiliated with the University of Göttingen. In doing so, we want to take into account that open access mandates generally lead to above-average open access uptake levels. Yet, they can vary by discipline and funding activity [@Larivi_re_2018].
-
 
 ```{r}
 library(openairegraph)
@@ -83,7 +124,7 @@ oa_monitor_ec <- pubs_projects %>%
   mutate(all_pub = as.integer(oa_n / oa_prop)) 
   ```
 
-As a start, we imported and transformed the whole h2020_results.gz dump following the above-described methods. The resulting dataset comprises 84,781 literature publications from 9,008 H2020 projects. After that, we identified H2020 projects with participation from the University of Göttingen using data from CORDIS, the European Commission’s research information portal.  We calculated the open access share per project affiliated with the university and the open access shares for each project in the corresponding H2020 activity like European Research Council grants or Marie Skłodowska-Curie activities.
+As a start, we imported and transformed the whole h2020_results.gz dump following the above-described methods. The resulting dataset comprises 84,781 literature publications from 9,008 H2020 projects. After that, we identified H2020 projects with participation from the University of Göttingen using data from CORDIS, the European Commission’s research information portal. We calculated the open access share per project affiliated with the university and the open access shares for each project in the corresponding H2020 activity like European Research Council grants or Marie Skłodowska-Curie activities.
 
 
 ```{r,  fig.cap = "Open Access Compliance Rates of Horizon 2020 projects affiliated with the University of Göttingen (purple dots) relative to the overall performance of the coressponding funding activities, visualised as a box plot. Only projects with at least five publications were considered. Data: OpenAIRE Research Graph[@manghi_paolo_2019_3516918]"}
@@ -159,3 +200,5 @@ Figure 3 shows that many H2020-projects with University of Göttingen participat
 # Discussion and Conclusion
 
 # References
+
+[^1]: <https://github.com/subugoe/openairegraph>
