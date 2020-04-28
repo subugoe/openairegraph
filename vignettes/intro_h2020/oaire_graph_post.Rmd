@@ -9,6 +9,7 @@ bibliography: literature.bib
 output: 
   bookdown::html_document2:
     number_sections: false
+always_allow_html: true
 link-citations: yes
 pkgdown:
   as_is: true
