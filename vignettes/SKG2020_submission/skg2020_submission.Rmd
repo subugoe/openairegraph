@@ -201,6 +201,10 @@ Figure 3 shows that many H2020-projects with University of Göttingen participat
 
 # Discussion and Conclusion
 
+In summary, we have presented the R package openairegraph, and described how it helps data science practitioners working primarily in R to access and analyse the OpenAIRE Research Graph Dump. R packages, which follow a standardized structure including documentation and testing, are a well-established way to share code. R code is not limited to statistical methods, but can be also used to access various types of scholarly data sources. Wrapping helpers to work with the OpenAIRE Research Graph Dump into a R package, allows data science practitioners to explore this Scientific Knowledge Graph while shielding them from its complexity. As our use case has demonstrated, it furthermore provides a reliable way to investigate large variations in scholarly communication in a reproducible manner.
+
+We are aware that not all data science practitioners use R. We encourage helpers for analysing big scholarly data dumps in other programming languages as well. Their implementation can draw from the standardized way how R packaging document, test and share code for statistical analyses. Such tools for statistical computing environments will likely improve re-use of Scientific Knowledge Graphs in quantitative science studies and decision-making.
+
 # References
 
 [^1]: <https://github.com/subugoe/openairegraph>
