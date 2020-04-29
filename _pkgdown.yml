@@ -1,8 +1,23 @@
 destination: docs
+repo:
+  url:
+    home: https://github.com/subugoe/openairegraph/
+    issue: https://github.com/subugoe/openairegraph/issues/
+authors:
+  Najko Jahn:
+    href: https://www.sub.uni-goettingen.de/kontakt/personen-a-z/personendetails/person/najko-jahn/
+  Maximilian Held:
+    href: https://www.maxheld.de
+  Göttingen State and University Library:
+    href: https://www.sub.uni-goettingen.de/
 template:
-  params:
-    bootswatch: cosmo
+  package: metaR
+  opengraph:
+    twitter:
+      site: "@subugoe"
+      card: summary_large_image
 navbar:
   type: inverse
-  structure:
-    right: [github]
+development:
+  mode: auto
+  destination: ""

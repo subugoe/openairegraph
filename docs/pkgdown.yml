@@ -1,6 +1,0 @@
-pandoc: 2.9.1
-pkgdown: 1.4.1
-pkgdown_sha: ~
-articles:
-  oaire_graph_post: intro_h2020/oaire_graph_post.html
-

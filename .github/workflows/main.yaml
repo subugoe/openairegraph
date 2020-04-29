@@ -1,0 +1,89 @@
+name: main
+
+on:
+  push:
+  pull_request:
+    types: [assigned, opened, synchronize, reopened]
+  release:
+    types: [published, created, edited]
+
+jobs:
+  cicd:
+    runs-on: ubuntu-18.04
+    container:
+      image: rocker/rstudio:latest # needs to be the same as in dockerfile
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - name: Query dependencies
+        run: |
+          options(warn = 2)
+          install.packages('remotes')
+          saveRDS(remotes::dev_package_deps(dependencies = TRUE), "depends.Rds", version = 2)
+        shell: Rscript {0}
+      - name: Cache R packages
+        uses: actions/cache@v1
+        with:
+          path: /usr/local/lib/R/site-library
+          key: rocker-rstudio-latest-${{ hashFiles('depends.Rds') }}
+          restore-keys: rocker-rstudio-latest-
+      - name: Install system dependencies
+        env:
+          RHUB_PLATFORM: linux-x86_64-debian-gcc
+        run: |
+          Rscript -e "remotes::install_github('r-hub/sysreqs', ref='3860f2b512a9c3bd3db6791c2ff467a1158f4048')"
+          sysreqs=$(Rscript -e "cat(sysreqs::sysreq_commands('DESCRIPTION'))")
+          sudo -s eval "$sysreqs"
+      - name: Install dependencies
+        run: |
+          remotes::install_deps(dependencies = TRUE)
+          remotes::install_cran("rcmdcheck")
+        shell: Rscript {0}
+      - name: Check package
+        run: rcmdcheck::rcmdcheck(args = "--no-manual", error_on = "warning", check_dir = "check")
+        shell: Rscript {0}
+      - name: Upload check results
+        if: failure()
+        uses: actions/upload-artifact@v1
+        with:
+          name: results
+          path: check
+      - name: Run Code Coverage
+        run: covr::codecov(commit = '$GITHUB_SHA', branch = '$GITHUB_REF', token = '${{ secrets.CODECOV_TOKEN }}')
+        shell: Rscript {0}
+      - name: Copy dependencies to working directory
+        run: |
+          cp --recursive --force /usr/local/lib/R/site-library/* deps/
+      - name: Build and push docker image
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_TOKEN }}
+          repository: subugoe/openairegraph
+          tag_with_sha: true
+          tag_with_ref: true
+          add_git_labels: true
+          tags: ${{ github.sha }}
+          push: ${{ github.event_name != 'pull_request' }}
+      - name: Build pkgdown website
+        run: pkgdown::build_site()
+        shell: Rscript {0}
+      - name: Get system dependencies for github pages deploy
+        run: apt-get update -y && apt-get install -y ssh rsync
+      - name: Deploy pkgdown website to ref
+        if: github.event_name != 'pull_request'
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          ACCESS_TOKEN: ${{ secrets.GH_PAT }}
+          BRANCH: gh-pages # The branch the action should deploy to.
+          FOLDER: docs # The folder the action should deploy.
+          TARGET_FOLDER: ${{ github.ref }}
+      - name: Deploy pkgdown website to root
+        if: github.ref == 'refs/heads/master'
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          ACCESS_TOKEN: ${{ secrets.GH_PAT }}
+          BRANCH: gh-pages # The branch the action should deploy to.
+          FOLDER: docs # The folder the action should deploy.

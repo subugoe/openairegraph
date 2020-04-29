@@ -9,6 +9,7 @@ bibliography: literature.bib
 output: 
   bookdown::html_document2:
     number_sections: false
+    toc: yes
 link-citations: yes
 pkgdown:
   as_is: true
@@ -69,6 +70,11 @@ After downloading it, the file can be imported into R using the jsonlite package
 library(jsonlite) # tools to work with json files
 library(tidyverse) # tools from the tidyverse useful for data analysis
 # download the file from Zenodo and store it locally
+dir.create("data")
+download.file(
+  url = "https://zenodo.org/record/3516918/files/h2020_results.gz", 
+  destfile = "data/h2020_results.gz"
+)
 oaire <- jsonlite::stream_in(file("data/h2020_results.gz"), verbose = FALSE) %>%
   tibble::as_tibble()
 oaire
@@ -77,10 +83,11 @@ oaire
 
 ### De-coding and storing OpenAIRE Research Graph records
 
-The function `openairegraph::oarg_decode()`  splits and de-codes each record. Storing the records individually allows to process the files independent from each other, which is a common approach when working with big data. 
+The function `openairegraph::oarg_decode()` splits and de-codes each record. Storing the records individually allows to process the files independent from each other, which is a common approach when working with big data. 
 
 ```{r}
 library(openairegraph)
+dir.create("data/records")
 openairegraph::oarg_decode(oaire, records_path = "data/records/", 
   limit = 500, verbose = FALSE)
 ```
@@ -150,7 +157,7 @@ In this use case, I will illustrate how to make use of the OpenAIRE Research Gra
 
 As a start, I load a dataset, which was compiled following the above-described methods using the whole `h2020_results.gz` dump.
 
-```{r}
+```{r eval=FALSE}
 oaire_df <-
   jsonlite::stream_in(file("data/h2020_parsed.json"), verbose = FALSE) %>%
   tibble::as_tibble()
@@ -190,7 +197,7 @@ pubs_projects %>%
     breaks =  scales::extended_breaks()(0:25000)
     ) +
   labs(x = NULL, y = "Publications", caption = "Data: OpenAIRE Research Graph") +
-  theme_minimal_vgrid(font_family = "Roboto") +
+  theme_minimal_vgrid() +
   theme(legend.position = "none")
 ```
 
@@ -199,7 +206,6 @@ Figure \@ref(fig:activity) shows that most publications in the OpenAIRE Research
 The European Commission mandates open access to publications. Let's measure the compliance to this policy using the OpenAIRE Research Graph per project:
 
 ```{r, layout="l-body-outset"}
-library(rmarkdown)
 oa_monitor_ec <- pubs_projects %>%
   filter(funding_level_0 == "H2020") %>%
   mutate(funding_scheme = fct_infreq(funding_level_1)) %>%
@@ -247,7 +253,7 @@ oa_monitor_ec %>%
   labs(x = NULL,
        y = "Open Access Percentage",
        caption = "Data: OpenAIRE Research Graph") +
-  theme_minimal_vgrid(font_family = "Roboto") +
+  theme_minimal_vgrid() +
   theme(legend.position = "top",
         legend.justification = "right")
 ```
@@ -259,7 +265,7 @@ About 77% of research publications under the H2020 open access mandate are openl
 Because of their large variations, I want to put the open access rates of H2020-funded projects in context when presenting the share for projects affiliated with the University of Göttingen. Again, the data analysis starts with loading the previously backed up file with decoded and parsed data, choosing project and access information from it. 
 
 
-```{r}
+```{r, eval=FALSE}
 oaire_df <- jsonlite::stream_in(file("data/h2020_parsed.json"), verbose = FALSE) %>%
   tibble::as_tibble()
 
@@ -274,6 +280,10 @@ Next, I want to identify H2020 projects with participation from the university. 
 
 ```{r}
 # load local copy downloaded from the EC open data portal
+download.file(
+  url = "https://cordis.europa.eu/data/cordis-h2020organizations.csv",
+  destfile = "data/cordis-h2020organizations.csv"
+)
 cordis_org <-
   readr::read_delim(
     "data/cordis-h2020organizations.csv",
@@ -343,7 +353,7 @@ p <- ggplot(goe_oa, aes(funding_scheme, oa_prop)) +
   labs(x = NULL,
        y = "Open Access Percentage",
        caption = "Data: OpenAIRE Research Graph") +
-  theme_minimal(base_family = "Roboto") +
+  theme_minimal() +
   theme(legend.position = "top",
         legend.justification = "right")
 plotly::ggplotly(p, tooltip = c("label"))
