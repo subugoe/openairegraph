@@ -10,4 +10,6 @@
 ^doc$
 ^Meta$
 ^vignettes/intro_h2020$
+^vignettes/SKG2020_submission$
 ^codecov\.yml$
+^data$
