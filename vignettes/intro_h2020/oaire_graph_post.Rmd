@@ -123,20 +123,34 @@ library(tictoc) # timing functions
 
 openaire_records <- list.files("data/records", full.names = TRUE)
 
-future::plan(multisession)
-tic()
-oaire_data <- future.apply::future_lapply(openaire_records, function(files) {
-  # load xml file
-  doc <- xml2::read_xml(files)
-  # parser
-  out <- oarg_publications_md(doc)
-  out$linked_projects <- list(oarg_linked_projects(doc))
-  out$linked_ftxt <- list(oarg_linked_ftxt(doc))
-  # use file path as id
-  out$id <- files
-  out
-})
-toc()
+if (!identical(Sys.getenv("GITHUB_ACTIONS"), "true")) {
+  future::plan(multisession)
+  tic()
+  oaire_data <- future.apply::future_lapply(openaire_records, function(files) {
+    # load xml file
+    doc <- xml2::read_xml(files)
+    # parser
+    out <- oarg_publications_md(doc)
+    out$linked_projects <- list(oarg_linked_projects(doc))
+    out$linked_ftxt <- list(oarg_linked_ftxt(doc))
+    # use file path as id
+    out$id <- files
+    out
+  })
+  toc()
+} else {
+  oaire_data <- lapply(openaire_records, function(files) {
+    # load xml file
+    doc <- xml2::read_xml(files)
+    # parser
+    out <- oarg_publications_md(doc)
+    out$linked_projects <- list(oarg_linked_projects(doc))
+    out$linked_ftxt <- list(oarg_linked_ftxt(doc))
+    # use file path as id
+    out$id <- files
+    out
+  })
+}
 oaire_df <- dplyr::bind_rows(oaire_data)
 ```
 
