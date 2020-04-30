@@ -4,10 +4,7 @@
 #'
 #' @inheritParams oarg_publications_md
 #'
-#' @importFrom xml2 xml_find_all xml_find_first xml_text
-#' @importFrom tibble tibble
-#' @importFrom purrr map_df
-#' @importFrom dplyr bind_rows
+#' @import xml2
 #'
 #' @return The result is a tibble with project metadata.
 #'  Here are the returned columns and descriptions:
@@ -35,12 +32,12 @@
 #'
 #' @export
 oarg_linked_projects <- function(doc) {
-  if (!any(is(doc) == "xml_document"))
+  if (!any(methods::is(doc) == "xml_document"))
     stop("No valid XML")
   else
     # get parent nodes relative to projects
     project_nodes <-
-      xml2::xml_find_all(doc,
+      xml_find_all(doc,
                          "//oaf:entity//oaf:result//rels//rel//to[@type='project']/..")
   # apply xpaths to each project node and return as flat tibble
   purrr::map_df(project_nodes, function(x) {

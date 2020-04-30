@@ -25,9 +25,6 @@
 #'   \code{source_ids}         \tab metadata source ids like OAI identifier
 #'   }
 #'
-#' @importFrom xml2 xml_text xml_find_first
-#' @importFrom tibble tibble
-#'
 #' @examples
 #' \dontrun{
 #' # sample file delivered with this package
@@ -45,10 +42,10 @@
 #' }
 #' @export
 oarg_publications_md <- function(doc) {
-  if (!any(is(doc) == "xml_document"))
+  if (!any(methods::is(doc) == "xml_document"))
     stop("No valid XML")
   else
-   pubs_node <- xml2::xml_find_first(doc,
+   pubs_node <- xml_find_first(doc,
                        "//oaf:entity//oaf:result")
   out <- tibble::tibble(
     type = xml_text(xml_find_first(pubs_node, "//resulttype//@classname")),
