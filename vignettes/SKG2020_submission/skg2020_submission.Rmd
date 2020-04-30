@@ -99,13 +99,20 @@ While writing the package, we collected exemplary OpenAIRE Research Graph record
 
 A main purpose of the OpenAIRE Research Graph, which links grants to publications and open access full-texts, is monitoring the efficacy of open access mandates. Here, we will demonstrate how to benchmark the compliance with the open access mandate of the European Commission’s HORIZON 2020 funding programme (H2020) against related funding activities using OpenAIRE data and our openairegraph package. We will focus on projects affiliated with the University of Göttingen. In doing so, we want to take into account that open access mandates generally lead to above-average open access uptake levels. Yet, they can vary by discipline and funding activity [@Larivi_re_2018].
 
-```{r}
+```{r, cache = TRUE}
 library(openairegraph)
 library(jsonlite)
 library(tidyverse)
 library(scales)
 library(here)
-oaire_df <- jsonlite::stream_in(file(here("data", "h2020_parsed.json")), verbose = FALSE) %>%
+# the parsed dump ist too large to be tracked with GIT
+# Here's how to download it and put it in the 
+# folder of this vignette
+file_url <- "https://github.com/subugoe/scholcomm_analytics/releases/download/oaire_graph_post/h2020_parsed.json.gz"
+download.file(file_url, 
+              here("vignettes/SKG2020_submission", "h2020_parsed.json.gz")
+              )
+oaire_df <- jsonlite::stream_in(file(here("vignettes/SKG2020_submission", "h2020_parsed.json.gz")), verbose = FALSE) %>%
   tibble::as_tibble()
 
 pubs_projects <- oaire_df %>%
