@@ -32,12 +32,10 @@ Encoding: UTF-8
 LazyData: true
 Imports: 
     xml2 (>= 1.3.1),
-    jsonlite (>= 1.6.1),
     tibble (>= 3.0.1),
     purrr (>= 0.3.4),
     progress (>= 1.2.2),
     base64enc (>= 0.1.3),
-    dplyr (>= 0.8.5),
     methods (>= 3.6.3)
 RoxygenNote: 7.1.0
 Suggests: 
@@ -59,7 +57,9 @@ Suggests:
     pkgdown (>= 1.5.0),
     rcmdcheck (>= 1.3.3),
     bookdown (>= 0.18),
-    tidyverse (>= 1.3.0)
+    tidyverse (>= 1.3.0),
+    dplyr (>= 0.8.5),
+    jsonlite (>= 1.6.1)
 VignetteBuilder: knitr
 Remotes: 
     subugoe/metaR@b18c1aec7e3629ae5d3eb9817109835d73518ebb
