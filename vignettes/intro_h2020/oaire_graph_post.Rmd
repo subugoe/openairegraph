@@ -175,12 +175,6 @@ In this use case, I will illustrate how to make use of the OpenAIRE Research Gra
 
 As a start, I load a dataset, which was compiled following the above-described methods using the whole `h2020_results.gz` dump.
 
-```{r}
-oaire_df <-
-  jsonlite::stream_in(file("data/h2020_parsed.json"), verbose = FALSE) %>%
-  tibble::as_tibble()
-```
-
 It contains `r oaire_df %>% distinct(id) %>% nrow()` grant-supported research outputs. Here, I will focus on the prevalence of open access across H2020 projects using metadata about the open access status of a publication and related project information stored in the list-column `linked_projects`.
 
 ```{r}
