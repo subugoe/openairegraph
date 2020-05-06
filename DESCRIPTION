@@ -59,8 +59,7 @@ Suggests:
     bookdown (>= 0.18),
     tidyverse (>= 1.3.0),
     dplyr (>= 0.8.5),
-    jsonlite (>= 1.6.1),
-    here (>= 0.1)
+    jsonlite (>= 1.6.1)
 VignetteBuilder: knitr
 Remotes: 
     subugoe/metaR@b18c1aec7e3629ae5d3eb9817109835d73518ebb
