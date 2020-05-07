@@ -4,8 +4,7 @@
 \alias{oarg_decode}
 \title{Decode and store records from OpenAIRE Research Graph files}
 \usage{
-oarg_decode(oaire = NULL, limit = NULL, records_path = NULL,
-  verbose = TRUE)
+oarg_decode(oaire = NULL, limit = NULL, records_path = NULL, verbose = TRUE)
 }
 \arguments{
 \item{oaire}{compressed json file}
@@ -34,7 +33,7 @@ Because the dumps are quite large, the function furthermore has a
 parameter that allows setting a limit, which is helpful for inspecting
 the output first.
 
-By default, a progress bar presents the current state of the process.
+ By default, a progress bar presents the current state of the process.
 }
 \examples{
 \dontrun{

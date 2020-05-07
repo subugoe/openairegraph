@@ -19,10 +19,6 @@
 #' @param records_path directory for the xml files
 #' @param verbose print some information on what is going on
 #'
-#' @importFrom progress progress_bar
-#' @importFrom purrr pmap
-#' @importFrom base64enc base64decode
-#' @importFrom tibble tibble
 #' @return Exports de-compressed XML-formatted record, storing them locally
 #'  as zip files. The file name represents the record identifier.
 #'
@@ -53,7 +49,7 @@ oarg_decode <-
     if (!dir.exists(records_path))
       stop("No folder found to store the decoded record files")
     if (verbose)
-      pb <- progress_bar$new(total = nrow(oaire_binary))
+      pb <- progress::progress_bar$new(total = nrow(oaire_binary))
    tt <- purrr::pmap(oaire_binary, function(bin_xml, id, verbose) {
       if (verbose)
         pb$tick()

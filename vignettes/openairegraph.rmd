@@ -1,0 +1,111 @@
+---
+title: "Read and manipulate the OpenAIRE Research Graph Dump with R"
+author: "Najko Jahn"
+opengraph:
+  twitter:
+    card: summary
+    creator: "@najkoja"
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  out.width = "100%"
+)
+```
+
+The workflow starts with loading a downloaded OpenAIRE Research Graph dump. 
+After that, the package helps you to de-code and split into several locally stored files. 
+A dedicated parser will obtain data from these files. 
+
+
+## De-code and split OpenAIRE Research Graph dumps
+
+OpenAIRE Research Graph dumps are json-files that contain a record identifier and a [Base64](https://en.wikipedia.org/wiki/Base64)-encoded text string representing the metadata.
+
+```{r}
+library(jsonlite)
+library(tibble)
+# sample file delivered with this package
+dump_file <- system.file(
+  "extdata", "h2020_results_short.gz",
+  package = "openairegraph"
+)
+# a dump file is in json format
+loaded_dump <- jsonlite::stream_in(file(dump_file), verbose = FALSE)
+tibble::as_tibble(loaded_dump)
+```
+
+`openairegraph::oarg_decode()` decodes these strings and saves them locally. 
+It writes out each XML-formatted record as a zip file to a specified folder.
+
+```{r, eval=FALSE}
+library(openairegraph)
+# writes out each XML-formatted record as a zip file to a specified folder
+dir.create("data")
+oarg_decode(loaded_dump, limit = 10, records_path = "data/")
+```
+
+These files can be loaded using the `xml2` package.
+
+```{r}
+library(xml2)
+# sample file delivered with this package
+dump_eg <- system.file(
+  "extdata", "multiple_projects.xml", 
+  package = "openairegraph"
+)
+my_record <- xml2::read_xml(dump_eg)
+my_record
+```
+
+
+### XML-Parsers
+
+So far, there are four parsers available to consume the H2020 results set:
+
+- `openairegraph::oarg_publications_md()` retrieves basic publication metadata complemented by author details and access status
+- `openairegraph::oarg_linked_projects()` parses grants linked to publications
+- `openairegraph::oarg_linked_ftxt()` gives full-text links including access information
+- `openairegraph::oarg_linked_affiliations()` parses affiliation data
+
+
+#### Basic publication metadata
+
+```{r}
+openairegraph::oarg_publications_md(my_record)
+```
+
+Author infos
+
+```{r}
+openairegraph::oarg_publications_md(my_record)$authors
+```
+
+Linked persistent identifiers (PID) to a research publication
+
+```{r}
+openairegraph::oarg_publications_md(my_record)$pids
+```
+
+
+#### Linked projects
+
+```{r}
+openairegraph::oarg_linked_projects(my_record)
+```
+
+
+#### Linked Full-Texts
+
+```{r}
+openairegraph::oarg_linked_ftxt(my_record)
+```
+
+
+#### Affiliation data
+
+```{r}
+openairegraph::oarg_linked_affiliations(my_record)
+```

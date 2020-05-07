@@ -4,5 +4,6 @@
 .Ruserdata
 data-raw/
 inst/doc
-doc
-Meta
+.rstudio/
+data/
+docs/

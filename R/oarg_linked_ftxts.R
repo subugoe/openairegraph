@@ -5,11 +5,6 @@
 #'
 #' @inheritParams oarg_publications_md
 #'
-#' @importFrom xml2 xml_find_all xml_find_first xml_text
-#' @importFrom tibble tibble
-#' @importFrom purrr map_df
-#' @importFrom methods is
-#'
 #' @return The result is a tibble. Here are the returned columns and descriptions:
 #'
 #' \tabular{ll}{
@@ -31,16 +26,16 @@
 #'
 #' @export
 oarg_linked_ftxt <- function(doc) {
-  if (!any(is(doc) == "xml_document"))
+  if (!any(methods::is(doc) == "xml_document"))
     stop("No valid XML")
   else
-    instance_nodes <- xml2::xml_find_all(doc,
+    instance_nodes <- xml_find_all(doc,
                                     "//oaf:entity//oaf:result//instance")
   tibble::tibble(
-    access_right = xml2::xml_text(xml_find_first(instance_nodes, "./accessright/@classname")),
-    collected_from = xml2::xml_text(xml_find_first(instance_nodes, "./collectedfrom/@name")),
-    instance_type = xml2::xml_text(xml_find_first(instance_nodes, "./instancetype/@classname")),
-    hosted_by = xml2::xml_text(xml_find_first(instance_nodes, "./hostedby/@name")),
+    access_right = xml_text(xml_find_first(instance_nodes, "./accessright/@classname")),
+    collected_from = xml_text(xml_find_first(instance_nodes, "./collectedfrom/@name")),
+    instance_type = xml_text(xml_find_first(instance_nodes, "./instancetype/@classname")),
+    hosted_by = xml_text(xml_find_first(instance_nodes, "./hostedby/@name")),
     web_urls = lapply(instance_nodes, function(x) xml_text(xml_find_all(x, "./webresource/url")))
   )
 }

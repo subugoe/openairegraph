@@ -9,14 +9,10 @@ bibliography: literature.bib
 output: 
   bookdown::html_document2:
     number_sections: false
-always_allow_html: true
+    toc: yes
 link-citations: yes
 pkgdown:
   as_is: true
-vignette: >
-  %\VignetteIndexEntry{foo}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
 ---
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE}
@@ -70,6 +66,11 @@ After downloading it, the file can be imported into R using the jsonlite package
 library(jsonlite) # tools to work with json files
 library(tidyverse) # tools from the tidyverse useful for data analysis
 # download the file from Zenodo and store it locally
+dir.create("data")
+download.file(
+  url = "https://zenodo.org/record/3516918/files/h2020_results.gz", 
+  destfile = "data/h2020_results.gz"
+)
 oaire <- jsonlite::stream_in(file("data/h2020_results.gz"), verbose = FALSE) %>%
   tibble::as_tibble()
 oaire
@@ -78,11 +79,12 @@ oaire
 
 ### De-coding and storing OpenAIRE Research Graph records
 
-The function `openairegraph::oarg_decode()`  splits and de-codes each record. Storing the records individually allows to process the files independent from each other, which is a common approach when working with big data. 
+The function `openairegraph::oarg_decode()` splits and de-codes each record. Storing the records individually allows to process the files independent from each other, which is a common approach when working with big data. 
 
 ```{r}
-openairegraph::oarg_decode(oaire, records_path = "data/records/", 
-  limit = 500, verbose = FALSE)
+library(openairegraph)
+dir.create("data/records")
+oarg_decode(oaire, records_path = "data/records/", limit = 500, verbose = FALSE)
 ```
 
 `openairegraph::oarg_decode()` writes out each XML-formatted record as a zip file to a specified folder. Because the dumps are quite large, the function furthermore has a parameter that allows setting a limit, which is helpful for inspecting the output first. By default, a progress bar presents the current state of the process.
@@ -116,20 +118,34 @@ library(tictoc) # timing functions
 
 openaire_records <- list.files("data/records", full.names = TRUE)
 
-future::plan(multisession)
-tic()
-oaire_data <- future.apply::future_lapply(openaire_records, function(files) {
-  # load xml file
-  doc <- xml2::read_xml(files)
-  # parser
-  out <- oarg_publications_md(doc)
-  out$linked_projects <- list(oarg_linked_projects(doc))
-  out$linked_ftxt <- list(oarg_linked_ftxt(doc))
-  # use file path as id
-  out$id <- files
-  out
-})
-toc()
+if (!identical(Sys.getenv("GITHUB_ACTIONS"), "true")) {
+  future::plan(multisession)
+  tic()
+  oaire_data <- future.apply::future_lapply(openaire_records, function(files) {
+    # load xml file
+    doc <- xml2::read_xml(files)
+    # parser
+    out <- oarg_publications_md(doc)
+    out$linked_projects <- list(oarg_linked_projects(doc))
+    out$linked_ftxt <- list(oarg_linked_ftxt(doc))
+    # use file path as id
+    out$id <- files
+    out
+  })
+  toc()
+} else {
+  oaire_data <- lapply(openaire_records, function(files) {
+    # load xml file
+    doc <- xml2::read_xml(files)
+    # parser
+    out <- oarg_publications_md(doc)
+    out$linked_projects <- list(oarg_linked_projects(doc))
+    out$linked_ftxt <- list(oarg_linked_ftxt(doc))
+    # use file path as id
+    out$id <- files
+    out
+  })
+}
 oaire_df <- dplyr::bind_rows(oaire_data)
 ```
 
@@ -138,6 +154,15 @@ I therefore recommend to back up the resulting data, instead of un-packing the w
 
 ```{r}
 jsonlite::stream_out(oaire_df, file("data/h2020_parsed_short.json"))
+download.file(
+  url = "https://github.com/subugoe/scholcomm_analytics/releases/download/oaire_graph_post/h2020_parsed.json.gz", 
+  destfile = "data/h2020_parsed.json.gz"
+)
+oaire_df <- jsonlite::stream_in(
+  file("data/h2020_parsed.json.gz"), 
+  verbose = FALSE
+) %>%
+  tibble::as_tibble()
 ```
 
 ## Use case: Monitoring the Open Access Compliance across H2020 grant-supported projects at the institutional level
@@ -149,12 +174,6 @@ In this use case, I will illustrate how to make use of the OpenAIRE Research Gra
 ### Overview
 
 As a start, I load a dataset, which was compiled following the above-described methods using the whole `h2020_results.gz` dump.
-
-```{r}
-oaire_df <-
-  jsonlite::stream_in(file("data/h2020_parsed.json"), verbose = FALSE) %>%
-  tibble::as_tibble()
-```
 
 It contains `r oaire_df %>% distinct(id) %>% nrow()` grant-supported research outputs. Here, I will focus on the prevalence of open access across H2020 projects using metadata about the open access status of a publication and related project information stored in the list-column `linked_projects`.
 
@@ -190,7 +209,7 @@ pubs_projects %>%
     breaks =  scales::extended_breaks()(0:25000)
     ) +
   labs(x = NULL, y = "Publications", caption = "Data: OpenAIRE Research Graph") +
-  theme_minimal_vgrid(font_family = "Roboto") +
+  theme_minimal_vgrid() +
   theme(legend.position = "none")
 ```
 
@@ -199,7 +218,6 @@ Figure \@ref(fig:activity) shows that most publications in the OpenAIRE Research
 The European Commission mandates open access to publications. Let's measure the compliance to this policy using the OpenAIRE Research Graph per project:
 
 ```{r, layout="l-body-outset"}
-library(rmarkdown)
 oa_monitor_ec <- pubs_projects %>%
   filter(funding_level_0 == "H2020") %>%
   mutate(funding_scheme = fct_infreq(funding_level_1)) %>%
@@ -247,7 +265,7 @@ oa_monitor_ec %>%
   labs(x = NULL,
        y = "Open Access Percentage",
        caption = "Data: OpenAIRE Research Graph") +
-  theme_minimal_vgrid(font_family = "Roboto") +
+  theme_minimal_vgrid() +
   theme(legend.position = "top",
         legend.justification = "right")
 ```
@@ -260,9 +278,6 @@ Because of their large variations, I want to put the open access rates of H2020-
 
 
 ```{r}
-oaire_df <- jsonlite::stream_in(file("data/h2020_parsed.json"), verbose = FALSE) %>%
-  tibble::as_tibble()
-
 pubs_projects <- oaire_df %>%
   select(id, type, best_access_right, linked_projects) %>%
   unnest(linked_projects) 
@@ -274,6 +289,10 @@ Next, I want to identify H2020 projects with participation from the university. 
 
 ```{r}
 # load local copy downloaded from the EC open data portal
+download.file(
+  url = "https://cordis.europa.eu/data/cordis-h2020organizations.csv",
+  destfile = "data/cordis-h2020organizations.csv"
+)
 cordis_org <-
   readr::read_delim(
     "data/cordis-h2020organizations.csv",
@@ -343,7 +362,7 @@ p <- ggplot(goe_oa, aes(funding_scheme, oa_prop)) +
   labs(x = NULL,
        y = "Open Access Percentage",
        caption = "Data: OpenAIRE Research Graph") +
-  theme_minimal(base_family = "Roboto") +
+  theme_minimal() +
   theme(legend.position = "top",
         legend.justification = "right")
 plotly::ggplotly(p, tooltip = c("label"))
