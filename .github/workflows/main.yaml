@@ -73,7 +73,7 @@ jobs:
       - name: Get system dependencies for github pages deploy
         run: apt-get update -y && apt-get install -y ssh rsync
       - name: Deploy pkgdown website to ref
-        if: github.event_name != 'pull_request'
+        if: github.event_name != 'pull_request' && github.ref != 'refs/heads/master'
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
           ACCESS_TOKEN: ${{ secrets.GH_PAT }}
