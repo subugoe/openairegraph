@@ -71,6 +71,7 @@ jobs:
         run: pkgdown::build_site()
         shell: Rscript {0}
       - name: Deploy to GitHub Pages
+        if: github.ref == 'refs/heads/master'
         uses: maxheld83/ghpages@github-token
         env:
           BUILD_DIR: docs
