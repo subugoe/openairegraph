@@ -24,7 +24,7 @@ The result is a tibble with each row representing a publication.
   \code{resource_type}      \tab Type of dataset \cr
   \code{authors}            \tab List-column with author details including names,
 order and ORCID \cr
-  \code{pid}                \tab List-column with persistent identifiers (PIDS)
+  \code{pids}                \tab List-column with persistent identifiers (PIDS)
 referencing the publication, e.g. DOI, PMID or PMCID.
 PIDs are particularly useful when cross-linking to other scholarly data sources \cr
   \code{collected_from}     \tab Name and identifier of metadata source \cr
