@@ -1,7 +1,7 @@
 Package: openairegraph
 Title: Read and manipulate the OpenAIRE Research Graph Dump
 Version: 0.0.1.9000
-Authors@R: 
+Authors@R:
     c(
       person(
         given = "Najko",
@@ -22,23 +22,23 @@ Authors@R:
         role = c("cph", "fnd")
       )
     )
-Description: Helper functions to obtain and manipualte data from the OpenAIRE Research Graph 
-    Dumps <https://api.openaire.eu/graph-dumps.html>. 
-    This package focuses on research results funded by EC framework programme HORIZON 2020. 
+Description: Helper functions to obtain and manipualte data from the OpenAIRE Research Graph
+    Dumps <https://api.openaire.eu/graph-dumps.html>.
+    This package focuses on research results funded by EC framework programme HORIZON 2020.
 License: MIT + file LICENSE
 URL: https://subugoe.github.io/openairegraph/, https://github.com/subugoe/openairegraph
 BugReports: https://github.com/subugoe/openairegraph/issues
 Encoding: UTF-8
 LazyData: true
-Imports: 
+Imports:
     xml2 (>= 1.3.1),
     tibble (>= 3.0.1),
     purrr (>= 0.3.4),
     progress (>= 1.2.2),
     base64enc (>= 0.1.3),
     methods (>= 3.6.3)
-RoxygenNote: 7.1.0
-Suggests: 
+RoxygenNote: 7.1.1
+Suggests:
     testthat (>= 2.1.0),
     future (>= 1.17.0),
     future.apply (>= 1.5.0),
@@ -52,7 +52,7 @@ Suggests:
     knitr (>= 1.28),
     rmarkdown (>= 2.1),
     covr (>= 3.5.0),
-    metaR (>= 0.0.0.9000),
+    metar (>= 0.0.0.9000),
     remotes (>= 2.1.1),
     pkgdown (>= 1.5.0),
     rcmdcheck (>= 1.3.3),
@@ -61,5 +61,5 @@ Suggests:
     dplyr (>= 0.8.5),
     jsonlite (>= 1.6.1)
 VignetteBuilder: knitr
-Remotes: 
-    subugoe/metaR@b18c1aec7e3629ae5d3eb9817109835d73518ebb
+Remotes:
+    subugoe/metar@7ccc2a0
