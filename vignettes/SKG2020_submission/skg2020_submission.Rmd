@@ -1,5 +1,5 @@
 ---
-title: "Accessing and analysing the OpenAIRE Research Graph Dump with R"
+title: "SKG Submission: Accessing and analysing the OpenAIRE Research Graph Dump with R"
 author:
   - name: Najko Jahn 
     url: https://twitter.com/najkoja
